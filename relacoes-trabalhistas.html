@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Relações Trabalhistas de Alta Performance | GPA Advocacia</title>
+	<link rel="shortcut icon" href="assets/img/logo/ficon.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Libraries -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/flaticon.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS "Human Capital Engineering" -->
+    <style>
+        /* --- CORE --- */
+        body { font-family: 'Open Sans', sans-serif; color: #666; background-color: #f4f4f4; overflow-x: hidden; }
+        h1, h2, h3, h4, h5 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; color: #222; }
+        
+        /* Cores */
+        .text-orange { color: #430b0b; }
+        .bg-graphite { background-color: #1a1a1a; color: #fff; }
+        
+        /* Font Imports */
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@300;400;500;700&display=swap');
+
+        /* --- HEADER --- */
+        .main_header { border-bottom: 1px solid #ddd; background: #fff; }
+        .main_navigation .dropdown-menu > li.dropdown{ position: relative; }
+        .main_navigation .dropdown-menu > li.dropdown > ul.dropdown-menu{ position: absolute; top: 0; left: 100%; display: none; z-index: 9999; }
+        .main_navigation a.has-submenu:after{ content: "›"; float: right; margin-left: 10px; opacity: .7; }
+        @media (min-width: 992px){ .main_navigation .dropdown-menu > li.dropdown:hover > ul.dropdown-menu{ display: block; } }
+
+        /* --- HERO "IMPACT" --- */
+        .labor-hero {
+            height: 90vh;
+            min-height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('assets/img/service/at3.jpg') center/cover fixed;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .hero-line {
+            width: 100px; height: 5px; background: #430b0b; margin-bottom: 30px;
+        }
+        .labor-hero h1 {
+            color: #fff; font-size: 4.5rem; font-weight: 700; line-height: 1; margin-bottom: 25px; text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .labor-hero p {
+            color: #ccc; font-size: 1.3rem; max-width: 700px; font-weight: 300; margin-bottom: 40px;
+        }
+        .btn-orange {
+            background: #430b0b; color: #fff; padding: 18px 50px; font-weight: 700; font-family: 'Oswald', sans-serif; border: none; transition: 0.3s; text-transform: uppercase; letter-spacing: 2px;
+        }
+        .btn-orange:hover { background: #fff; color: #430b0b; transform: translateY(-5px); box-shadow: 0 15px 30px rgba(230, 81, 0, 0.3); }
+
+        /* --- INTRO "THE SHIFT" --- */
+        .intro-sec { padding: 120px 0; background: #fff; }
+        .intro-title h2 { font-size: 3rem; margin-bottom: 20px; }
+        .intro-title span { color: #430b0b; font-weight: 300; display: block; font-size: 1.5rem; margin-bottom: 10px; }
+        
+        .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; margin-top: 50px; }
+        .intro-card {
+            padding: 40px; border: 1px solid #eee; transition: 0.3s; position: relative; overflow: hidden;
+        }
+        .intro-card:hover { border-color: #430b0b; }
+        .intro-card::after {
+            content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 4px; background: #430b0b; transition: 0.5s;
+        }
+        .intro-card:hover::after { width: 100%; }
+        
+        .intro-card h3 { font-size: 1.5rem; margin-bottom: 15px; display: flex; align-items: center; }
+        .intro-card i { font-size: 2rem; color: #430b0b; margin-right: 15px; }
+
+        /* --- DEEP DIVE SERVICES (Tabs Visual) --- */
+        .services-sec { padding: 120px 0; background: #1a1a1a; color: #fff; }
+        .service-row { display: flex; flex-wrap: wrap; margin-bottom: 80px; align-items: stretch; }
+        .service-row:nth-child(even) { flex-direction: row-reverse; }
+        
+        .srv-img {
+            flex: 1; min-width: 300px;
+            background-size: cover; background-position: center; min-height: 400px;
+            position: relative;
+        }
+        /* Overlay na imagem */
+        .srv-img::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(230, 81, 0, 0.1); transition: 0.3s;
+        }
+        .srv-content { flex: 1; padding: 60px; background: #222; border-top: 5px solid #430b0b; }
+        
+        .srv-content h3 { font-size: 2rem; margin-bottom: 20px; color: #fff; }
+        .srv-content p { color: #aaa; margin-bottom: 30px; font-weight: 300; }
+        .srv-list li { margin-bottom: 15px; color: #ccc; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .srv-list i { color: #f70000; margin-right: 10px; }
+
+        /* --- NUMBERS (Counter) --- */
+        .numbers-sec { padding: 100px 0; background: url('assets/img/background/map2.png') center/cover; text-align: center; }
+        .num-item { margin-bottom: 30px; }
+        .num-val { font-size: 4rem; font-weight: 700; color: #222; font-family: 'Oswald', sans-serif; }
+        .num-label { font-size: 1.1rem; color: #430b0b; font-weight: 600; text-transform: uppercase; }
+
+        /* --- FAQ (Accordion Moderno) --- */
+        .faq-sec { padding: 120px 0; background: #fff; }
+        .accordion .card { border: none; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .accordion .card-header { background: #fff; padding: 0; border-bottom: 1px solid #f0f0f0; }
+        .accordion .btn-link {
+            width: 100%; text-align: left; padding: 25px; color: #333; font-weight: 700; font-family: 'Oswald', sans-serif; font-size: 1.1rem; text-decoration: none; position: relative;
+        }
+        .accordion .btn-link::after {
+            content: '+'; position: absolute; right: 25px; font-size: 1.5rem; color: #430b0b; transition: 0.3s;
+        }
+        .accordion .btn-link[aria-expanded="true"]::after { content: '-'; transform: rotate(180deg); }
+        .accordion .card-body { padding: 25px; color: #666; line-height: 1.8; background: #fafafa; }
+
+        /* --- CTA --- */
+        .cta-force { padding: 100px 0; background: #430b0b; text-align: center; color: #fff; }
+        .cta-force h2 { color: #fff; font-size: 3.5rem; margin-bottom: 20px; }
+        .btn-black {
+            background: #000; color: #fff; padding: 18px 50px; font-weight: 700; text-transform: uppercase; border: none; letter-spacing: 2px; transition: 0.3s; font-family: 'Oswald', sans-serif;
+        }
+        .btn-black:hover { background: #fff; color: #000; }
+
+        @media (max-width: 768px) {
+            .labor-hero h1 { font-size: 3rem; }
+            .intro-grid { grid-template-columns: 1fr; }
+            .service-row { flex-direction: column !important; }
+            .srv-img { min-height: 250px; }
+        }
+    </style>
+</head>
+<body>
+
+<header id="header_id" class="main_header header_style_one">
+		<div class="header_top">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="header_contact_info float-left ul-li">
+						<ul>
+							<li><i class="far fa-envelope"></i> gpa.adv@outlook.com</li>
+							<li><i class="fas fa-phone"></i> (41) 99726-6499</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="header_follow_social float-right ul-li">
+						<ul>
+							<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+							<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /header_top -->
+<div class="header_main_menu">
+<div class="site_logo">
+<a href="index<a href="#" title="GPA Advocacia - Parceria jurídica no mundo dos negócios">
+<img src="assets/img/logo/logo-1.png" alt="Logo GPA Advocacia">
+</a>
+</div>
+<nav class="main_navigation ul-li">
+<ul>
+<li class="dropdown">
+<a href="index.html">Início</a>
+</li>
+<li class="dropdown">
+<a href="#service">Empresa</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="especializacao-missao.html">Especialização &amp; Missão</a></li>
+<li><a href="fundado-em-curitiba.html">Fundado em Curitiba</a></li>
+<!-- NÍVEL 1 -->
+<li class="dropdown">
+<a href="#" class="has-submenu">Sócio Fundador</a>
+<ul class="dropdown-menu clearfix">
+<!-- NÍVEL 2 -->
+<li class="dropdown">
+<a href="gustavo-de-oliveira-pedroso.html" class="has-submenu">Gustavo de Oliveira Pedroso</a>
+<ul class="dropdown-menu clearfix">
+<!-- NÍVEL 3 -->
+<li class="dropdown">
+<a href="#" class="has-submenu">Qualificações</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="especialista-em-direito-empresarial-e-inovacao-uel.html">Especialista em Direito Empresarial e Inovação (UEL)</a></li>
+<li><a href="mba-ibmec.html">MBA (IBMEC)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="seguranca-juridica.html">Segurança Jurídica</a></li>
+<li><a href="estrategias-empresariais.html">Estratégias Empresariais</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#service">Serviços</a>
+<ul class="dropdown-menu clearfix">
+<li class="dropdown">
+<a href="#" class="has-submenu">Área Consultiva</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação de Negócios</a></li>
+<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental, Florestal e Agronegócio</a></li>
+<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#" class="has-submenu">Área Contenciosa</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+<li><a href="tributario.html">Tributário</a></li>
+<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#portfolio">Rede social</a>
+<ul class="dropdown-menu">
+<li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+<li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+<li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+</ul>
+</li>
+
+<li><a href="#">Blog</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+
+
+			<!-- /nav Menu -->
+			<div class="wide_side_bar open_side_area clearfix">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="wide_side_inner">
+				<div class="side_overlay open_side_area"></div>
+				<div class="side_inner_content text-center">
+					<div class="close_btn open_side_area">Voltar <i class="fas fa-arrow-right"></i></div>
+					<div class="side_inner_logo">
+						<a href="index" title="GPA Advocacia">
+							<img src="assets/img/logo/logo-1.png" alt="Logo lateral GPA Advocacia">
+						</a>
+					</div>
+					<p>
+						GPA Advocacia é um escritório fundado em Curitiba, especializado em empresas e empresários que buscam
+						<strong>segurança jurídica aliada às melhores estratégias empresariais</strong>. Atuamos como um verdadeiro
+						<strong>jurídico parceiro de negócios</strong>, apoiando a tomada de decisão e o crescimento sustentável das empresas.
+					</p>
+					<div class="side_contact">
+						<div class="social_widget ul-li headline relative-position">
+							<h3>Siga a GPA nas redes:</h3>
+							<ul>
+								<li class="h-fb"><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+								<li class="h-tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+								<li class="h-bh"><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+								<li class="h-yo"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="side_copywright">
+						© 2026 GPA Advocacia · Desenvolvido por e-Web Agency + Empresarial Web
+					</div>
+				</div>
+			</div>
+			
+			<!-- side bar Inner -->
+			<div class="call_to_quote float-right">
+				<div class="call_icon float-left">
+					<i class="flaticon-call"></i>
+				</div>
+				<span>Atendimento para empresas</span>
+				<span class="call_number">(41) 99726-6499</span>
+				<div class="icon_bg">
+					<i class="flaticon-call"></i>
+				</div>
+			</div>
+			<!-- /call to action -->
+		</div>
+		<!-- /desktop version -->
+		<div class="mobile_menu">
+			<div class="mobile_menu_button open_mobile_menu">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div class="mobile_menu_wrap">
+				<div class="mobile_menu_overlay open_mobile_menu"></div>
+				<div class="mobile_menu_content">
+					<div class="mobile_menu_close open_mobile_menu">
+						<i class="fas fa-window-close"></i>
+					</div>
+					<div class="m-brand-logo text-center">
+						<img src="assets/img/logo/logo-1.png" alt="Logo mobile GPA Advocacia">
+					</div>
+					<nav class="main-navigation  clearfix ul-li">
+						<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+							<li class="dropdown">
+								<a href="index">
+									Início
+								</a>
+							</li>
+							<li><a href="about">Empresa</a></li>
+							<li class="dropdown">
+								<a href="#service">
+									Serviços
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="case">Área Consultiva</a></li>
+									<li><a href="case-2">Área Contenciosa</a></li>
+									<li><a href="case-single">Detalhes dos serviços</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Rede social
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Instagram</a></li>
+									<li><a href="#">Facebook</a></li>
+									<li><a href="#">Linkedin</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Time
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="team">Equipe</a></li>
+									<li><a href="team-single">Sócio fundador</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Blog
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Artigos</a></li>
+									<li><a href="#">Post detalhado</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Páginas
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="contato">Contato</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">Proposta & Investimento</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<div class="free_call_nm">
+						<div class="m_call_icon text-center">
+							<i class="flaticon-call"></i>
+						</div>
+						<div class="m_call_text">
+							<span>ATENDIMENTO EMPRESARIAL</span>
+							<strong>(41) 99726-6499</strong>
+						</div>
+					</div>
+					<div class="m_social_area text-center ul-li">
+						<h3> Siga a GPA:</h3>
+						<ul>
+							<li class="m_fb"><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="m_tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+							<li class="m_lk"><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+							<li class="m_yb"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+						</ul>
+					</div>
+					<div class="m_get_quote">
+						<a href="contato">Falar com o jurídico parceiro</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /mobile menu -->
+	</header>
+
+    <!-- 1. HERO IMPACT -->
+    <section class="labor-hero">
+        <div class="container">
+            <div class="hero-line wow fadeInLeft"></div>
+            <div class="row">
+                <div class="col-lg-9 wow fadeInUp">
+                    <h1>Engenharia de<br>Capital Humano.</h1>
+                    <p>O Direito do Trabalho moderno não é sobre processos. É sobre produtividade, redução de custos e segurança para escalar sua operação.</p>
+                    <a style="color:white;" href="contact.html" class="btn-orange">Diagnóstico Trabalhista</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. INTRO THE SHIFT -->
+    <section class="intro-sec">
+        <div class="container">
+            <div class="intro-title text-center wow fadeInUp">
+                <span>GESTÃO ESTRATÉGICA DE PESSOAS</span>
+                <h2>Transforme Passivo em Ativo</h2>
+                <p style="max-width: 800px; margin: 0 auto;">A legislação trabalhista brasileira é complexa, mas oferece inúmeras oportunidades de otimização que a maioria das empresas desconhece. Nós saímos da defesa reativa para a arquitetura proativa de cargos e salários.</p>
+            </div>
+            
+            <div class="intro-grid">
+                <!-- Card 1 -->
+                <div class="intro-card wow fadeInLeft">
+                    <h3><i class="flaticon-chart"></i> Redução de Custos</h3>
+                    <p>Mapeamos ineficiências na folha de pagamento e implementamos modelos de remuneração variável (PLR, Prêmios) isentos de encargos, aumentando o ganho líquido do colaborador e reduzindo o custo empresa.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="intro-card wow fadeInRight">
+                    <h3><i class="flaticon-shield"></i> Blindagem Contratual</h3>
+                    <p>Contratos customizados para cada função (Teletrabalho, Híbrido, Intermitente, PJ, Autônomo), com cláusulas de confidencialidade e não-concorrência robustas para proteger o know-how da empresa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. DEEP DIVE SERVICES (Dark Mode) -->
+    <section class="services-sec">
+        <div class="container-fluid p-0">
+            
+            <!-- Row 1: Preventivo -->
+            <div class="service-row wow fadeInUp">
+                <div class="srv-img" style="background-image: url('assets/img/service/at1.jpg');"></div>
+                <div class="srv-content">
+                    <h3>Consultoria Preventiva</h3>
+                    <p>A auditoria trabalhista identifica o "passivo oculto" antes que ele exploda. Corrigimos rotinas de ponto, pagamentos "por fora" e desvios de função.</p>
+                    <ul class="list-unstyled srv-list">
+                        <li><i class="fas fa-check"></i> Auditoria de Folha e Rotinas de RH.</li>
+                        <li><i class="fas fa-check"></i> Adequação à Reforma Trabalhista.</li>
+                        <li><i class="fas fa-check"></i> Gestão de Terceirizados e Riscos de Vínculo.</li>
+                        <li><i class="fas fa-check"></i> Programas de Compliance e Combate ao Assédio.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Row 2: Sindical (Invertido) -->
+            <div class="service-row wow fadeInUp">
+                <div class="srv-img" style="background-image: url('assets/img/background/gustavo-oliveira.jpg');"></div>
+                <div class="srv-content">
+                    <h3>Atuação Sindical Estratégica</h3>
+                    <p>O Acordo Coletivo de Trabalho (ACT) pode prevalecer sobre a lei em diversos pontos. Negociamos com sindicatos para flexibilizar jornadas e benefícios.</p>
+                    <ul class="list-unstyled srv-list">
+                        <li><i class="fas fa-check"></i> Negociação de Acordos Coletivos (ACT).</li>
+                        <li><i class="fas fa-check"></i> Banco de Horas Especial.</li>
+                        <li><i class="fas fa-check"></i> Turnos de Revezamento.</li>
+                        <li><i class="fas fa-check"></i> Gestão de Greves e Crises.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Row 3: Contencioso -->
+            <div class="service-row wow fadeInUp">
+                <div class="srv-img" style="background-image: url('assets/img/portfolio/prt3.jpg');"></div>
+                <div class="srv-content">
+                    <h3>Contencioso de Alta Complexidade</h3>
+                    <p>Quando o litígio é inevitável, atuamos com vigor técnico. Defesa em Ações Civis Públicas (MPT), Reclamações de Altos Executivos e Acidentes de Trabalho.</p>
+                    <ul class="list-unstyled srv-list">
+                        <li><i class="fas fa-check"></i> Defesa em Reclamatórias Trabalhistas.</li>
+                        <li><i class="fas fa-check"></i> Atuação perante o Ministério Público do Trabalho.</li>
+                        <li><i class="fas fa-check"></i> Recursos ao TST (Brasília).</li>
+                        <li><i class="fas fa-check"></i> Sustentação Oral nos Tribunais.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 4. NUMBERS -->
+    <section class="numbers-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 num-item wow zoomIn">
+                    <span class="num-val">40%</span>
+                    <span class="d-block num-label">Redução Média de Passivo</span>
+                </div>
+                <div class="col-md-4 num-item wow zoomIn" data-wow-delay="0.2s">
+                    <span class="num-val">+150</span>
+                    <span class="d-block num-label">Acordos Coletivos Negociados</span>
+                </div>
+                <div class="col-md-4 num-item wow zoomIn" data-wow-delay="0.4s">
+                    <span class="num-val">24h</span>
+                    <span class="d-block num-label">Suporte a Gestão de Crise</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FAQ -->
+    <section class="faq-sec">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Perguntas Frequentes (Gestores)</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqLabor">
+                        <!-- P1 -->
+                        <div class="card wow fadeInUp">
+                            <div class="card-header" id="h1">
+                                <a class="btn-link" href="#" data-toggle="collapse" data-target="#c1">
+                                    É seguro contratar via PJ (Pejotização)?
+                                </a>
+                            </div>
+                            <div id="c1" class="collapse show" data-parent="#faqLabor">
+                                <div class="card-body">
+                                    Existe risco se houver subordinação direta. Para ser seguro, a relação deve ser de natureza civil/comercial, com autonomia do prestador, sem cumprimento de horário rígido e com contrato bem estruturado que afaste os requisitos do art. 3º da CLT.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- P2 -->
+                        <div class="card wow fadeInUp">
+                            <div class="card-header" id="h2">
+                                <a class="btn-link collapsed" href="#" data-toggle="collapse" data-target="#c2">
+                                    Como implementar PLR sem gerar encargos?
+                                </a>
+                            </div>
+                            <div id="c2" class="collapse" data-parent="#faqLabor">
+                                <div class="card-body">
+                                    A Participação nos Lucros e Resultados é isenta de encargos trabalhistas e previdenciários se seguir a Lei 10.101/00. Exige metas claras, objetivas e aferíveis, além de negociação prévia com comissão de empregados e sindicato.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- P3 -->
+                        <div class="card wow fadeInUp">
+                            <div class="card-header" id="h3">
+                                <a class="btn-link collapsed" href="#" data-toggle="collapse" data-target="#c3">
+                                    O que muda com a Lei do Teletrabalho?
+                                </a>
+                            </div>
+                            <div id="c3" class="collapse" data-parent="#faqLabor">
+                                <div class="card-body">
+                                    A lei trouxe segurança para o modelo híbrido e home office total. É crucial definir por contrato quem paga as despesas (internet, luz, equipamentos) e se há ou não controle de jornada, para evitar o pagamento de horas extras.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- P4 -->
+                        <div class="card wow fadeInUp">
+                            <div class="card-header" id="h4">
+                                <a class="btn-link collapsed" href="#" data-toggle="collapse" data-target="#c4">
+                                    Posso monitorar o e-mail corporativo do funcionário?
+                                </a>
+                            </div>
+                            <div id="c4" class="collapse" data-parent="#faqLabor">
+                                <div class="card-body">
+                                    Sim, desde que o funcionário tenha ciência prévia (via política de uso de TI assinada) de que o e-mail é uma ferramenta de trabalho monitorada e que não deve haver expectativa de privacidade.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- P5 -->
+                        <div class="card wow fadeInUp">
+                            <div class="card-header" id="h5">
+                                <a class="btn-link collapsed" href="#" data-toggle="collapse" data-target="#c5">
+                                    O banco de horas precisa de homologação sindical?
+                                </a>
+                            </div>
+                            <div id="c5" class="collapse" data-parent="#faqLabor">
+                                <div class="card-body">
+                                    Não necessariamente. O banco de horas semestral pode ser feito por acordo individual escrito. Apenas para o banco de horas anual é exigida a negociação coletiva com o sindicato.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-force">
+        <div class="container">
+            <h2 class="wow fadeInUp">Chega de perder dinheiro com passivo.</h2>
+            <p class="text-white-50 mb-5 wow fadeInUp" style="font-size: 1.2rem;">Blindagem jurídica, eficiência na folha e paz para crescer.</p>
+            <a href="contact.html" class="btn-black wow fadeInUp">Falar com Especialista Trabalhista</a>
+        </div>
+    </section>
+
+	<footer id="footer_area" style="background-color:black;" class="footer_section relative-position">
+		<div class="background_overlay"></div>
+		<div class="container">
+			<div class="footer_content">
+				<div class="row">
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Sobre a GPA
+							</h3>
+							<div class="widget_footer_text">
+								GPA Advocacia é um escritório fundado em Curitiba, voltado a empresas e empresários que buscam
+								<strong>segurança jurídica</strong> aliada à estratégia. Atuamos nas áreas consultiva e contenciosa,
+								sempre com foco em atendimento personalizado, visão de negócios e parceria de longo prazo com nossos clientes.
+							</div>
+							                            <div class="footer_app_btn">
+							                                <a href="contato.html">Agendar atendimento</a>
+							                            </div>						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Áreas de atuação
+							</h3>
+							<div class="practice_list ul-li-block clearfix">
+								<ul>
+									<li><strong style="color:#fff; text-transform:uppercase; font-size:0.85rem; display:block; margin-bottom:10px;">Área Consultiva</strong></li>
+									<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação</a></li>
+									<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+									<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+									<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental e Agronegócio</a></li>
+									<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+									<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+									
+									<li class="mt-3"><strong style="color:#fff; text-transform:uppercase; font-size:0.85rem; display:block; margin-bottom:10px;">Área Contenciosa</strong></li>
+									<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+									<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+									<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+									<li><a href="tributario.html">Direito Tributário</a></li>
+									<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+									<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+									<li><a href="estrategias-empresariais.html">Consultoria Estratégica</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Informações & notícias
+							</h3>
+							<div class="latest-blog-widget">
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt1.jpg" alt="Conteúdo jurídico GPA">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">EXPANSÃO</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="estrategias-empresariais.html">Segurança na Abertura de Filiais</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">Estratégias para estruturar o crescimento da sua empresa em novos estados.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt2.jpg" alt="Artigo sobre governança e compliance">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">GOVERNANÇA</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="compliance-e-regulatorio.html">Compliance como Valor</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">A ética e a transparência como diferenciais competitivos no mercado atual.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt3.jpg" alt="Artigo sobre relações trabalhistas">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">GESTÃO DE RH</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="relacoes-trabalhistas.html">Prevenção Trabalhista</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">Estratégias jurídicas para mitigar riscos e otimizar as relações de trabalho.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt4.jpg" alt="Artigo sobre planejamento jurídico">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">PLANEJAMENTO</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="seguranca-juridica.html">Jurídico Estratégico</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">O papel do jurídico na construção de um negócio sólido e previsível.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="footer_copyright">
+		<div class="container">
+			<div class="footer_copyright_content">
+				<div class="row">
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_social ul-li clearfix">
+							<ul>
+								<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+								<li><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+								<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_logo text-center">
+							<a href="index"><img src="assets/img/logo/flogo-1.png" alt="Logo rodapé GPA Advocacia"></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="copyright_text text-right">
+							© 2026 GPA Advocacia. Desenvolvido por <a href="#">e-Web Agency + Empresarial Web</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/appear.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>

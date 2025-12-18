@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Família e Sucessões | GPA Advocacia</title>
+	<link rel="shortcut icon" href="assets/img/logo/ficon.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/flaticon.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        /* --- ESTILOS GERAIS --- */
+        body { font-family: 'Poppins', sans-serif; color: #444; background-color: #fff; }
+        
+        /* HEADER FIX */
+        .main_header { position: relative; z-index: 999; }
+        .main_navigation .dropdown-menu > li.dropdown{ position: relative; }
+        .main_navigation .dropdown-menu > li.dropdown > ul.dropdown-menu{ position: absolute; top: 0; left: 100%; display: none; z-index: 9999; }
+        .main_navigation a.has-submenu:after{ content: "›"; float: right; margin-left: 10px; opacity: .7; }
+        @media (min-width: 992px){ .main_navigation .dropdown-menu > li.dropdown:hover > ul.dropdown-menu{ display: block; } }
+
+        /* --- HERO --- */
+        .hero-legacy {
+            padding: 150px 0 100px;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('assets/img/portfolio/prt4.jpg') center/cover;
+            color: #fff;
+            text-align: center;
+        }
+        .hero-legacy h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 20px; color: #fff; }
+        .hero-legacy p { font-size: 1.2rem; margin-bottom: 30px; color: #ddd; }
+        
+        .btn-legacy {
+            display: inline-block;
+            background: #5d001e;
+            color: #fff;
+            padding: 12px 30px;
+            font-weight: 600;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: 0.3s;
+        }
+        .btn-legacy:hover { background: #3a0013; color: #fff; text-decoration: none; }
+
+        /* --- INTRO --- */
+        .intro-sec { padding: 80px 0; }
+        .intro-text h2 { font-family: 'Playfair Display', serif; color: #5d001e; margin-bottom: 20px; }
+        .intro-text p { text-align: justify; line-height: 1.8; margin-bottom: 20px; }
+
+        /* --- SERVICES --- */
+        .services-sec { padding: 80px 0; background: #fdfdfd; }
+        .service-box {
+            background: #fff;
+            padding: 30px;
+            border: 1px solid #eee;
+            margin-bottom: 30px;
+            text-align: center;
+            transition: 0.3s;
+            height: 100%;
+        }
+        .service-box:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.05); border-color: #5d001e; }
+        .service-box i { font-size: 2.5rem; color: #5d001e; margin-bottom: 20px; }
+        .service-box h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 10px; }
+        
+        /* --- HOLDING --- */
+        .holding-sec { padding: 80px 0; background: #1a1a1a; color: #fff; }
+        .holding-list li { margin-bottom: 10px; }
+        .holding-list i { color: #5d001e; margin-right: 10px; }
+
+        /* --- FAQ COM BACKGROUND --- */
+        .faq-sec { 
+            padding: 100px 0; 
+            /* Imagem de fundo com overlay branco suave */
+            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('assets/img/background/brbg.jpg') center/cover fixed;
+        }
+        .faq-item { margin-bottom: 15px; border-bottom: 1px solid #ddd; background: transparent; }
+        .faq-question {
+            cursor: pointer; padding: 15px 0; font-weight: 600; color: #5d001e; display: flex; justify-content: space-between;
+        }
+        .faq-answer { display: none; padding-bottom: 15px; color: #666; }
+        .faq-item.active .faq-answer { display: block; }
+
+        /* --- CTA --- */
+        .cta-sec { padding: 80px 0; background: #5d001e; color: #fff; text-align: center; }
+        .btn-white { background: #fff; color: #5d001e; padding: 12px 30px; font-weight: 700; text-transform: uppercase; margin-top: 20px; display: inline-block; }
+        .btn-white:hover { background: #eee; color: #5d001e; text-decoration: none; }
+
+    </style>
+</head>
+<body>
+
+	<!-- Header -->
+<header id="header_id" class="main_header header_style_one">
+		<div class="header_top">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="header_contact_info float-left ul-li">
+						<ul>
+							<li><i class="far fa-envelope"></i> gpa.adv@outlook.com</li>
+							<li><i class="fas fa-phone"></i> (41) 99726-6499</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="header_follow_social float-right ul-li">
+						<ul>
+							<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+							<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /header_top -->
+<div class="header_main_menu">
+<div class="site_logo">
+<a href="index<a href="#" title="GPA Advocacia - Parceria jurídica no mundo dos negócios">
+<img src="assets/img/logo/logo-1.png" alt="Logo GPA Advocacia">
+</a>
+</div>
+<nav class="main_navigation ul-li">
+<ul>
+<li class="dropdown">
+<a href="index.html">Início</a>
+</li>
+<li class="dropdown">
+<a href="#service">Empresa</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="especializacao-missao.html">Especialização &amp; Missão</a></li>
+<li><a href="fundado-em-curitiba.html">Fundado em Curitiba</a></li>
+<!-- NÍVEL 1 -->
+<li class="dropdown">
+<a href="#" class="has-submenu">Sócio Fundador</a>
+<ul class="dropdown-menu clearfix">
+<!-- NÍVEL 2 -->
+<li class="dropdown">
+<a href="gustavo-de-oliveira-pedroso.html" class="has-submenu">Gustavo de Oliveira Pedroso</a>
+<ul class="dropdown-menu clearfix">
+<!-- NÍVEL 3 -->
+<li class="dropdown">
+<a href="#" class="has-submenu">Qualificações</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="especialista-em-direito-empresarial-e-inovacao-uel.html">Especialista em Direito Empresarial e Inovação (UEL)</a></li>
+<li><a href="mba-ibmec.html">MBA (IBMEC)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="seguranca-juridica.html">Segurança Jurídica</a></li>
+<li><a href="estrategias-empresariais.html">Estratégias Empresariais</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#service">Serviços</a>
+<ul class="dropdown-menu clearfix">
+<li class="dropdown">
+<a href="#" class="has-submenu">Área Consultiva</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação de Negócios</a></li>
+<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental, Florestal e Agronegócio</a></li>
+<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#" class="has-submenu">Área Contenciosa</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+<li><a href="tributario.html">Tributário</a></li>
+<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#portfolio">Rede social</a>
+<ul class="dropdown-menu">
+<li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+<li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+<li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+</ul>
+</li>
+
+<li><a href="#">Blog</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+
+
+			<!-- /nav Menu -->
+			<div class="wide_side_bar open_side_area clearfix">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="wide_side_inner">
+				<div class="side_overlay open_side_area"></div>
+				<div class="side_inner_content text-center">
+					<div class="close_btn open_side_area">Voltar <i class="fas fa-arrow-right"></i></div>
+					<div class="side_inner_logo">
+						<a href="index" title="GPA Advocacia">
+							<img src="assets/img/logo/logo-1.png" alt="Logo lateral GPA Advocacia">
+						</a>
+					</div>
+					<p>
+						GPA Advocacia é um escritório fundado em Curitiba, especializado em empresas e empresários que buscam
+						<strong>segurança jurídica aliada às melhores estratégias empresariais</strong>. Atuamos como um verdadeiro
+						<strong>jurídico parceiro de negócios</strong>, apoiando a tomada de decisão e o crescimento sustentável das empresas.
+					</p>
+					<div class="side_contact">
+						<div class="social_widget ul-li headline relative-position">
+							<h3>Siga a GPA nas redes:</h3>
+							<ul>
+								<li class="h-fb"><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+								<li class="h-tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+								<li class="h-bh"><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+								<li class="h-yo"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="side_copywright">
+						© 2026 GPA Advocacia · Desenvolvido por e-Web Agency + Empresarial Web
+					</div>
+				</div>
+			</div>
+			
+			<!-- side bar Inner -->
+			<div class="call_to_quote float-right">
+				<div class="call_icon float-left">
+					<i class="flaticon-call"></i>
+				</div>
+				<span>Atendimento para empresas</span>
+				<span class="call_number">(41) 99726-6499</span>
+				<div class="icon_bg">
+					<i class="flaticon-call"></i>
+				</div>
+			</div>
+			<!-- /call to action -->
+		</div>
+		<!-- /desktop version -->
+		<div class="mobile_menu">
+			<div class="mobile_menu_button open_mobile_menu">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div class="mobile_menu_wrap">
+				<div class="mobile_menu_overlay open_mobile_menu"></div>
+				<div class="mobile_menu_content">
+					<div class="mobile_menu_close open_mobile_menu">
+						<i class="fas fa-window-close"></i>
+					</div>
+					<div class="m-brand-logo text-center">
+						<img src="assets/img/logo/logo-1.png" alt="Logo mobile GPA Advocacia">
+					</div>
+					<nav class="main-navigation  clearfix ul-li">
+						<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+							<li class="dropdown">
+								<a href="index">
+									Início
+								</a>
+							</li>
+							<li><a href="about">Empresa</a></li>
+							<li class="dropdown">
+								<a href="#service">
+									Serviços
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="case">Área Consultiva</a></li>
+									<li><a href="case-2">Área Contenciosa</a></li>
+									<li><a href="case-single">Detalhes dos serviços</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Rede social
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Instagram</a></li>
+									<li><a href="#">Facebook</a></li>
+									<li><a href="#">Linkedin</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Time
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="team">Equipe</a></li>
+									<li><a href="team-single">Sócio fundador</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Blog
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Artigos</a></li>
+									<li><a href="#">Post detalhado</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Páginas
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="contato">Contato</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">Proposta & Investimento</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<div class="free_call_nm">
+						<div class="m_call_icon text-center">
+							<i class="flaticon-call"></i>
+						</div>
+						<div class="m_call_text">
+							<span>ATENDIMENTO EMPRESARIAL</span>
+							<strong>(41) 99726-6499</strong>
+						</div>
+					</div>
+					<div class="m_social_area text-center ul-li">
+						<h3> Siga a GPA:</h3>
+						<ul>
+							<li class="m_fb"><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="m_tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+							<li class="m_lk"><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+							<li class="m_yb"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+						</ul>
+					</div>
+					<div class="m_get_quote">
+						<a href="contato">Falar com o jurídico parceiro</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /mobile menu -->
+	</header>
+
+    <!-- 1. HERO -->
+    <section class="hero-legacy">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1>Família & Sucessões</h1>
+                    <p>Proteção do patrimônio e harmonia entre gerações.</p>
+                    <a href="contact.html" class="btn-legacy">Agendar Atendimento</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. INTRO -->
+    <section class="intro-sec">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="intro-text">
+                        <h2>Gestão de Legado</h2>
+                        <p>O planejamento sucessório é o ato de responsabilidade mais importante que um empresário pode ter. Evita conflitos familiares, reduz custos tributários e garante que o negócio continue prosperando.</p>
+                        <p>A GPA Advocacia atua com discrição e técnica, criando estruturas jurídicas (como Holdings e Testamentos) que blindam o patrimônio contra riscos externos e internos.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="assets/img/service/sr3.jpg" class="img-fluid rounded shadow" alt="Família">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. SERVICES -->
+    <section class="services-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="flaticon-users"></i>
+                        <h3>Planejamento Sucessório</h3>
+                        <p>Organização prévia da transferência de bens para evitar inventários longos e caros.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-file-contract"></i>
+                        <h3>Holding Familiar</h3>
+                        <p>Criação de empresa para gerir o patrimônio, com regras claras de governança e sucessão.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-box">
+                        <i class="fas fa-heart-broken"></i>
+                        <h3>Divórcio Empresarial</h3>
+                        <p>Atuação em separações complexas envolvendo quotas de empresas e partilha de bens.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. HOLDING -->
+    <section class="holding-sec">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <img src="assets/img/portfolio/prt4.jpg" class="img-fluid rounded" alt="Holding">
+                </div>
+                <div class="col-lg-6 pl-lg-5">
+                    <h2 class="mb-4">Por que criar uma Holding?</h2>
+                    <ul class="list-unstyled holding-list">
+                        <li><i class="fas fa-check"></i> Redução de impostos sobre aluguéis (de 27,5% para ~11%).</li>
+                        <li><i class="fas fa-check"></i> Proteção contra dívidas da pessoa física.</li>
+                        <li><i class="fas fa-check"></i> Evita o condomínio de bens entre herdeiros.</li>
+                        <li><i class="fas fa-check"></i> Centralização da gestão financeira da família.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FAQ (Expandido) -->
+    <section class="faq-sec">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2>Dúvidas Frequentes</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            O inventário extrajudicial é mais rápido?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Sim. Se todos os herdeiros forem maiores e estiverem de acordo, o inventário pode ser feito em cartório em poucas semanas, evitando a morosidade do Judiciário.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            A Holding blinda 100% do patrimônio?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Nenhuma blindagem é absoluta (fraudes podem ser desfeitas). Porém, a Holding cria camadas de proteção lícitas que dificultam muito que dívidas operacionais atinjam os bens pessoais da família.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Quanto custa o planejamento sucessório?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            O custo do planejamento é sempre menor que o custo de um inventário sem planejamento (que pode consumir até 20% do patrimônio em impostos e taxas). É um investimento que se paga.
+                        </div>
+                    </div>
+                    <!-- NOVAS PERGUNTAS -->
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Qual a diferença entre Testamento e Doação em Vida?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            O testamento só tem efeito após a morte e exige inventário. A doação transfere o bem imediatamente, mas pode ser feita com reserva de usufruto (os pais continuam usando o bem até o fim da vida).
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Qual o melhor regime de bens para empresários?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Geralmente, a Separação Total de Bens é o mais indicado para evitar que as dívidas da empresa atinjam o cônjuge, ou que o divórcio afete a sociedade empresarial.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Como fazer inventário se existem herdeiros menores?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Se houver herdeiros menores ou incapazes, o inventário deve ser obrigatoriamente judicial, com a participação do Ministério Público para proteger os interesses do menor.
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            Qual o prazo para abrir o inventário?
+                            <i class="fas fa-chevron-down faq-icon"></i>
+                        </div>
+                        <div class="faq-answer">
+                            O prazo legal é de 60 dias após o falecimento. Se o inventário não for aberto nesse período, pode haver cobrança de multa sobre o imposto (ITCMD).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-sec">
+        <div class="container">
+            <h2>Proteja o seu legado hoje.</h2>
+            <p>Atendimento com sigilo absoluto e técnica jurídica.</p>
+            <a href="contato.html" class="btn-white">Falar com Especialista</a>
+        </div>
+    </section>
+
+	<footer id="footer_area" style="background-color:black;" class="footer_section relative-position">
+		<div class="background_overlay"></div>
+		<div class="container">
+			<div class="footer_content">
+				<div class="row">
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Sobre a GPA
+							</h3>
+							<div class="widget_footer_text">
+								GPA Advocacia é um escritório fundado em Curitiba, voltado a empresas e empresários que buscam
+								<strong>segurança jurídica</strong> aliada à estratégia. Atuamos nas áreas consultiva e contenciosa,
+								sempre com foco em atendimento personalizado, visão de negócios e parceria de longo prazo com nossos clientes.
+							</div>
+							                            <div class="footer_app_btn">
+							                                <a href="contato.html">Agendar atendimento</a>
+							                            </div>						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Áreas de atuação
+							</h3>
+							<div class="practice_list ul-li-block clearfix">
+								<ul>
+									<li><strong style="color:#fff; text-transform:uppercase; font-size:0.85rem; display:block; margin-bottom:10px;">Área Consultiva</strong></li>
+									<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação</a></li>
+									<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+									<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+									<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental e Agronegócio</a></li>
+									<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+									<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+									
+									<li class="mt-3"><strong style="color:#fff; text-transform:uppercase; font-size:0.85rem; display:block; margin-bottom:10px;">Área Contenciosa</strong></li>
+									<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+									<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+									<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+									<li><a href="tributario.html">Direito Tributário</a></li>
+									<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+									<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+									<li><a href="estrategias-empresariais.html">Consultoria Estratégica</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Informações & notícias
+							</h3>
+							<div class="latest-blog-widget">
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt1.jpg" alt="Conteúdo jurídico GPA">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">EXPANSÃO</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="estrategias-empresariais.html">Segurança na Abertura de Filiais</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">Estratégias para estruturar o crescimento da sua empresa em novos estados.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt2.jpg" alt="Artigo sobre governança e compliance">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">GOVERNANÇA</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="compliance-e-regulatorio.html">Compliance como Valor</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">A ética e a transparência como diferenciais competitivos no mercado atual.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt3.jpg" alt="Artigo sobre relações trabalhistas">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">GESTÃO DE RH</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="relacoes-trabalhistas.html">Prevenção Trabalhista</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">Estratégias jurídicas para mitigar riscos e otimizar as relações de trabalho.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt4.jpg" alt="Artigo sobre planejamento jurídico">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">PLANEJAMENTO</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="seguranca-juridica.html">Jurídico Estratégico</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">O papel do jurídico na construção de um negócio sólido e previsível.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="footer_copyright">
+		<div class="container">
+			<div class="footer_copyright_content">
+				<div class="row">
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_social ul-li clearfix">
+							<ul>
+								<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+								<li><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+								<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_logo text-center">
+							<a href="index"><img src="assets/img/logo/flogo-1.png" alt="Logo rodapé GPA Advocacia"></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="copyright_text text-right">
+							© 2026 GPA Advocacia. Desenvolvido por <a href="#">e-Web Agency + Empresarial Web</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/appear.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/script.js"></script>
+    <script>
+        // FAQ Accordion
+        $(document).ready(function(){
+            $('.faq-question').click(function(){
+                $(this).parent().toggleClass('active');
+                $(this).next('.faq-answer').slideToggle();
+                $(this).parent().siblings().removeClass('active').find('.faq-answer').slideUp();
+            });
+        });
+    </script>
+</body>
+</html>

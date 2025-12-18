@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Advocacy e Relações Governamentais | GPA Advocacia</title>
+	<link rel="shortcut icon" href="assets/img/logo/ficon.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/flaticon.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS "Institutional & Diplomatic" -->
+    <style>
+        /* --- GERAL --- */
+        body { font-family: 'Times New Roman', serif; color: #444; background-color: #fdfdfd; } /* Fonte Serifada para tom clássico */
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: #222; }
+        .text-gold { color: #b8860b; }
+        .font-sans { font-family: 'Poppins', sans-serif; } /* Contraste moderno */
+        
+        /* --- HEADER --- */
+        .main_navigation .dropdown-menu > li.dropdown{ position: relative; }
+        .main_navigation .dropdown-menu > li.dropdown > ul.dropdown-menu{ position: absolute; top: 0; left: 100%; display: none; z-index: 9999; }
+        .main_navigation a.has-submenu:after{ content: "›"; float: right; margin-left: 10px; opacity: .7; }
+        @media (min-width: 992px){ .main_navigation .dropdown-menu > li.dropdown:hover > ul.dropdown-menu{ display: block; } }
+
+        /* --- HERO "GOVERNMENT" --- */
+        .advocacy-hero {
+            height: 90vh;
+            background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)), url('assets/img/service/at1.jpg'); /* Imagem que remeta a prédios/fóruns */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            border-bottom: 5px solid #b8860b;
+        }
+        .advocacy-hero h1 { font-size: 4.5rem; color: #fff; margin-bottom: 20px; font-style: italic; }
+        .advocacy-hero p { font-family: 'Poppins', sans-serif; font-size: 1.1rem; color: #ddd; max-width: 700px; margin: 0 auto; letter-spacing: 1px; text-transform: uppercase; }
+        .btn-diplomat {
+            background: #fff;
+            color: #222;
+            padding: 15px 50px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            border: 1px solid #fff;
+            margin-top: 40px;
+            transition: 0.3s;
+        }
+        .btn-diplomat:hover { background: #b8860b; border-color: #b8860b; color: #fff; }
+
+        /* --- INTRO "EDITORIAL" --- */
+        .editorial-sec { padding: 120px 0; column-count: 2; column-gap: 50px; }
+        .editorial-sec h2 { column-span: all; text-align: center; margin-bottom: 50px; font-size: 2.5rem; position: relative; }
+        .editorial-sec h2::after { content: ''; display: block; width: 60px; height: 2px; background: #b8860b; margin: 20px auto 0; }
+        .editorial-sec p { font-size: 1.1rem; line-height: 1.9; margin-bottom: 20px; text-align: justify; }
+        .dropcap { float: left; font-size: 4rem; line-height: 0.8; padding-right: 10px; color: #b8860b; font-weight: 700; }
+
+        /* --- STAKEHOLDER MAP (Visual) --- */
+        .map-section { background: #f4f4f4; padding: 100px 0; text-align: center; }
+        .stakeholder-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-top: 50px; }
+        .stakeholder-card {
+            background: #fff;
+            padding: 30px;
+            width: 250px;
+            border-top: 3px solid #ccc;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+        .stakeholder-card:hover { border-color: #b8860b; transform: translateY(-5px); }
+        .sh-icon { font-size: 2rem; color: #555; margin-bottom: 15px; }
+        .sh-title { font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem; margin-bottom: 10px; }
+        .sh-desc { font-size: 0.9rem; color: #777; font-family: 'Poppins', sans-serif; }
+
+        /* --- ETHICS BANNER --- */
+        .ethics-banner {
+            background: #222;
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+        .ethics-banner i { font-size: 3rem; color: #b8860b; margin-bottom: 20px; }
+        .ethics-banner h3 { color: #fff; font-family: 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
+
+        /* --- SERVICES LIST (Classic) --- */
+        .classic-services { padding: 100px 0; }
+        .cs-item { margin-bottom: 40px; border-left: 1px solid #ddd; padding-left: 30px; }
+        .cs-item h4 { font-size: 1.5rem; margin-bottom: 15px; color: #b8860b; }
+        .cs-item p { font-family: 'Poppins', sans-serif; font-size: 0.95rem; line-height: 1.7; color: #666; }
+
+        /* --- CTA --- */
+        .cta-class { padding: 100px 0; text-align: center; background: #fff; border-top: 1px solid #eee; }
+        .cta-class h2 { font-size: 3rem; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+<header id="header_id" class="main_header header_style_one">
+		<div class="header_top">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="header_contact_info float-left ul-li">
+						<ul>
+							<li><i class="far fa-envelope"></i> gpa.adv@outlook.com</li>
+							<li><i class="fas fa-phone"></i> (41) 99726-6499</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="header_follow_social float-right ul-li">
+						<ul>
+							<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+							<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /header_top -->
+<div class="header_main_menu">
+<div class="site_logo">
+<a href="index<a href="#" title="GPA Advocacia - Parceria jurídica no mundo dos negócios">
+<img src="assets/img/logo/logo-1.png" alt="Logo GPA Advocacia">
+</a>
+</div>
+<nav class="main_navigation ul-li">
+<ul>
+<li class="dropdown">
+<a href="index.html">Início</a>
+</li>
+<li class="dropdown">
+<a href="#service">Empresa</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="especializacao-missao.html">Especialização &amp; Missão</a></li>
+<li><a href="fundado-em-curitiba.html">Fundado em Curitiba</a></li>
+<!-- NÍVEL 1 -->
+<li class="dropdown">
+<a href="#" class="has-submenu">Sócio Fundador</a>
+<ul class="dropdown-menu clearfix">
+<!-- NÍVEL 2 -->
+<li class="dropdown">
+<a href="gustavo-de-oliveira-pedroso.html" class="has-submenu">Gustavo de Oliveira Pedroso</a>
+<ul class="dropdown-menu clearfix">
+<!-- NÍVEL 3 -->
+<li class="dropdown">
+<a href="#" class="has-submenu">Qualificações</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="especialista-em-direito-empresarial-e-inovacao-uel.html">Especialista em Direito Empresarial e Inovação (UEL)</a></li>
+<li><a href="mba-ibmec.html">MBA (IBMEC)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="seguranca-juridica.html">Segurança Jurídica</a></li>
+<li><a href="estrategias-empresariais.html">Estratégias Empresariais</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#service">Serviços</a>
+<ul class="dropdown-menu clearfix">
+<li class="dropdown">
+<a href="#" class="has-submenu">Área Consultiva</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação de Negócios</a></li>
+<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental, Florestal e Agronegócio</a></li>
+<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#" class="has-submenu">Área Contenciosa</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+<li><a href="tributario.html">Tributário</a></li>
+<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#portfolio">Rede social</a>
+<ul class="dropdown-menu">
+<li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+<li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+<li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+</ul>
+</li>
+
+<li><a href="#">Blog</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+
+
+			<!-- /nav Menu -->
+			<div class="wide_side_bar open_side_area clearfix">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="wide_side_inner">
+				<div class="side_overlay open_side_area"></div>
+				<div class="side_inner_content text-center">
+					<div class="close_btn open_side_area">Voltar <i class="fas fa-arrow-right"></i></div>
+					<div class="side_inner_logo">
+						<a href="index" title="GPA Advocacia">
+							<img src="assets/img/logo/logo-1.png" alt="Logo lateral GPA Advocacia">
+						</a>
+					</div>
+					<p>
+						GPA Advocacia é um escritório fundado em Curitiba, especializado em empresas e empresários que buscam
+						<strong>segurança jurídica aliada às melhores estratégias empresariais</strong>. Atuamos como um verdadeiro
+						<strong>jurídico parceiro de negócios</strong>, apoiando a tomada de decisão e o crescimento sustentável das empresas.
+					</p>
+					<div class="side_contact">
+						<div class="social_widget ul-li headline relative-position">
+							<h3>Siga a GPA nas redes:</h3>
+							<ul>
+								<li class="h-fb"><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+								<li class="h-tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+								<li class="h-bh"><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+								<li class="h-yo"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="side_copywright">
+						© 2026 GPA Advocacia · Desenvolvido por e-Web Agency + Empresarial Web
+					</div>
+				</div>
+			</div>
+			
+			<!-- side bar Inner -->
+			<div class="call_to_quote float-right">
+				<div class="call_icon float-left">
+					<i class="flaticon-call"></i>
+				</div>
+				<span>Atendimento para empresas</span>
+				<span class="call_number">(41) 99726-6499</span>
+				<div class="icon_bg">
+					<i class="flaticon-call"></i>
+				</div>
+			</div>
+			<!-- /call to action -->
+		</div>
+		<!-- /desktop version -->
+		<div class="mobile_menu">
+			<div class="mobile_menu_button open_mobile_menu">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div class="mobile_menu_wrap">
+				<div class="mobile_menu_overlay open_mobile_menu"></div>
+				<div class="mobile_menu_content">
+					<div class="mobile_menu_close open_mobile_menu">
+						<i class="fas fa-window-close"></i>
+					</div>
+					<div class="m-brand-logo text-center">
+						<img src="assets/img/logo/logo-1.png" alt="Logo mobile GPA Advocacia">
+					</div>
+					<nav class="main-navigation  clearfix ul-li">
+						<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+							<li class="dropdown">
+								<a href="index">
+									Início
+								</a>
+							</li>
+							<li><a href="about">Empresa</a></li>
+							<li class="dropdown">
+								<a href="#service">
+									Serviços
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="case">Área Consultiva</a></li>
+									<li><a href="case-2">Área Contenciosa</a></li>
+									<li><a href="case-single">Detalhes dos serviços</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Rede social
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Instagram</a></li>
+									<li><a href="#">Facebook</a></li>
+									<li><a href="#">Linkedin</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Time
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="team">Equipe</a></li>
+									<li><a href="team-single">Sócio fundador</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Blog
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Artigos</a></li>
+									<li><a href="#">Post detalhado</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Páginas
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="contato">Contato</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">Proposta & Investimento</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<div class="free_call_nm">
+						<div class="m_call_icon text-center">
+							<i class="flaticon-call"></i>
+						</div>
+						<div class="m_call_text">
+							<span>ATENDIMENTO EMPRESARIAL</span>
+							<strong>(41) 99726-6499</strong>
+						</div>
+					</div>
+					<div class="m_social_area text-center ul-li">
+						<h3> Siga a GPA:</h3>
+						<ul>
+							<li class="m_fb"><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="m_tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+							<li class="m_lk"><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+							<li class="m_yb"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+						</ul>
+					</div>
+					<div class="m_get_quote">
+						<a href="contato">Falar com o jurídico parceiro</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /mobile menu -->
+	</header>
+
+    <!-- 1. HERO -->
+    <section class="advocacy-hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 wow fadeInUp">
+                    <h1>Advocacy & Public Affairs</h1>
+                    <p>O diálogo técnico e legítimo entre o setor produtivo e o poder público.</p><br><br>
+                    <a href="contato.html" class="btn-diplomat">Relações Governamentais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. EDITORIAL TEXT (Columns) -->
+    <section class="container">
+        <div class="editorial-sec wow fadeInUp">
+            <h2>Influência Técnica na Tomada de Decisão</h2>
+            <p><span class="dropcap">A</span>s decisões tomadas nas esferas legislativa e executiva têm impacto direto e imediato sobre a viabilidade dos negócios. Em um ambiente democrático, o Advocacy surge como a ferramenta legítima para que setores da sociedade civil e empresarial apresentem seus pontos de vista, dados e preocupações aos tomadores de decisão.</p>
+            <p>A GPA Advocacia atua na construção de pontes. Não fazemos lobby no sentido pejorativo da palavra; fazemos representação de interesses baseada em dados, técnica jurídica e análise de impacto regulatório. Nossa missão é qualificar o debate público, garantindo que as normas criadas sejam eficientes, justas e exequíveis para o setor produtivo.</p>
+        </div>
+    </section>
+
+    <!-- 3. STAKEHOLDER MAP -->
+    <section class="map-section">
+        <div class="container">
+            <h3 class="font-sans mb-5">Atuação Multidisciplinar</h3>
+            <div class="stakeholder-grid">
+                <div class="stakeholder-card wow fadeInUp" data-wow-delay="0.1s">
+                    <i class="fas fa-landmark sh-icon"></i>
+                    <div class="sh-title">Legislativo</div>
+                    <div class="sh-desc">Monitoramento de PLs no Congresso e Assembleias.</div>
+                </div>
+                <div class="stakeholder-card wow fadeInUp" data-wow-delay="0.2s">
+                    <i class="fas fa-building sh-icon"></i>
+                    <div class="sh-title">Executivo</div>
+                    <div class="sh-desc">Diálogo com Ministérios e Secretarias.</div>
+                </div>
+                <div class="stakeholder-card wow fadeInUp" data-wow-delay="0.3s">
+                    <i class="fas fa-balance-scale sh-icon"></i>
+                    <div class="sh-title">Agências</div>
+                    <div class="sh-desc">Defesa técnica em Agências Reguladoras.</div>
+                </div>
+                <div class="stakeholder-card wow fadeInUp" data-wow-delay="0.4s">
+                    <i class="fas fa-newspaper sh-icon"></i>
+                    <div class="sh-title">Sociedade</div>
+                    <div class="sh-desc">Gestão de reputação e opinião pública.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. ETHICS BANNER -->
+    <section class="ethics-banner">
+        <div class="container">
+            <i class="fas fa-hand-holding-heart wow zoomIn"></i>
+            <h3 class="wow fadeInUp">Compliance & Ética</h3>
+            <p class="font-sans text-white-50 mt-3" style="max-width: 600px; margin: 0 auto;">Toda interação com agentes públicos é pautada pela Lei Anticorrupção e pelos mais rígidos padrões de integridade.</p>
+        </div>
+    </section>
+
+    <!-- 5. SERVICES LIST -->
+    <section class="classic-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 wow fadeInLeft">
+                    <div class="cs-item">
+                        <h4>Monitoramento Legislativo</h4>
+                        <p>Acompanhamento diário de Projetos de Lei e normas que impactam o setor do cliente, com relatórios de inteligência e prognóstico de aprovação.</p>
+                    </div>
+                    <div class="cs-item">
+                        <h4>Notas Técnicas</h4>
+                        <p>Elaboração de pareceres jurídicos e econômicos profundos para subsidiar o debate em Audiências Públicas e Comissões Parlamentares.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 wow fadeInRight">
+                    <div class="cs-item">
+                        <h4>Gestão de Crise</h4>
+                        <p>Atuação jurídica e estratégica em CPIs (Comissões Parlamentares de Inquérito) e crises de imagem envolvendo regulação.</p>
+                    </div>
+                    <div class="cs-item">
+                        <h4>Coalizões</h4>
+                        <p>Formação e gestão de grupos de interesse e associações setoriais para fortalecer a representatividade perante o Estado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FAQ INSTITUCIONAL (NOVO) -->
+    <section class="faq-advocacy" style="padding: 100px 0; background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('assets/img/background/vdbg.jpg') center/cover fixed; color: #fff;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 style="color: #fff; font-family: 'Playfair Display', serif;">Perguntas Frequentes</h2>
+                <p style="color: #b8860b; font-family: 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1px;">Transparência nas Relações Governamentais</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- P1 -->
+                    <div class="mb-4">
+                        <h5 style="color: #fff; font-weight: 700; font-family: 'Poppins', sans-serif;">Advocacy e Lobby são a mesma coisa?</h5>
+                        <p style="color: #ccc; font-family: 'Poppins', sans-serif; font-size: 0.95rem;">Na prática, sim. O termo "Lobby" foi estigmatizado no Brasil, mas trata-se do exercício legítimo de representação de interesses. Advocacy é um termo mais amplo que engloba também a defesa de causas sociais e difusas perante a opinião pública.</p>
+                    </div>
+                    <!-- P2 -->
+                    <div class="mb-4">
+                        <h5 style="color: #fff; font-weight: 700; font-family: 'Poppins', sans-serif;">Essa atividade é regulamentada?</h5>
+                        <p style="color: #ccc; font-family: 'Poppins', sans-serif; font-size: 0.95rem;">A atividade é lícita e garantida pela Constituição (direito de petição). Embora não haja uma lei específica regulamentando a profissão de lobista, ela deve seguir estritamente a Lei Anticorrupção, a Lei de Conflito de Interesses e as normas de ética pública.</p>
+                    </div>
+                    <!-- P3 -->
+                    <div class="mb-4">
+                        <h5 style="color: #fff; font-weight: 700; font-family: 'Poppins', sans-serif;">Pequenas empresas podem fazer Advocacy?</h5>
+                        <p style="color: #ccc; font-family: 'Poppins', sans-serif; font-size: 0.95rem;">Sim, geralmente através de Associações de Classe ou Sindicatos. A GPA auxilia na formação dessas coalizões para que pequenos empresários tenham força política para defender seus interesses em conjunto.</p>
+                    </div>
+                    <!-- P4 -->
+                    <div class="mb-4">
+                        <h5 style="color: #fff; font-weight: 700; font-family: 'Poppins', sans-serif;">Como mitigar riscos de Compliance?</h5>
+                        <p style="color: #ccc; font-family: 'Poppins', sans-serif; font-size: 0.95rem;">Todas as interações com agentes públicos devem ser formais, registradas em ata e, preferencialmente, públicas. Jamais oferecemos brindes ou vantagens indevidas. A técnica é o nosso único argumento.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-class">
+        <div class="container">
+            <h2 class="wow fadeInUp">Sua voz precisa ser ouvida.</h2>
+            <p class="font-sans text-muted mb-4 wow fadeInUp">Não deixe que decidam o futuro do seu negócio sem a sua participação.</p>
+            <a href="contato.html" class="btn-diplomat wow fadeInUp" style="background: #222; color: #fff; border-color: #222;">Agendar Reunião Institucional</a>
+        </div>
+    </section>
+
+	<footer id="footer_area" style="background-color:black;" class="footer_section relative-position">
+		<div class="background_overlay"></div>
+		<div class="container">
+			<div class="footer_content">
+				<div class="row">
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Sobre a GPA
+							</h3>
+							<div class="widget_footer_text">
+								GPA Advocacia é um escritório fundado em Curitiba, voltado a empresas e empresários que buscam
+								<strong>segurança jurídica</strong> aliada à estratégia. Atuamos nas áreas consultiva e contenciosa,
+								sempre com foco em atendimento personalizado, visão de negócios e parceria de longo prazo com nossos clientes.
+							</div>
+							                            <div class="footer_app_btn">
+							                                <a href="contato.html">Agendar atendimento</a>
+							                            </div>						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Áreas de atuação
+							</h3>
+							<div class="practice_list ul-li-block clearfix">
+								<ul>
+									<li><strong style="color:#fff; text-transform:uppercase; font-size:0.85rem; display:block; margin-bottom:10px;">Área Consultiva</strong></li>
+									<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação</a></li>
+									<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+									<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+									<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental e Agronegócio</a></li>
+									<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+									<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+									
+									<li class="mt-3"><strong style="color:#fff; text-transform:uppercase; font-size:0.85rem; display:block; margin-bottom:10px;">Área Contenciosa</strong></li>
+									<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+									<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+									<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+									<li><a href="tributario.html">Direito Tributário</a></li>
+									<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+									<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+									<li><a href="estrategias-empresariais.html">Consultoria Estratégica</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Informações & notícias
+							</h3>
+							<div class="latest-blog-widget">
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt1.jpg" alt="Conteúdo jurídico GPA">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">EXPANSÃO</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="estrategias-empresariais.html">Segurança na Abertura de Filiais</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">Estratégias para estruturar o crescimento da sua empresa em novos estados.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt2.jpg" alt="Artigo sobre governança e compliance">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">GOVERNANÇA</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="compliance-e-regulatorio.html">Compliance como Valor</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">A ética e a transparência como diferenciais competitivos no mercado atual.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt3.jpg" alt="Artigo sobre relações trabalhistas">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">GESTÃO DE RH</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="relacoes-trabalhistas.html">Prevenção Trabalhista</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">Estratégias jurídicas para mitigar riscos e otimizar as relações de trabalho.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt4.jpg" alt="Artigo sobre planejamento jurídico">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">PLANEJAMENTO</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="seguranca-juridica.html">Jurídico Estratégico</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">O papel do jurídico na construção de um negócio sólido e previsível.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="footer_copyright">
+		<div class="container">
+			<div class="footer_copyright_content">
+				<div class="row">
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_social ul-li clearfix">
+							<ul>
+								<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+								<li><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+								<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_logo text-center">
+							<a href="index"><img src="assets/img/logo/flogo-1.png" alt="Logo rodapé GPA Advocacia"></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="copyright_text text-right">
+							© 2026 GPA Advocacia. Desenvolvido por <a href="#">e-Web Agency + Empresarial Web</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/appear.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>

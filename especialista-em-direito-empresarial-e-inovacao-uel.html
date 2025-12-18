@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Especialista em Direito Empresarial | UEL - GPA Advocacia</title>
+	<link rel="shortcut icon" href="assets/img/logo/ficon.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Gustavo de Oliveira Pedroso, advogado especialista em Direito Empresarial e Inovação pela UEL. Consultoria jurídica para empresas, holdings e startups em Curitiba e região.">
+    
+    <!-- Libraries -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/flaticon.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS "Academic Authority" -->
+    <style>
+        /* --- GERAL --- */
+        body { font-family: 'Georgia', serif; color: #333; background-color: #fdfdfd; line-height: 1.8; }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; color: #003366; } /* Azul Real UEL */
+        .text-silver { color: #7f8c8d; }
+        .text-royal { color: #003366; }
+        .font-sans { font-family: 'Poppins', sans-serif; }
+        
+        /* --- HEADER --- */
+        .main_navigation .dropdown-menu > li.dropdown{ position: relative; }
+        .main_navigation .dropdown-menu > li.dropdown > ul.dropdown-menu{ position: absolute; top: 0; left: 100%; display: none; z-index: 9999; }
+        .main_navigation a.has-submenu:after{ content: "›"; float: right; margin-left: 10px; opacity: .7; }
+        @media (min-width: 992px){ .main_navigation .dropdown-menu > li.dropdown:hover > ul.dropdown-menu{ display: block; } }
+
+        /* --- HERO "MAGNA CUM LAUDE" --- */
+        .academic-hero {
+            padding: 180px 0 120px;
+            background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.7)), url('assets/img/background/brbg.jpg'); /* Fundo sóbrio */
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            text-align: center;
+            border-bottom: 5px solid #bdc3c7;
+        }
+        .academic-hero h1 { font-size: 3.5rem; color: #fff; margin-bottom: 20px; font-style: italic; }
+        .academic-hero p { font-family: 'Poppins', sans-serif; font-size: 1.1rem; max-width: 700px; margin: 0 auto 40px; color: #ecf0f1; text-transform: uppercase; letter-spacing: 2px; }
+        .badge-uel {
+            background: #fff; color: #003366; padding: 10px 25px; border-radius: 50px; font-weight: 700; font-family: 'Poppins', sans-serif; display: inline-block; margin-bottom: 30px; box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        /* --- INTRO "TRADITION & INNOVATION" --- */
+        .intro-sec { padding: 100px 0; }
+        .intro-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 50px; align-items: center; }
+        .intro-img { border-radius: 5px; box-shadow: 20px 20px 0 #ecf0f1; border: 1px solid #ddd; padding: 10px; background: #fff; }
+        .intro-content h2 { font-size: 2.5rem; margin-bottom: 30px; }
+        .intro-content p { font-size: 1.1rem; margin-bottom: 20px; color: #555; text-align: justify; }
+        .quote-academic {
+            border-left: 4px solid #003366; padding-left: 20px; font-style: italic; color: #7f8c8d; margin: 30px 0; font-size: 1.2rem;
+        }
+
+        /* --- KNOWLEDGE MATRIX (Modules) --- */
+        .matrix-sec { background: #f4f6f7; padding: 100px 0; }
+        .matrix-title { text-align: center; margin-bottom: 60px; }
+        .matrix-title h2 { font-size: 3rem; }
+        .matrix-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
+        
+        .module-card {
+            background: #fff; padding: 40px; border-top: 4px solid #bdc3c7; transition: 0.3s;
+        }
+        .module-card:hover { border-color: #003366; transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
+        .mod-icon { font-size: 2rem; color: #003366; margin-bottom: 20px; }
+        .module-card h4 { font-family: 'Poppins', sans-serif; font-size: 1.3rem; margin-bottom: 15px; font-weight: 700; }
+        .module-card ul { padding-left: 20px; margin: 0; }
+        .module-card li { margin-bottom: 8px; font-family: 'Poppins', sans-serif; font-size: 0.9rem; color: #666; }
+
+        /* --- APPLICATION (Theory to Practice) --- */
+        .app-sec { padding: 100px 0; background: #003366; color: #fff; }
+        .app-flex { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+        .app-text { width: 45%; }
+        .app-text h2 { color: #fff; font-size: 2.8rem; margin-bottom: 30px; }
+        .app-text p { font-family: 'Poppins', sans-serif; color: #bdc3c7; font-size: 1.1rem; }
+        .app-visual { width: 45%; position: relative; }
+        .stat-circle {
+            width: 150px; height: 150px; border: 2px solid #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column; text-align: center; margin: 20px; float: left;
+        }
+        .stat-circle h3 { color: #fff; font-size: 2.5rem; margin: 0; font-family: 'Poppins', sans-serif; }
+        .stat-circle span { font-size: 0.8rem; font-family: 'Poppins', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* --- FAQ SECTION (Expandido para SEO) --- */
+        .academic-faq { padding: 100px 0; background: #fff; }
+        .faq-container { max-width: 900px; margin: 0 auto; }
+        .faq-item { margin-bottom: 20px; border: 1px solid #eef2f4; border-radius: 8px; overflow: hidden; }
+        .faq-question { 
+            background: #f8fafc; padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.3s;
+        }
+        .faq-question:hover { background: #f1f5f9; }
+        .faq-question h4 { font-family: 'Poppins', sans-serif; font-size: 1.1rem; margin: 0; color: #003366; font-weight: 600; }
+        .faq-answer { padding: 25px; display: none; background: #fff; border-top: 1px solid #eef2f4; }
+        .faq-answer p { margin: 0; font-family: 'Inter', sans-serif; font-size: 1rem; color: #555; }
+        .faq-icon { transition: 0.3s; color: #003366; }
+        .faq-item.active .faq-icon { transform: rotate(180deg); }
+        .faq-item.active .faq-answer { display: block; }
+
+        /* --- CTA --- */
+        .cta-academic { padding: 100px 0; text-align: center; background: #fff; border-top: 1px solid #eee; }
+        .btn-royal {
+            background: #003366; color: #fff; padding: 15px 50px; font-family: 'Poppins', sans-serif; text-transform: uppercase; font-weight: 700; border: none; transition: 0.3s;
+        }
+        .btn-royal:hover { background: #002244; transform: scale(1.05); }
+
+    </style>
+</head>
+<body>
+
+<header id="header_id" class="main_header header_style_one">
+		<div class="header_top">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="header_contact_info float-left ul-li">
+						<ul>
+							<li><i class="far fa-envelope"></i> gpa.adv@outlook.com</li>
+							<li><i class="fas fa-phone"></i> (41) 99726-6499</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="header_follow_social float-right ul-li">
+						<ul>
+							<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+							<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /header_top -->
+<div class="header_main_menu">
+<div class="site_logo">
+<a href="index<a href="#" title="GPA Advocacia - Parceria jurídica no mundo dos negócios">
+<img src="assets/img/logo/logo-1.png" alt="Logo GPA Advocacia">
+</a>
+</div>
+<nav class="main_navigation ul-li">
+<ul>
+<li class="dropdown">
+<a href="index.html">Início</a>
+</li>
+<li class="dropdown">
+<a href="#service">Empresa</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="especializacao-missao.html">Especialização &amp; Missão</a></li>
+<li><a href="fundado-em-curitiba.html">Fundado em Curitiba</a></li>
+<!-- NÍVEL 1 -->
+<li class="dropdown">
+<a href="#" class="has-submenu">Sócio Fundador</a>
+<ul class="dropdown-menu clearfix">
+<!-- NÍVEL 2 -->
+<li class="dropdown">
+<a href="gustavo-de-oliveira-pedroso.html" class="has-submenu">Gustavo de Oliveira Pedroso</a>
+<ul class="dropdown-menu clearfix">
+<!-- NÍVEL 3 -->
+<li class="dropdown">
+<a href="#" class="has-submenu">Qualificações</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="especialista-em-direito-empresarial-e-inovacao-uel.html">Especialista em Direito Empresarial e Inovação (UEL)</a></li>
+<li><a href="mba-ibmec.html">MBA (IBMEC)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="seguranca-juridica.html">Segurança Jurídica</a></li>
+<li><a href="estrategias-empresariais.html">Estratégias Empresariais</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#service">Serviços</a>
+<ul class="dropdown-menu clearfix">
+<li class="dropdown">
+<a href="#" class="has-submenu">Área Consultiva</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação de Negócios</a></li>
+<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental, Florestal e Agronegócio</a></li>
+<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#" class="has-submenu">Área Contenciosa</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+<li><a href="tributario.html">Tributário</a></li>
+<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#portfolio">Rede social</a>
+<ul class="dropdown-menu">
+<li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+<li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+<li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+</ul>
+</li>
+
+<li><a href="#">Blog</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+
+
+			<!-- /nav Menu -->
+			<div class="wide_side_bar open_side_area clearfix">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="wide_side_inner">
+				<div class="side_overlay open_side_area"></div>
+				<div class="side_inner_content text-center">
+					<div class="close_btn open_side_area">Voltar <i class="fas fa-arrow-right"></i></div>
+					<div class="side_inner_logo">
+						<a href="index" title="GPA Advocacia">
+							<img src="assets/img/logo/logo-1.png" alt="Logo lateral GPA Advocacia">
+						</a>
+					</div>
+					<p>
+						GPA Advocacia é um escritório fundado em Curitiba, especializado em empresas e empresários que buscam
+						<strong>segurança jurídica aliada às melhores estratégias empresariais</strong>. Atuamos como um verdadeiro
+						<strong>jurídico parceiro de negócios</strong>, apoiando a tomada de decisão e o crescimento sustentável das empresas.
+					</p>
+					<div class="side_contact">
+						<div class="social_widget ul-li headline relative-position">
+							<h3>Siga a GPA nas redes:</h3>
+							<ul>
+								<li class="h-fb"><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+								<li class="h-tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+								<li class="h-bh"><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+								<li class="h-yo"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="side_copywright">
+						© 2026 GPA Advocacia · Desenvolvido por e-Web Agency + Empresarial Web
+					</div>
+				</div>
+			</div>
+			
+			<!-- side bar Inner -->
+			<div class="call_to_quote float-right">
+				<div class="call_icon float-left">
+					<i class="flaticon-call"></i>
+				</div>
+				<span>Atendimento para empresas</span>
+				<span class="call_number">(41) 99726-6499</span>
+				<div class="icon_bg">
+					<i class="flaticon-call"></i>
+				</div>
+			</div>
+			<!-- /call to action -->
+		</div>
+		<!-- /desktop version -->
+		<div class="mobile_menu">
+			<div class="mobile_menu_button open_mobile_menu">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div class="mobile_menu_wrap">
+				<div class="mobile_menu_overlay open_mobile_menu"></div>
+				<div class="mobile_menu_content">
+					<div class="mobile_menu_close open_mobile_menu">
+						<i class="fas fa-window-close"></i>
+					</div>
+					<div class="m-brand-logo text-center">
+						<img src="assets/img/logo/logo-1.png" alt="Logo mobile GPA Advocacia">
+					</div>
+					<nav class="main-navigation  clearfix ul-li">
+						<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+							<li class="dropdown">
+								<a href="index">
+									Início
+								</a>
+							</li>
+							<li><a href="about">Empresa</a></li>
+							<li class="dropdown">
+								<a href="#service">
+									Serviços
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="case">Área Consultiva</a></li>
+									<li><a href="case-2">Área Contenciosa</a></li>
+									<li><a href="case-single">Detalhes dos serviços</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Rede social
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Instagram</a></li>
+									<li><a href="#">Facebook</a></li>
+									<li><a href="#">Linkedin</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Time
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="team">Equipe</a></li>
+									<li><a href="team-single">Sócio fundador</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Blog
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Artigos</a></li>
+									<li><a href="#">Post detalhado</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Páginas
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="contato">Contato</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">Proposta & Investimento</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<div class="free_call_nm">
+						<div class="m_call_icon text-center">
+							<i class="flaticon-call"></i>
+						</div>
+						<div class="m_call_text">
+							<span>ATENDIMENTO EMPRESARIAL</span>
+							<strong>(41) 99726-6499</strong>
+						</div>
+					</div>
+					<div class="m_social_area text-center ul-li">
+						<h3> Siga a GPA:</h3>
+						<ul>
+							<li class="m_fb"><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="m_tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+							<li class="m_lk"><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+							<li class="m_yb"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+						</ul>
+					</div>
+					<div class="m_get_quote">
+						<a href="contato">Falar com o jurídico parceiro</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /mobile menu -->
+	</header>
+
+    <!-- 1. HERO -->
+    <section class="academic-hero">
+        <div class="container wow fadeInUp">
+            <span class="badge-uel">UEL - Universidade Estadual de Londrina</span>
+            <h1>Direito Empresarial & Inovação</h1>
+            <p>Especialização em alto nível para lidar com as complexidades do mercado moderno.</p>
+        </div>
+    </section>
+
+    <!-- 2. INTRO -->
+    <section class="intro-sec">
+        <div class="container">
+            <div class="intro-grid">
+                <div class="wow fadeInLeft">
+                    <div class="intro-img">
+                        <img src="assets/img/achive/cer1.png" alt="Certificação UEL" class="img-fluid">
+                    </div>
+                </div>
+                <div class="intro-content wow fadeInRight">
+                    <h2>Tradição e Vanguarda</h2>
+                    <p>A Universidade Estadual de Londrina (UEL) é reconhecida como uma das mais prestigiadas faculdades de Direito do Brasil. Sua pós-graduação em Direito Empresarial não foca apenas na doutrina clássica, mas na aplicação do direito em cenários de inovação e tecnologia.</p>
+                    <div class="quote-academic">
+                        "O Direito Empresarial não é estático. Ele deve acompanhar a velocidade das Startups e a solidez das Holdings."
+                    </div>
+                    <p>Essa formação conferiu ao sócio fundador da GPA, Gustavo de Oliveira Pedroso, a capacidade técnica de transitar entre dois mundos: a segurança jurídica necessária para grandes corporações e a flexibilidade exigida pela nova economia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. KNOWLEDGE MATRIX -->
+    <section class="matrix-sec">
+        <div class="container">
+            <div class="matrix-title">
+                <span class="font-sans text-silver text-uppercase font-weight-bold">Grade Curricular</span>
+                <h2>Matriz de Conhecimento</h2>
+            </div>
+            <div class="matrix-grid">
+                <!-- Mod 1 -->
+                <div class="module-card wow fadeInUp">
+                    <i class="flaticon-courthouse mod-icon"></i>
+                    <h4>Direito Societário Avançado</h4>
+                    <ul>
+                        <li>Estruturação de Holdings e Grupos Econômicos.</li>
+                        <li>Acordos de Acionistas e Governança Corporativa.</li>
+                        <li>Operações de M&A (Fusões e Aquisições).</li>
+                        <li>Dissolução de Sociedades e Apuração de Haveres.</li>
+                    </ul>
+                </div>
+                <!-- Mod 2 -->
+                <div class="module-card wow fadeInUp" data-wow-delay="0.2s">
+                     <i class="flaticon-courthouse mod-icon"></i>
+                    <h4>Contratos Empresariais</h4>
+                    <ul>
+                        <li>Teoria Geral dos Contratos e Boa-fé Objetiva.</li>
+                        <li>Contratos de Distribuição, Franquia e Representação.</li>
+                        <li>Cláusulas de Hardship e Resolução por Onerosidade Excessiva.</li>
+                        <li>Negociação e Redação Contratual Estratégica.</li>
+                    </ul>
+                </div>
+                <!-- Mod 3 -->
+                <div class="module-card wow fadeInUp" data-wow-delay="0.4s">
+                     <i class="flaticon-courthouse mod-icon"></i>
+                    <h4>Direito da Inovação</h4>
+                    <ul>
+                        <li>Marco Legal das Startups e Investimento Anjo.</li>
+                        <li>Propriedade Intelectual (Marcas, Patentes, Software).</li>
+                        <li>Proteção de Dados (LGPD) e Compliance Digital.</li>
+                        <li>Contratos de Transferência de Tecnologia.</li>
+                    </ul>
+                </div>
+                <!-- Mod 4 -->
+                <div class="module-card wow fadeInUp" data-wow-delay="0.6s">
+                     <i class="flaticon-courthouse mod-icon"></i>
+                    <h4>Crise da Empresa</h4>
+                    <ul>
+                        <li>Recuperação Judicial e Extrajudicial.</li>
+                        <li>Falência e Classificação de Créditos.</li>
+                        <li>Turnaround e Reestruturação de Passivos.</li>
+                        <li>Blindagem Patrimonial Lícita.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. APP SEC -->
+    <section class="app-sec">
+        <div class="container">
+            <div class="app-flex">
+                <div class="app-text wow fadeInLeft">
+                    <h2>Da Teoria à Prática</h2>
+                    <p>O conhecimento acadêmico só tem valor quando gera resultados. A especialização na UEL permitiu à GPA desenvolver metodologias próprias de consultoria que reduzem riscos reais.</p>
+                    <p class="mt-4">Cada cláusula contratual que redigimos e cada estrutura societária que desenhamos tem base em anos de estudo e jurisprudência consolidada.</p>
+                </div>
+                <div class="app-visual wow fadeInRight">
+                    <div class="stat-circle">
+                        <h3>360h</h3>
+                        <span>Carga Horária</span>
+                    </div>
+                    <div class="stat-circle">
+                        <h3>100%</h3>
+                        <span>Aplicabilidade</span>
+                    </div>
+                    <div class="stat-circle">
+                        <h3>A+</h3>
+                        <span>Excelência</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FAQ SECTION (Expandido para 9 Perguntas SEO) -->
+    <section class="academic-faq">
+        <div class="container">
+            <div class="section-header text-center mb-5 wow fadeInUp">
+                <h2 class="text-royal">Insights Jurídicos & Dúvidas Frequentes</h2>
+                <p class="text-muted">Perguntas essenciais para empresários que buscam segurança jurídica.</p>
+            </div>
+            <div class="faq-container">
+                <!-- FAQ 1 -->
+                <div class="faq-item wow fadeInUp">
+                    <div class="faq-question">
+                        <h4>Qual a diferença entre um advogado generalista e um especialista em Direito Empresarial?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A especialização pela UEL garante um aprofundamento em institutos complexos que um generalista raramente domina, como a apuração de haveres em dissoluções societárias, a estruturação de recuperação judicial e teses modernas de inovação. É a diferença entre "resolver processos" e "estruturar negócios".</p>
+                    </div>
+                </div>
+                <!-- FAQ 2 -->
+                <div class="faq-item wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="faq-question">
+                        <h4>O que é o Direito da Inovação na prática da GPA?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O Direito da Inovação estuda as novas relações jurídicas da economia digital. Na prática, usamos esse conhecimento para criar contratos de Vesting (participação de sócios/colaboradores), proteger o código-fonte de softwares como propriedade intelectual e adequar startups ao Marco Legal.</p>
+                    </div>
+                </div>
+                <!-- FAQ 3 -->
+                <div class="faq-item wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="faq-question">
+                        <h4>Como a formação acadêmica robusta ajuda na prevenção de falências?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Um especialista entende os sinais de crise da empresa muito antes deles se tornarem insolvência. O conhecimento em Recuperação de Empresas permite renegociações de passivos tributários e bancários com base em estratégias legais de "Turnaround", evitando a falência.</p>
+                    </div>
+                </div>
+                <!-- FAQ 4 -->
+                <div class="faq-item wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="faq-question">
+                        <h4>Por que a GPA foca tanto em Governança Corporativa?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Empresas sem governança morrem com o dono. A especialização nos deu as ferramentas para separar o patrimônio da família do patrimônio da empresa, profissionalizando a diretoria e aumentando o "valuation" (valor de mercado) da companhia.</p>
+                    </div>
+                </div>
+                
+                <!-- NOVAS PERGUNTAS SEO -->
+                
+                <!-- FAQ 5 -->
+                <div class="faq-item wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="faq-question">
+                        <h4>A GPA Advocacia atua apenas em Curitiba ou em todo o Brasil?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Apesar de nossa sede ser em <strong>Curitiba</strong>, nossa atuação é nacional. Atendemos empresas de São Paulo, Santa Catarina e outros estados através de consultoria jurídica online e presencial, utilizando ferramentas digitais para garantir agilidade no atendimento em todo o Brasil.</p>
+                    </div>
+                </div>
+                <!-- FAQ 6 -->
+                <div class="faq-item wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="faq-question">
+                        <h4>Qual o momento certo para contratar uma Consultoria Jurídica Empresarial?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>O ideal é a advocacia preventiva, antes do problema surgir. Contratar um advogado empresarial na fase de estruturação do negócio, elaboração de contratos ou planejamento tributário custa, em média, 7x menos do que defender a empresa em processos judiciais contenciosos.</p>
+                    </div>
+                </div>
+                <!-- FAQ 7 -->
+                <div class="faq-item wow fadeInUp" data-wow-delay="0.6s">
+                    <div class="faq-question">
+                        <h4>A especialização em Inovação ajuda empresas tradicionais?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sem dúvida. Empresas tradicionais estão passando por transformação digital. Nosso conhecimento em Direito da Inovação ajuda indústrias e comércios a se adaptarem à LGPD, digitalizarem contratos e protegerem seus ativos intangíveis na internet.</p>
+                    </div>
+                </div>
+                <!-- FAQ 8 -->
+                <div class="faq-item wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="faq-question">
+                        <h4>Como funciona a Blindagem Patrimonial na prática?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>A blindagem patrimonial (ou proteção patrimonial) é feita através da criação de Holdings e estruturas societárias lícitas que separam os bens pessoais dos sócios dos riscos operacionais da empresa. Isso impede que uma dívida trabalhista ou fiscal atinja a casa ou o carro da família.</p>
+                    </div>
+                </div>
+                <!-- FAQ 9 -->
+                <div class="faq-item wow fadeInUp" data-wow-delay="0.8s">
+                    <div class="faq-question">
+                        <h4>O escritório realiza auditoria de contratos já assinados?</h4>
+                        <i class="fas fa-chevron-down faq-icon"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sim. A revisão contratual é um dos nossos principais serviços. Analisamos contratos vigentes para identificar cláusulas abusivas, riscos de inadimplência e oportunidades de renegociação, garantindo maior segurança jurídica para a operação atual.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-academic">
+        <div class="container">
+            <h2 class="mb-4 font-sans text-royal font-weight-bold">Conhecimento que protege seu patrimônio.</h2>
+            <p class="mb-5 text-muted">Conte com um especialista certificado para cuidar dos assuntos legais da sua empresa.</p>
+            <a href="contato.html" class="btn-royal">Agendar Consulta com Gustavo</a>
+        </div>
+    </section>
+
+	<footer id="footer_area" style="background-color:black;" class="footer_section relative-position">
+		<div class="background_overlay"></div>
+		<div class="container">
+			<div class="footer_content">
+				<div class="row">
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Sobre a GPA
+							</h3>
+							<div class="widget_footer_text">
+								GPA Advocacia é um escritório fundado em Curitiba, voltado a empresas e empresários que buscam
+								<strong>segurança jurídica</strong> aliada à estratégia. Atuamos nas áreas consultiva e contenciosa,
+								sempre com foco em atendimento personalizado, visão de negócios e parceria de longo prazo com nossos clientes.
+							</div>
+							                            <div class="footer_app_btn">
+							                                <a href="contato.html">Agendar atendimento</a>
+							                            </div>						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Áreas de atuação
+							</h3>
+							<div class="practice_list ul-li-block clearfix">
+								<ul>
+									<li><strong style="color:#fff; text-transform:uppercase; font-size:0.85rem; display:block; margin-bottom:10px;">Área Consultiva</strong></li>
+									<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação</a></li>
+									<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+									<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+									<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental e Agronegócio</a></li>
+									<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+									<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+									
+									<li class="mt-3"><strong style="color:#fff; text-transform:uppercase; font-size:0.85rem; display:block; margin-bottom:10px;">Área Contenciosa</strong></li>
+									<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+									<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+									<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+									<li><a href="tributario.html">Direito Tributário</a></li>
+									<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+									<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+									<li><a href="estrategias-empresariais.html">Consultoria Estratégica</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Informações & notícias
+							</h3>
+							<div class="latest-blog-widget">
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt1.jpg" alt="Conteúdo jurídico GPA">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">EXPANSÃO</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="estrategias-empresariais.html">Segurança na Abertura de Filiais</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">Estratégias para estruturar o crescimento da sua empresa em novos estados.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt2.jpg" alt="Artigo sobre governança e compliance">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">GOVERNANÇA</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="compliance-e-regulatorio.html">Compliance como Valor</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">A ética e a transparência como diferenciais competitivos no mercado atual.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt3.jpg" alt="Artigo sobre relações trabalhistas">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">GESTÃO DE RH</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="relacoes-trabalhistas.html">Prevenção Trabalhista</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">Estratégias jurídicas para mitigar riscos e otimizar as relações de trabalho.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt4.jpg" alt="Artigo sobre planejamento jurídico">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">PLANEJAMENTO</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="seguranca-juridica.html">Jurídico Estratégico</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">O papel do jurídico na construção de um negócio sólido e previsível.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="footer_copyright">
+		<div class="container">
+			<div class="footer_copyright_content">
+				<div class="row">
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_social ul-li clearfix">
+							<ul>
+								<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+								<li><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+								<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_logo text-center">
+							<a href="index"><img src="assets/img/logo/flogo-1.png" alt="Logo rodapé GPA Advocacia"></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="copyright_text text-right">
+							© 2026 GPA Advocacia. Desenvolvido por <a href="#">e-Web Agency + Empresarial Web</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/appear.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/script.js"></script>
+    <script>
+        // Lógica simples para o FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            })
+        })
+    </script>
+</body>
+</html>

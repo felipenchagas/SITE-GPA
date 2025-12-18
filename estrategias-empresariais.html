@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Estratégias Empresariais & M&A | GPA Advocacia</title>
+	<link rel="shortcut icon" href="assets/img/logo/ficon.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Libraries -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/flaticon.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS "Master Strategy" -->
+    <style>
+        /* --- CORE --- */
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #333; background-color: #fff; line-height: 1.6; }
+        h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; font-weight: 700; color: #0f172a; }
+        .text-gold { color: #c5a47e; }
+        .bg-midnight { background-color: #0f172a; color: #fff; }
+        .font-sans { font-family: 'Poppins', sans-serif; }
+        
+        /* --- HEADER --- */
+        .main_navigation .dropdown-menu > li.dropdown{ position: relative; }
+        .main_navigation .dropdown-menu > li.dropdown > ul.dropdown-menu{ position: absolute; top: 0; left: 100%; display: none; z-index: 9999; }
+        .main_navigation a.has-submenu:after{ content: "›"; float: right; margin-left: 10px; opacity: .7; }
+        @media (min-width: 992px){ .main_navigation .dropdown-menu > li.dropdown:hover > ul.dropdown-menu{ display: block; } }
+
+        /* --- HERO "EXECUTIVE" --- */
+        .strategy-hero {
+            padding: 200px 0 150px;
+            background: linear-gradient(to right, #0f172a 40%, rgba(15, 23, 42, 0.8) 100%), url('assets/img/slider/s1.jpg') right center/cover no-repeat;
+            color: #fff;
+            position: relative;
+        }
+        .hero-content { max-width: 700px; padding-left: 5%; }
+        .hero-label { 
+            font-family: 'Poppins', sans-serif; 
+            font-size: 0.8rem; 
+            text-transform: uppercase; 
+            letter-spacing: 4px; 
+            color: #c5a47e; 
+            margin-bottom: 20px; 
+            display: inline-block; 
+            border-bottom: 1px solid #c5a47e;
+            padding-bottom: 5px;
+        }
+        .strategy-hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 30px; color: #fff; }
+        .strategy-hero p { font-size: 1.2rem; color: #94a3b8; font-weight: 300; margin-bottom: 40px; border-left: 3px solid #c5a47e; padding-left: 20px; }
+        
+        .btn-gold-outline {
+            background: transparent;
+            color: #c5a47e;
+            border: 1px solid #c5a47e;
+            padding: 15px 40px;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+        .btn-gold-outline:hover { background: #c5a47e; color: #0f172a; }
+
+        /* --- INTRO "THE SHIFT" --- */
+        .shift-section { padding: 100px 0; background: #fdfdfd; }
+        .shift-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .shift-text h2 { font-size: 2.5rem; margin-bottom: 30px; }
+        .shift-text p { margin-bottom: 20px; font-size: 1.05rem; text-align: justify; color: #555; }
+        .shift-card {
+            background: #fff;
+            padding: 40px;
+            border-left: 5px solid #0f172a;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+        }
+        .shift-card h4 { font-size: 1.2rem; color: #c5a47e; margin-bottom: 15px; text-transform: uppercase; }
+        .shift-card ul { padding-left: 20px; }
+        .shift-card li { margin-bottom: 10px; color: #444; }
+
+        /* --- DEEP DIVE: M&A --- */
+        .ma-section { padding: 100px 0; background: #0f172a; color: #fff; }
+        .ma-header { text-align: center; margin-bottom: 70px; }
+        .ma-header h2 { color: #fff; font-size: 3rem; }
+        .ma-header p { color: #94a3b8; max-width: 600px; margin: 0 auto; }
+        
+        .timeline-ma {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .timeline-ma::before {
+            content: ''; position: absolute; left: 50%; width: 2px; height: 100%; background: rgba(255,255,255,0.1);
+        }
+        .ma-step {
+            padding: 20px 40px;
+            position: relative;
+            background: rgba(255,255,255,0.02);
+            width: 50%;
+            margin-bottom: 30px;
+            transition: 0.3s;
+        }
+        .ma-step:hover { background: rgba(255,255,255,0.05); }
+        .ma-step:nth-child(odd) { left: 0; text-align: right; border-right: 3px solid #c5a47e; }
+        .ma-step:nth-child(even) { left: 50%; border-left: 3px solid #c5a47e; }
+        
+        .ma-step h3 { color: #c5a47e; font-size: 1.5rem; margin-bottom: 10px; }
+        .ma-step p { color: #ccc; font-size: 0.95rem; }
+        .ma-number {
+            font-size: 4rem; font-weight: 900; position: absolute; top: 0; color: rgba(255,255,255,0.03); z-index: 0;
+        }
+        .ma-step:nth-child(odd) .ma-number { left: 20px; }
+        .ma-step:nth-child(even) .ma-number { right: 20px; }
+
+        /* --- SERVICES EXPANDED --- */
+        .services-ex { padding: 100px 0; }
+        .service-row { margin-bottom: 80px; display: flex; flex-wrap: wrap; align-items: center; }
+        .service-row:nth-child(even) { flex-direction: row-reverse; }
+        .sr-img img { width: 100%; border-radius: 5px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .sr-content { padding: 40px; }
+        .sr-content h3 { font-size: 2rem; margin-bottom: 20px; }
+        .sr-content p { color: #666; margin-bottom: 20px; text-align: justify; }
+        .sr-list li { margin-bottom: 8px; display: flex; align-items: center; color: #333; font-weight: 500; }
+        .sr-list li i { color: #c5a47e; margin-right: 15px; }
+
+        /* --- RISK MATRIX --- */
+        .risk-section { padding: 100px 0; background: #f8f9fa; text-align: center; }
+        .risk-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+        .risk-card {
+            background: #fff; padding: 40px 30px;
+            border-top: 4px solid #0f172a;
+            transition: 0.3s;
+        }
+        .risk-card:hover { transform: translateY(-10px); border-color: #c5a47e; }
+        .risk-icon { font-size: 2.5rem; color: #0f172a; margin-bottom: 20px; }
+        .risk-card h4 { font-size: 1.3rem; margin-bottom: 15px; }
+        .risk-card p { font-size: 0.9rem; color: #666; }
+
+        /* --- FAQ / INSIGHTS --- */
+        .faq-strat { 
+            padding: 100px 0; 
+            background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('assets/img/about/ab3.jpg') center/cover fixed; 
+            color: #fff;
+        }
+        .accordion .card { border: none; margin-bottom: 10px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); overflow: hidden; }
+        .accordion .card-header { background: #fff; padding: 0; border: none; }
+        .accordion .btn-link {
+            width: 100%; text-align: left; padding: 20px; color: #0f172a; font-weight: 700; text-decoration: none; display: flex; justify-content: space-between; align-items: center;
+        }
+        .accordion .btn-link:hover { background: #fdfdfd; color: #c5a47e; }
+        .accordion .card-body { padding: 20px; color: #555; line-height: 1.7; background: #fcfcfc; border-top: 1px solid #eee; }
+
+        /* --- CTA --- */
+        .cta-big { padding: 120px 0; background: #0f172a; text-align: center; color: #fff; }
+        .cta-big h2 { font-size: 3rem; margin-bottom: 20px; color: #fff; }
+        .btn-gold-solid {
+            background: #c5a47e; color: #fff; padding: 20px 60px; text-transform: uppercase; font-weight: 700; border: none; letter-spacing: 1px; transition: 0.3s;
+        }
+        .btn-gold-solid:hover { background: #fff; color: #0f172a; }
+
+    </style>
+</head>
+<body>
+
+<header id="header_id" class="main_header header_style_one">
+		<div class="header_top">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="header_contact_info float-left ul-li">
+						<ul>
+							<li><i class="far fa-envelope"></i> gpa.adv@outlook.com</li>
+							<li><i class="fas fa-phone"></i> (41) 99726-6499</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="header_follow_social float-right ul-li">
+						<ul>
+							<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+							<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /header_top -->
+<div class="header_main_menu">
+<div class="site_logo">
+<a href="index<a href="#" title="GPA Advocacia - Parceria jurídica no mundo dos negócios">
+<img src="assets/img/logo/logo-1.png" alt="Logo GPA Advocacia">
+</a>
+</div>
+<nav class="main_navigation ul-li">
+<ul>
+<li class="dropdown">
+<a href="index.html">Início</a>
+</li>
+<li class="dropdown">
+<a href="#service">Empresa</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="especializacao-missao.html">Especialização &amp; Missão</a></li>
+<li><a href="fundado-em-curitiba.html">Fundado em Curitiba</a></li>
+<!-- NÍVEL 1 -->
+<li class="dropdown">
+<a href="#" class="has-submenu">Sócio Fundador</a>
+<ul class="dropdown-menu clearfix">
+<!-- NÍVEL 2 -->
+<li class="dropdown">
+<a href="gustavo-de-oliveira-pedroso.html" class="has-submenu">Gustavo de Oliveira Pedroso</a>
+<ul class="dropdown-menu clearfix">
+<!-- NÍVEL 3 -->
+<li class="dropdown">
+<a href="#" class="has-submenu">Qualificações</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="especialista-em-direito-empresarial-e-inovacao-uel.html">Especialista em Direito Empresarial e Inovação (UEL)</a></li>
+<li><a href="mba-ibmec.html">MBA (IBMEC)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="seguranca-juridica.html">Segurança Jurídica</a></li>
+<li><a href="estrategias-empresariais.html">Estratégias Empresariais</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#service">Serviços</a>
+<ul class="dropdown-menu clearfix">
+<li class="dropdown">
+<a href="#" class="has-submenu">Área Consultiva</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação de Negócios</a></li>
+<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental, Florestal e Agronegócio</a></li>
+<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#" class="has-submenu">Área Contenciosa</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+<li><a href="tributario.html">Tributário</a></li>
+<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#portfolio">Rede social</a>
+<ul class="dropdown-menu">
+<li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+<li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+<li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+</ul>
+</li>
+
+<li><a href="#">Blog</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+
+
+			<!-- /nav Menu -->
+			<div class="wide_side_bar open_side_area clearfix">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="wide_side_inner">
+				<div class="side_overlay open_side_area"></div>
+				<div class="side_inner_content text-center">
+					<div class="close_btn open_side_area">Voltar <i class="fas fa-arrow-right"></i></div>
+					<div class="side_inner_logo">
+						<a href="index" title="GPA Advocacia">
+							<img src="assets/img/logo/logo-1.png" alt="Logo lateral GPA Advocacia">
+						</a>
+					</div>
+					<p>
+						GPA Advocacia é um escritório fundado em Curitiba, especializado em empresas e empresários que buscam
+						<strong>segurança jurídica aliada às melhores estratégias empresariais</strong>. Atuamos como um verdadeiro
+						<strong>jurídico parceiro de negócios</strong>, apoiando a tomada de decisão e o crescimento sustentável das empresas.
+					</p>
+					<div class="side_contact">
+						<div class="social_widget ul-li headline relative-position">
+							<h3>Siga a GPA nas redes:</h3>
+							<ul>
+								<li class="h-fb"><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+								<li class="h-tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+								<li class="h-bh"><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+								<li class="h-yo"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="side_copywright">
+						© 2026 GPA Advocacia · Desenvolvido por e-Web Agency + Empresarial Web
+					</div>
+				</div>
+			</div>
+			
+			<!-- side bar Inner -->
+			<div class="call_to_quote float-right">
+				<div class="call_icon float-left">
+					<i class="flaticon-call"></i>
+				</div>
+				<span>Atendimento para empresas</span>
+				<span class="call_number">(41) 99726-6499</span>
+				<div class="icon_bg">
+					<i class="flaticon-call"></i>
+				</div>
+			</div>
+			<!-- /call to action -->
+		</div>
+		<!-- /desktop version -->
+		<div class="mobile_menu">
+			<div class="mobile_menu_button open_mobile_menu">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div class="mobile_menu_wrap">
+				<div class="mobile_menu_overlay open_mobile_menu"></div>
+				<div class="mobile_menu_content">
+					<div class="mobile_menu_close open_mobile_menu">
+						<i class="fas fa-window-close"></i>
+					</div>
+					<div class="m-brand-logo text-center">
+						<img src="assets/img/logo/logo-1.png" alt="Logo mobile GPA Advocacia">
+					</div>
+					<nav class="main-navigation  clearfix ul-li">
+						<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+							<li class="dropdown">
+								<a href="index">
+									Início
+								</a>
+							</li>
+							<li><a href="about">Empresa</a></li>
+							<li class="dropdown">
+								<a href="#service">
+									Serviços
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="case">Área Consultiva</a></li>
+									<li><a href="case-2">Área Contenciosa</a></li>
+									<li><a href="case-single">Detalhes dos serviços</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Rede social
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Instagram</a></li>
+									<li><a href="#">Facebook</a></li>
+									<li><a href="#">Linkedin</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Time
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="team">Equipe</a></li>
+									<li><a href="team-single">Sócio fundador</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Blog
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Artigos</a></li>
+									<li><a href="#">Post detalhado</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Páginas
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="contato">Contato</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">Proposta & Investimento</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<div class="free_call_nm">
+						<div class="m_call_icon text-center">
+							<i class="flaticon-call"></i>
+						</div>
+						<div class="m_call_text">
+							<span>ATENDIMENTO EMPRESARIAL</span>
+							<strong>(41) 99726-6499</strong>
+						</div>
+					</div>
+					<div class="m_social_area text-center ul-li">
+						<h3> Siga a GPA:</h3>
+						<ul>
+							<li class="m_fb"><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="m_tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+							<li class="m_lk"><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+							<li class="m_yb"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+						</ul>
+					</div>
+					<div class="m_get_quote">
+						<a href="contato">Falar com o jurídico parceiro</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /mobile menu -->
+	</header>
+
+    <!-- 1. HERO -->
+    <section class="strategy-hero">
+        <div class="container">
+            <div class="hero-content wow fadeInUp">
+                <span class="hero-label">Corporate Intelligence</span>
+                <h1>Direito como Estratégia de Poder.</h1>
+                <p>O jurídico não deve ser o departamento do "não". Deve ser o arquiteto que viabiliza fusões, protege o equity e estrutura o crescimento exponencial da companhia.</p>
+                <a href="contact.html" class="btn-gold-outline">Agendar Reunião de Diretoria</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. INTRO THE SHIFT -->
+    <section class="shift-section">
+        <div class="container">
+            <div class="shift-grid">
+                <div class="shift-text wow fadeInLeft">
+                    <h2>De Centro de Custo para<br>Centro de Valor</h2>
+                    <p>Tradicionalmente, empresas veem advogados como um mal necessário ou um custo fixo para resolver problemas que já aconteceram. Na GPA, subvertemos essa lógica.</p>
+                    <p>Atuamos como <strong>Parceiros de Negócios (Business Partners)</strong>. Entendemos de EBITDA, Fluxo de Caixa e Valuation tanto quanto de leis. Nossa missão é desenhar estruturas jurídicas que aumentem o valor da sua empresa perante investidores e blindem o patrimônio contra instabilidades de mercado.</p>
+                </div>
+                <div class="shift-card wow fadeInRight">
+                    <h4>Nossa Abordagem 360º</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-gold mr-2"></i> Foco no Resultado Econômico.</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i> Antecipação de Cenários Regulatórios.</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i> Linguagem Executiva (Sem "Juridiquês").</li>
+                        <li><i class="fas fa-check text-gold mr-2"></i> Proatividade na busca por eficiência fiscal.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. DEEP DIVE: M&A -->
+    <section class="ma-section">
+        <div class="container">
+            <div class="ma-header wow fadeInUp">
+                <span class="text-gold font-weight-bold text-uppercase">Fusões e Aquisições</span>
+                <h2>O Ciclo do Deal Making</h2>
+                <p>Comprar ou vender uma empresa é o momento mais crítico da vida corporativa. Um erro na estrutura pode custar milhões.</p>
+            </div>
+            
+            <div class="timeline-ma">
+                <!-- Step 1 -->
+                <div class="ma-step wow fadeInUp" data-wow-delay="0.1s">
+                    <span class="ma-number">01</span>
+                    <h3>NDA & Carta de Intenções (LOI)</h3>
+                    <p>O início de tudo. Garantimos o sigilo das negociações e definimos as premissas básicas do negócio (preço alvo, condições precedentes) antes de abrir os livros da empresa.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="ma-step wow fadeInUp" data-wow-delay="0.3s">
+                    <span class="ma-number">02</span>
+                    <h3>Due Diligence (Auditoria)</h3>
+                    <p>A "hora da verdade". Investigamos profundamente passivos trabalhistas, fiscais e contratuais ocultos. Para quem vende, preparamos o Data Room para evitar surpresas.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="ma-step wow fadeInUp" data-wow-delay="0.5s">
+                    <span class="ma-number">03</span>
+                    <h3>Valuation & Ajuste de Preço</h3>
+                    <p>Transformamos riscos jurídicos em números. Usamos as contingências encontradas na auditoria para negociar descontos no preço ou retenções de pagamento (Escrow).</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="ma-step wow fadeInUp" data-wow-delay="0.7s">
+                    <span class="ma-number">04</span>
+                    <h3>SPA & Closing</h3>
+                    <p>A elaboração do Contrato de Compra e Venda (SPA) com cláusulas robustas de indenização, declarações e garantias (Reps & Warranties) e regras de não-concorrência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SERVICES EXPANDED -->
+    <section class="services-ex">
+        <div class="container">
+            <!-- Row 1: Governança -->
+            <div class="service-row wow fadeInUp">
+                <div class="col-md-6 sr-img">
+                    <img src="assets/img/about/abg.jpg" alt="Governança Corporativa">
+                </div>
+                <div class="col-md-6 sr-content">
+                    <h3>Governança Corporativa</h3>
+                    <p>Empresas organizadas valem mais. Ajudamos a profissionalizar a gestão familiar, separando propriedade de direção, e criando mecanismos de controle que atraem investidores.</p>
+                    <ul class="list-unstyled sr-list">
+                        <li><i class="fas fa-caret-right"></i> Acordo de Sócios e Acionistas.</li>
+                        <li><i class="fas fa-caret-right"></i> Regimento Interno do Conselho.</li>
+                        <li><i class="fas fa-caret-right"></i> Resolução de Conflitos Societários.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Row 2: Reestruturação (Invertido) -->
+            <div class="service-row wow fadeInUp">
+                <div class="col-md-6 sr-img">
+                    <img src="assets/img/portfolio/prt1.jpg" alt="Reestruturação">
+                </div>
+                <div class="col-md-6 sr-content">
+                    <h3>Reestruturação Societária & Patrimonial</h3>
+                    <p>Otimização da estrutura legal do grupo econômico para eficiência tributária e proteção de ativos. Criação de veículos de investimento específicos para novos projetos.</p>
+                    <ul class="list-unstyled sr-list">
+                        <li><i class="fas fa-caret-right"></i> Constituição de Holdings (Pura e Mista).</li>
+                        <li><i class="fas fa-caret-right"></i> SCPs e SPEs para empreendimentos imobiliários.</li>
+                        <li><i class="fas fa-caret-right"></i> Offshores e estruturas internacionais.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Row 3: Joint Ventures -->
+            <div class="service-row wow fadeInUp">
+                <div class="col-md-6 sr-img">
+                    <img src="assets/img/service/s-bn.jpg" alt="Joint Venture">
+                </div>
+                <div class="col-md-6 sr-content">
+                    <h3>Joint Ventures & Parcerias</h3>
+                    <p>Quando duas empresas se unem para um projeto específico, o contrato é a alma do negócio. Definimos aportes, distribuição de lucros, gestão e saída.</p>
+                    <ul class="list-unstyled sr-list">
+                        <li><i class="fas fa-caret-right"></i> Memorandos de Entendimento (MOU).</li>
+                        <li><i class="fas fa-caret-right"></i> Contratos de Parceria Comercial.</li>
+                        <li><i class="fas fa-caret-right"></i> Estruturação de Consórcios.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. RISK MATRIX -->
+    <section class="risk-section">
+        <div class="container">
+            <h2>Matriz de Gestão de Riscos</h2>
+            <p class="text-muted">Como blindamos a operação em três níveis</p>
+            <div class="risk-grid">
+                <div class="risk-card wow zoomIn" data-wow-delay="0.1s">
+                    <i class="flaticon-shield risk-icon"></i>
+                    <h4>Risco Societário</h4>
+                    <p>Prevenção de brigas entre sócios que podem paralisar a empresa ("Deadlock") e proteção do patrimônio pessoal dos administradores.</p>
+                </div>
+                <div class="risk-card wow zoomIn" data-wow-delay="0.3s">
+                    <i class="flaticon-money risk-icon"></i>
+                    <h4>Risco Regulatório</h4>
+                    <p>Monitoramento de mudanças legislativas e agências reguladoras (CVM, BACEN, CADE) para garantir compliance total.</p>
+                </div>
+                <div class="risk-card wow zoomIn" data-wow-delay="0.5s">
+                    <i class="flaticon-contract risk-icon"></i>
+                    <h4>Risco Contratual</h4>
+                    <p>Análise de cláusulas de responsabilidade, multas e rescisão em contratos estratégicos com fornecedores e clientes-chave.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FAQ STRATEGY (Expanded) -->
+    <section class="faq-strat">
+        <div class="container">
+            <h2 class="text-center mb-5 text-white">Perguntas Frequentes de Gestores</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="accordionExample">
+                        <!-- FAQ 1 -->
+                        <div class="card wow fadeInUp">
+                            <div class="card-header" id="headingOne">
+                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne">
+                                    Por que constituir uma Holding Patrimonial?
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    A Holding oferece três vantagens principais: 1) Proteção Patrimonial (afasta riscos operacionais dos bens imóveis); 2) Planejamento Sucessório (evita inventários caros e demorados); 3) Eficiência Tributária (redução de impostos sobre aluguéis e venda de imóveis).
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ 2 -->
+                        <div class="card wow fadeInUp">
+                            <div class="card-header" id="headingTwo">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo">
+                                    Qual a importância da Due Diligence na compra de uma empresa?
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <div id="collapseTwo" class="collapse" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    A Due Diligence é a única forma de conhecer a "caixa preta" da empresa alvo. Ela identifica dívidas trabalhistas, fiscais e contratuais que não aparecem no balanço. Sem ela, você assume o risco de pagar caro por um negócio cheio de problemas (sucessão empresarial).
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ 3 -->
+                        <div class="card wow fadeInUp">
+                            <div class="card-header" id="headingThree">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree">
+                                    O que é um Acordo de Sócios e por que preciso de um?
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <div id="collapseThree" class="collapse" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    É o contrato particular que rege a relação entre os donos. Ele define regras de saída (Tag Along/Drag Along), critérios de avaliação da empresa (Valuation), distribuição de dividendos e o que acontece em caso de falecimento ou divórcio de um sócio. É essencial para a paz societária.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ 4 (NOVO) -->
+                        <div class="card wow fadeInUp">
+                            <div class="card-header" id="headingFour">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour">
+                                    Como funciona o processo de Exit (Saída de Sócios)?
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <div id="collapseFour" class="collapse" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    O Exit deve ser planejado. Definimos o Valuation (quanto vale a quota), a forma de pagamento (parcelamento, garantias) e as cláusulas de Non-Compete (proibição de concorrência) para garantir que a saída seja justa para quem sai e segura para a empresa que fica.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ 5 (NOVO) -->
+                        <div class="card wow fadeInUp">
+                            <div class="card-header" id="headingFive">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive">
+                                    Qual a melhor estrutura para receber investimento: Mútuo ou Sociedade?
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <div id="collapseFive" class="collapse" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Para investidores externos (Anjos ou VC), o Mútuo Conversível é geralmente mais seguro, pois o investidor não entra no contrato social imediatamente, evitando riscos trabalhistas e fiscais até o momento da conversão em ações.
+                                </div>
+                            </div>
+                        </div>
+                        <!-- FAQ 6 (NOVO) -->
+                        <div class="card wow fadeInUp">
+                            <div class="card-header" id="headingSix">
+                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix">
+                                    Quando devo criar um Conselho Consultivo?
+                                    <i class="fas fa-chevron-down"></i>
+                                </button>
+                            </div>
+                            <div id="collapseSix" class="collapse" data-parent="#accordionExample">
+                                <div class="card-body">
+                                    Assim que a empresa busca profissionalização ou prepara sucessão. O Conselho traz visão externa, isenta e estratégica, ajudando a diretoria a não ficar "míope" com o dia a dia operacional. É um passo vital para a maturidade corporativa.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-big">
+        <div class="container">
+            <h2 class="wow fadeInUp">Sua empresa está pronta para o próximo salto?</h2>
+            <p class="text-white-50 mb-5 wow fadeInUp" style="font-size: 1.2rem;">Não deixe que a insegurança jurídica freie o seu crescimento. Vamos desenhar a estratégia ideal.</p>
+            <a href="contact.html" class="btn-gold-solid wow fadeInUp" data-wow-delay="0.2s">Agendar Reunião de Diagnóstico</a>
+        </div>
+    </section>
+
+	<footer id="footer_area" style="background-color:black;" class="footer_section relative-position">
+		<div class="background_overlay"></div>
+		<div class="container">
+			<div class="footer_content">
+				<div class="row">
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Sobre a GPA
+							</h3>
+							<div class="widget_footer_text">
+								GPA Advocacia é um escritório fundado em Curitiba, voltado a empresas e empresários que buscam
+								<strong>segurança jurídica</strong> aliada à estratégia. Atuamos nas áreas consultiva e contenciosa,
+								sempre com foco em atendimento personalizado, visão de negócios e parceria de longo prazo com nossos clientes.
+							</div>
+							                            <div class="footer_app_btn">
+							                                <a href="contato.html">Agendar atendimento</a>
+							                            </div>						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Áreas de atuação
+							</h3>
+							<div class="practice_list ul-li-block clearfix">
+								<ul>
+									<li><strong style="color:#fff; text-transform:uppercase; font-size:0.85rem; display:block; margin-bottom:10px;">Área Consultiva</strong></li>
+									<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação</a></li>
+									<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+									<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+									<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental e Agronegócio</a></li>
+									<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+									<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+									
+									<li class="mt-3"><strong style="color:#fff; text-transform:uppercase; font-size:0.85rem; display:block; margin-bottom:10px;">Área Contenciosa</strong></li>
+									<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+									<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+									<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+									<li><a href="tributario.html">Direito Tributário</a></li>
+									<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+									<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+									<li><a href="estrategias-empresariais.html">Consultoria Estratégica</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Informações & notícias
+							</h3>
+							<div class="latest-blog-widget">
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt1.jpg" alt="Conteúdo jurídico GPA">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">EXPANSÃO</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="estrategias-empresariais.html">Segurança na Abertura de Filiais</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">Estratégias para estruturar o crescimento da sua empresa em novos estados.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt2.jpg" alt="Artigo sobre governança e compliance">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">GOVERNANÇA</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="compliance-e-regulatorio.html">Compliance como Valor</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">A ética e a transparência como diferenciais competitivos no mercado atual.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt3.jpg" alt="Artigo sobre relações trabalhistas">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">GESTÃO DE RH</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="relacoes-trabalhistas.html">Prevenção Trabalhista</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">Estratégias jurídicas para mitigar riscos e otimizar as relações de trabalho.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt4.jpg" alt="Artigo sobre planejamento jurídico">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">PLANEJAMENTO</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="seguranca-juridica.html">Jurídico Estratégico</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">O papel do jurídico na construção de um negócio sólido e previsível.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="footer_copyright">
+		<div class="container">
+			<div class="footer_copyright_content">
+				<div class="row">
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_social ul-li clearfix">
+							<ul>
+								<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+								<li><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+								<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_logo text-center">
+							<a href="index"><img src="assets/img/logo/flogo-1.png" alt="Logo rodapé GPA Advocacia"></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="copyright_text text-right">
+							© 2026 GPA Advocacia. Desenvolvido por <a href="#">e-Web Agency + Empresarial Web</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/appear.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>

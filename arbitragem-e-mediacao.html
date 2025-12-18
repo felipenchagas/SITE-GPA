@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Arbitragem e Mediação | GPA Advocacia</title>
+	<link rel="shortcut icon" href="assets/img/logo/ficon.png" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Libraries -->
+	<link rel="stylesheet" href="assets/css/owl.carousel.css">
+	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<link rel="stylesheet" href="assets/css/flaticon.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- CSS "Diplomatic Identity" -->
+    <style>
+        /* --- CORE --- */
+        body { font-family: 'DM Sans', sans-serif; color: #4a4a4a; background-color: #fdfdfd; }
+        h1, h2, h3, h4 { font-family: 'Libre Baskerville', serif; color: #002b36; } /* Azul Petróleo */
+        .text-sand { color: #c2b280; }
+        .bg-petrol { background-color: #002b36; color: #fff; }
+        
+        /* Font import */
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+        /* --- HEADER --- */
+        .main_header { border-bottom: 1px solid #eee; }
+        .main_navigation .dropdown-menu > li.dropdown{ position: relative; }
+        .main_navigation .dropdown-menu > li.dropdown > ul.dropdown-menu{ position: absolute; top: 0; left: 100%; display: none; z-index: 9999; }
+        .main_navigation a.has-submenu:after{ content: "›"; float: right; margin-left: 10px; opacity: .7; }
+        @media (min-width: 992px){ .main_navigation .dropdown-menu > li.dropdown:hover > ul.dropdown-menu{ display: block; } }
+
+        /* --- HERO "THE BRIDGE" --- */
+        .arb-hero {
+            padding: 180px 0 120px;
+            background: linear-gradient(to right, rgba(0, 43, 54, 0.95), rgba(0, 43, 54, 0.7)), url('assets/img/portfolio/arbitragem.jpg') center/cover;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-badge {
+            background: rgba(194, 178, 128, 0.2); color: #c2b280; padding: 8px 20px; border: 1px solid #c2b280; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; border-radius: 50px; margin-bottom: 25px; display: inline-block;
+        }
+        .arb-hero h1 { font-size: 4rem; margin-bottom: 20px; line-height: 1.1; color: #fff; }
+        .arb-hero p { font-size: 1.25rem; color: #aebdc1; max-width: 650px; margin-bottom: 40px; font-weight: 300; }
+        
+        .btn-diplomat {
+            background: #c2b280; color: #002b36; padding: 18px 45px; font-weight: 700; border-radius: 4px; border: none; transition: 0.3s; text-transform: uppercase; letter-spacing: 1px;
+        }
+        .btn-diplomat:hover { background: #fff; color: #002b36; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+
+        /* --- COMPARISON CARD (Floating) --- */
+        .comparison-sec { margin-top: -80px; position: relative; z-index: 10; padding-bottom: 80px; }
+        .comp-card {
+            background: #fff; padding: 50px; border-radius: 8px; box-shadow: 0 20px 60px rgba(0, 43, 54, 0.1); display: grid; grid-template-columns: 1fr 1px 1fr; gap: 40px; align-items: center;
+        }
+        .comp-divider { background: #eee; height: 100%; }
+        .comp-side h3 { font-size: 1.5rem; margin-bottom: 20px; display: flex; align-items: center; }
+        .comp-side ul { list-style: none; padding: 0; }
+        .comp-side li { margin-bottom: 12px; font-size: 0.95rem; color: #666; display: flex; align-items: center; }
+        .comp-side i { margin-right: 10px; font-size: 1.1rem; }
+        
+        .vs-bad i { color: #e74c3c; }
+        .vs-good i { color: #27ae60; }
+
+        @media (max-width: 991px) { .comp-card { grid-template-columns: 1fr; } .comp-divider { display: none; } }
+
+        /* --- SERVICES (Elegant Grid) --- */
+        .arb-services { padding: 100px 0; background: #fdfdfd; }
+        .arb-card {
+            background: #fff; border: 1px solid #eaeaea; padding: 40px; transition: 0.4s; position: relative; overflow: hidden;
+        }
+        .arb-card::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 0; background: #c2b280; transition: 0.4s;
+        }
+        .arb-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
+        .arb-card:hover::before { height: 100%; }
+        
+        .arb-icon { font-size: 2.5rem; color: #002b36; margin-bottom: 25px; }
+        .arb-card h4 { font-size: 1.3rem; margin-bottom: 15px; }
+        .arb-card p { font-size: 0.95rem; color: #777; line-height: 1.7; }
+
+        /* --- PROCESS (Circular) --- */
+        .process-sec { padding: 100px 0; background: #002b36; color: #fff; text-align: center; }
+        .process-title { margin-bottom: 60px; }
+        .process-title h2 { color: #fff; }
+        
+        .step-circle {
+            width: 180px; height: 180px; border: 1px solid rgba(255,255,255,0.2); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0 auto 20px; transition: 0.3s; position: relative;
+        }
+        .step-circle:hover { border-color: #c2b280; background: rgba(194, 178, 128, 0.1); }
+        .step-num { font-size: 3rem; font-weight: 700; color: #c2b280; opacity: 0.5; line-height: 1; }
+        .step-label { font-size: 1rem; font-weight: 600; margin-top: 10px; color: #fff; text-transform: uppercase; }
+        .step-desc { font-size: 0.85rem; color: #aaa; max-width: 250px; margin: 0 auto; }
+
+        /* --- QUOTE --- */
+        .arb-quote { padding: 120px 0; text-align: center; background: url('assets/img/background/map.png'); }
+        .quote-box { max-width: 800px; margin: 0 auto; }
+        .quote-box i { font-size: 3rem; color: #c2b280; margin-bottom: 20px; }
+        .quote-text { font-size: 1.8rem; font-style: italic; color: #333; line-height: 1.5; }
+        .quote-author { font-weight: 700; color: #002b36; margin-top: 20px; display: block; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem; }
+
+        /* --- CTA --- */
+        .cta-arb { padding: 100px 0; text-align: center; background: #f4f4f4; }
+        .btn-outline-petrol {
+            background: transparent; border: 2px solid #002b36; color: #002b36; padding: 15px 40px; font-weight: 700; text-transform: uppercase; transition: 0.3s;
+        }
+        .btn-outline-petrol:hover { background: #002b36; color: #fff; }
+
+    </style>
+</head>
+<body>
+
+<header id="header_id" class="main_header header_style_one">
+		<div class="header_top">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="header_contact_info float-left ul-li">
+						<ul>
+							<li><i class="far fa-envelope"></i> gpa.adv@outlook.com</li>
+							<li><i class="fas fa-phone"></i> (41) 99726-6499</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="header_follow_social float-right ul-li">
+						<ul>
+							<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+							<li><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+							<li><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+							<li><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+							<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /header_top -->
+<div class="header_main_menu">
+<div class="site_logo">
+<a href="index<a href="#" title="GPA Advocacia - Parceria jurídica no mundo dos negócios">
+<img src="assets/img/logo/logo-1.png" alt="Logo GPA Advocacia">
+</a>
+</div>
+<nav class="main_navigation ul-li">
+<ul>
+<li class="dropdown">
+<a href="index.html">Início</a>
+</li>
+<li class="dropdown">
+<a href="#service">Empresa</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="especializacao-missao.html">Especialização &amp; Missão</a></li>
+<li><a href="fundado-em-curitiba.html">Fundado em Curitiba</a></li>
+<!-- NÍVEL 1 -->
+<li class="dropdown">
+<a href="#" class="has-submenu">Sócio Fundador</a>
+<ul class="dropdown-menu clearfix">
+<!-- NÍVEL 2 -->
+<li class="dropdown">
+<a href="gustavo-de-oliveira-pedroso.html" class="has-submenu">Gustavo de Oliveira Pedroso</a>
+<ul class="dropdown-menu clearfix">
+<!-- NÍVEL 3 -->
+<li class="dropdown">
+<a href="#" class="has-submenu">Qualificações</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="especialista-em-direito-empresarial-e-inovacao-uel.html">Especialista em Direito Empresarial e Inovação (UEL)</a></li>
+<li><a href="mba-ibmec.html">MBA (IBMEC)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="seguranca-juridica.html">Segurança Jurídica</a></li>
+<li><a href="estrategias-empresariais.html">Estratégias Empresariais</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#service">Serviços</a>
+<ul class="dropdown-menu clearfix">
+<li class="dropdown">
+<a href="#" class="has-submenu">Área Consultiva</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação de Negócios</a></li>
+<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental, Florestal e Agronegócio</a></li>
+<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#" class="has-submenu">Área Contenciosa</a>
+<ul class="dropdown-menu clearfix">
+<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+<li><a href="tributario.html">Tributário</a></li>
+<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+</ul>
+</li>
+</ul>
+</li>
+
+<li class="dropdown">
+<a href="#portfolio">Rede social</a>
+<ul class="dropdown-menu">
+<li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+<li><a href="https://www.facebook.com/" target="_blank">Facebook</a></li>
+<li><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></li>
+</ul>
+</li>
+
+<li><a href="#">Blog</a></li>
+<li><a href="contato.html">Contato</a></li>
+</ul>
+</nav>
+
+
+			<!-- /nav Menu -->
+			<div class="wide_side_bar open_side_area clearfix">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="wide_side_inner">
+				<div class="side_overlay open_side_area"></div>
+				<div class="side_inner_content text-center">
+					<div class="close_btn open_side_area">Voltar <i class="fas fa-arrow-right"></i></div>
+					<div class="side_inner_logo">
+						<a href="index" title="GPA Advocacia">
+							<img src="assets/img/logo/logo-1.png" alt="Logo lateral GPA Advocacia">
+						</a>
+					</div>
+					<p>
+						GPA Advocacia é um escritório fundado em Curitiba, especializado em empresas e empresários que buscam
+						<strong>segurança jurídica aliada às melhores estratégias empresariais</strong>. Atuamos como um verdadeiro
+						<strong>jurídico parceiro de negócios</strong>, apoiando a tomada de decisão e o crescimento sustentável das empresas.
+					</p>
+					<div class="side_contact">
+						<div class="social_widget ul-li headline relative-position">
+							<h3>Siga a GPA nas redes:</h3>
+							<ul>
+								<li class="h-fb"><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+								<li class="h-tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+								<li class="h-bh"><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+								<li class="h-yo"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="side_copywright">
+						© 2026 GPA Advocacia · Desenvolvido por e-Web Agency + Empresarial Web
+					</div>
+				</div>
+			</div>
+			
+			<!-- side bar Inner -->
+			<div class="call_to_quote float-right">
+				<div class="call_icon float-left">
+					<i class="flaticon-call"></i>
+				</div>
+				<span>Atendimento para empresas</span>
+				<span class="call_number">(41) 99726-6499</span>
+				<div class="icon_bg">
+					<i class="flaticon-call"></i>
+				</div>
+			</div>
+			<!-- /call to action -->
+		</div>
+		<!-- /desktop version -->
+		<div class="mobile_menu">
+			<div class="mobile_menu_button open_mobile_menu">
+				<i class="fas fa-bars"></i>
+			</div>
+			<div class="mobile_menu_wrap">
+				<div class="mobile_menu_overlay open_mobile_menu"></div>
+				<div class="mobile_menu_content">
+					<div class="mobile_menu_close open_mobile_menu">
+						<i class="fas fa-window-close"></i>
+					</div>
+					<div class="m-brand-logo text-center">
+						<img src="assets/img/logo/logo-1.png" alt="Logo mobile GPA Advocacia">
+					</div>
+					<nav class="main-navigation  clearfix ul-li">
+						<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+							<li class="dropdown">
+								<a href="index">
+									Início
+								</a>
+							</li>
+							<li><a href="about">Empresa</a></li>
+							<li class="dropdown">
+								<a href="#service">
+									Serviços
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="case">Área Consultiva</a></li>
+									<li><a href="case-2">Área Contenciosa</a></li>
+									<li><a href="case-single">Detalhes dos serviços</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Rede social
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Instagram</a></li>
+									<li><a href="#">Facebook</a></li>
+									<li><a href="#">Linkedin</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Time
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="team">Equipe</a></li>
+									<li><a href="team-single">Sócio fundador</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Blog
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Artigos</a></li>
+									<li><a href="#">Post detalhado</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#">
+									Páginas
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="contato">Contato</a></li>
+									<li><a href="#">FAQ</a></li>
+									<li><a href="#">Proposta & Investimento</a></li>
+								</ul>
+							</li>
+						</ul>
+					</nav>
+					<div class="free_call_nm">
+						<div class="m_call_icon text-center">
+							<i class="flaticon-call"></i>
+						</div>
+						<div class="m_call_text">
+							<span>ATENDIMENTO EMPRESARIAL</span>
+							<strong>(41) 99726-6499</strong>
+						</div>
+					</div>
+					<div class="m_social_area text-center ul-li">
+						<h3> Siga a GPA:</h3>
+						<ul>
+							<li class="m_fb"><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="m_tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+							<li class="m_lk"><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+							<li class="m_yb"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+						</ul>
+					</div>
+					<div class="m_get_quote">
+						<a href="contato">Falar com o jurídico parceiro</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /mobile menu -->
+	</header>
+
+    <!-- 1. HERO -->
+    <section class="arb-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 wow fadeInUp">
+                    <span class="hero-badge">Resolução Estratégica de Conflitos</span>
+                    <h1>A Arbitragem é o Caminho<br>da Eficiência.</h1>
+                    <p>Grandes contratos exigem soluções rápidas. Fuja da morosidade do judiciário e resolva conflitos com sigilo, técnica e árbitros especializados.</p>
+                    <a href="contato.html" class="btn-diplomat">Análise de Cláusula Compromissória</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. COMPARISON CARD (Floating) -->
+    <div class="container comparison-sec wow fadeInUp">
+        <div class="comp-card">
+            <!-- Lado Ruim: Judiciário -->
+            <div class="comp-side vs-bad">
+                <h3><i class="fas fa-gavel"></i> Judiciário Comum</h3>
+                <ul>
+                    <li><i class="fas fa-times"></i> <strong>Lentidão:</strong> Média de 5 a 10 anos para decisão final.</li>
+                    <li><i class="fas fa-times"></i> <strong>Exposição:</strong> Processos públicos (risco de imagem).</li>
+                    <li><i class="fas fa-times"></i> <strong>Generalista:</strong> Juiz não é especialista no setor.</li>
+                    <li><i class="fas fa-times"></i> <strong>Recursos Infinitos:</strong> Insegurança jurídica.</li>
+                </ul>
+            </div>
+            
+            <div class="comp-divider"></div>
+
+            <!-- Lado Bom: Arbitragem -->
+            <div class="comp-side vs-good">
+                <h3><i class="fas fa-balance-scale"></i> Arbitragem (GPA)</h3>
+                <ul>
+                    <li><i class="fas fa-check"></i> <strong>Agilidade:</strong> Decisão final em 12 a 18 meses.</li>
+                    <li><i class="fas fa-check"></i> <strong>Confidencialidade:</strong> Sigilo total do conflito.</li>
+                    <li><i class="fas fa-check"></i> <strong>Especialidade:</strong> Árbitros técnicos (Engenheiros, Contadores).</li>
+                    <li><i class="fas fa-check"></i> <strong>Definitividade:</strong> Sentença arbitral tem força de lei.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. SERVICES GRID -->
+    <section class="arb-services">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 style="color: #002b36;">Nossa Atuação</h2>
+                <p class="text-muted">Representação de alto nível em métodos adequados de resolução de disputas.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb-4 wow fadeInUp">
+                    <div class="arb-card">
+                        <i class="flaticon-courthouse arb-icon"></i>
+                        <h4>Arbitragem Comercial</h4>
+                        <p>Atuação como advogados de parte em câmaras nacionais (CAM-CCBC, CIESP/FIESP, ARBITAC) e internacionais. Estratégia processual robusta.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="arb-card">
+                        <i class="flaticon-courthouse arb-icon"></i>
+                        <h4>Mediação Empresarial</h4>
+                        <p>Facilitação de acordos em disputas societárias ou com fornecedores estratégicos. Foco em preservar o relacionamento comercial.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="arb-card">
+                        <i class="flaticon-courthouse arb-icon"></i>
+                        <h4>Cláusulas Compromissórias</h4>
+                        <p>Redação estratégica de cláusulas de arbitragem em contratos complexos (M&A, Infraestrutura), definindo a sede, lei aplicável e câmara.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="arb-card">
+                        <i class="flaticon-courthouse arb-icon"></i>
+                        <h4>Dispute Boards</h4>
+                        <p>Acompanhamento de Comitês de Resolução de Disputas em grandes obras de engenharia e contratos de longa duração.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="arb-card">
+                        <i class="flaticon-courthouse arb-icon"></i>
+                        <h4>Homologação de Sentença</h4>
+                        <p>Procedimentos no STJ para validação de sentenças arbitrais estrangeiras e sua execução forçada no território nacional.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="arb-card">
+                        <i class="flaticon-courthouse arb-icon"></i>
+                        <h4>Negociação Complexa</h4>
+                        <p>Assessoria em mesas de negociação de alta complexidade, utilizando técnicas de Harvard para maximizar resultados sem litígio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. PROCESS (Circular) -->
+    <section class="process-sec">
+        <div class="container">
+            <div class="process-title">
+                <h2>O Caminho do Acordo</h2>
+                <p style="color: #aebdc1;">Como transformamos o conflito em solução.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-3 wow zoomIn">
+                    <div class="step-circle">
+                        <span class="step-num">01</span>
+                        <span class="step-label">Análise</span>
+                    </div>
+                    <p class="step-desc">Avaliação de risco x benefício e chances de êxito.</p>
+                </div>
+                <div class="col-md-3 wow zoomIn" data-wow-delay="0.2s">
+                    <div class="step-circle">
+                        <span class="step-num">02</span>
+                        <span class="step-label">Estratégia</span>
+                    </div>
+                    <p class="step-desc">Definição da tese jurídica e escolha do árbitro/mediador.</p>
+                </div>
+                <div class="col-md-3 wow zoomIn" data-wow-delay="0.4s">
+                    <div class="step-circle">
+                        <span class="step-num">03</span>
+                        <span class="step-label">Atuação</span>
+                    </div>
+                    <p class="step-desc">Audiências, oitivas e memoriais técnicos.</p>
+                </div>
+                <div class="col-md-3 wow zoomIn" data-wow-delay="0.6s">
+                    <div class="step-circle">
+                        <span class="step-num">04</span>
+                        <span class="step-label">Resultado</span>
+                    </div>
+                    <p class="step-desc">Sentença ou Acordo com segurança jurídica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FAQ COM BACKGROUND (NOVO) -->
+    <section class="faq-arb" style="padding: 100px 0; background: linear-gradient(rgba(0, 43, 54, 0.9), rgba(0, 43, 54, 0.9)), url('assets/img/background/prbg.jpg') center/cover fixed; color: #fff;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 style="color: #fff; font-family: 'Libre Baskerville', serif;">Dúvidas Frequentes</h2>
+                <p style="color: #c2b280;">Esclarecendo a Justiça Privada</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <!-- P1 -->
+                    <div class="mb-4">
+                        <h5 style="color: #c2b280; font-weight: 700;">A sentença arbitral tem a mesma validade da judicial?</h5>
+                        <p style="color: #ccc; font-size: 0.95rem;">Sim. A Lei de Arbitragem (Lei 9.307/96) equipara a sentença arbitral à sentença judicial. Ela é um título executivo judicial e não precisa ser homologada pelo poder judiciário para ser executada.</p>
+                    </div>
+                    <!-- P2 -->
+                    <div class="mb-4">
+                        <h5 style="color: #c2b280; font-weight: 700;">A arbitragem é muito mais cara que o judiciário?</h5>
+                        <p style="color: #ccc; font-size: 0.95rem;">O custo inicial pode ser maior devido aos honorários dos árbitros e taxas da câmara. Porém, ao considerar o custo do tempo (dinheiro parado por 10 anos no judiciário) e a qualidade técnica da decisão, a arbitragem se torna economicamente muito mais eficiente para grandes contratos.</p>
+                    </div>
+                    <!-- P3 -->
+                    <div class="mb-4">
+                        <h5 style="color: #c2b280; font-weight: 700;">Posso recorrer da decisão arbitral?</h5>
+                        <p style="color: #ccc; font-size: 0.95rem;">Em regra, não. A decisão arbitral é definitiva e irrecorrível no mérito. Isso garante o fim do conflito. Só é possível anular a sentença no judiciário em casos gravíssimos de nulidade formal (ex: falta de contraditório ou corrupção do árbitro).</p>
+                    </div>
+                    <!-- P4 -->
+                    <div class="mb-4">
+                        <h5 style="color: #c2b280; font-weight: 700;">Qualquer empresa pode usar arbitragem?</h5>
+                        <p style="color: #ccc; font-size: 0.95rem;">Sim, desde que o litígio envolva direitos patrimoniais disponíveis. Basta incluir uma Cláusula Compromissória nos contratos da empresa ou assinar um Compromisso Arbitral após o surgimento do conflito.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. QUOTE -->
+    <section class="arb-quote">
+        <div class="container">
+            <div class="quote-box wow fadeInUp">
+                <i class="fas fa-quote-left"></i>
+                <p class="quote-text">"Em negócios de alto nível, o tempo é o ativo mais caro. A arbitragem não é um custo, é a garantia de que o business continuará rodando."</p>
+                <span class="quote-author">Equipe de Resolução de Disputas GPA</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-arb">
+        <div class="container">
+            <h2 class="wow fadeInUp" style="color: #002b36;">Sua disputa precisa de especialistas.</h2>
+            <p class="text-muted mb-5 wow fadeInUp">Não deixe um contrato complexo nas mãos de generalistas.</p>
+            <a href="contato.html" class="btn-outline-petrol wow fadeInUp">Agendar Consulta</a>
+        </div>
+    </section>
+
+	<footer id="footer_area" style="background-color:black;" class="footer_section relative-position">
+		<div class="background_overlay"></div>
+		<div class="container">
+			<div class="footer_content">
+				<div class="row">
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Sobre a GPA
+							</h3>
+							<div class="widget_footer_text">
+								GPA Advocacia é um escritório fundado em Curitiba, voltado a empresas e empresários que buscam
+								<strong>segurança jurídica</strong> aliada à estratégia. Atuamos nas áreas consultiva e contenciosa,
+								sempre com foco em atendimento personalizado, visão de negócios e parceria de longo prazo com nossos clientes.
+							</div>
+							                            <div class="footer_app_btn">
+							                                <a href="contato.html">Agendar atendimento</a>
+							                            </div>						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Áreas de atuação
+							</h3>
+							<div class="practice_list ul-li-block clearfix">
+								<ul>
+									<li><strong style="color:#fff; text-transform:uppercase; font-size:0.85rem; display:block; margin-bottom:10px;">Área Consultiva</strong></li>
+									<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação</a></li>
+									<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+									<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+									<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental e Agronegócio</a></li>
+									<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+									<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+									
+									<li class="mt-3"><strong style="color:#fff; text-transform:uppercase; font-size:0.85rem; display:block; margin-bottom:10px;">Área Contenciosa</strong></li>
+									<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+									<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+									<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+									<li><a href="tributario.html">Direito Tributário</a></li>
+									<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+									<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+									<li><a href="estrategias-empresariais.html">Consultoria Estratégica</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_widget headline">
+							<h3 class="widget_title">
+								<span class="title_shape_left"></span>
+								Informações & notícias
+							</h3>
+							<div class="latest-blog-widget">
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt1.jpg" alt="Conteúdo jurídico GPA">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">EXPANSÃO</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="estrategias-empresariais.html">Segurança na Abertura de Filiais</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">Estratégias para estruturar o crescimento da sua empresa em novos estados.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt2.jpg" alt="Artigo sobre governança e compliance">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">GOVERNANÇA</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="compliance-e-regulatorio.html">Compliance como Valor</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">A ética e a transparência como diferenciais competitivos no mercado atual.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt3.jpg" alt="Artigo sobre relações trabalhistas">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">GESTÃO DE RH</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="relacoes-trabalhistas.html">Prevenção Trabalhista</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">Estratégias jurídicas para mitigar riscos e otimizar as relações de trabalho.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+								<div class="blog-img-content">
+									<div class="blog-img">
+										<img src="assets/img/blog/bt4.jpg" alt="Artigo sobre planejamento jurídico">
+									</div>
+									<div class="blog-text headline">
+										<span class="blog-meta" style="color:#c5a47e; font-weight:700; text-transform:uppercase; font-size:0.8rem;">PLANEJAMENTO</span>
+										<h4 style="margin-bottom:5px; font-size:1rem;"><a href="seguranca-juridica.html">Jurídico Estratégico</a></h4>
+										<p style="color:#aaa; font-size:0.85rem; margin:0; line-height:1.4;">O papel do jurídico na construção de um negócio sólido e previsível.</p>
+									</div>
+								</div>
+								<!-- /blog post -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<div class="footer_copyright">
+		<div class="container">
+			<div class="footer_copyright_content">
+				<div class="row">
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_social ul-li clearfix">
+							<ul>
+								<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
+								<li><a href="https://www.linkedin.com" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+								<li><a href="https://www.facebook.com" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
+								<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="footer_logo text-center">
+							<a href="index"><img src="assets/img/logo/flogo-1.png" alt="Logo rodapé GPA Advocacia"></a>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-12">
+						<div class="copyright_text text-right">
+							© 2026 GPA Advocacia. Desenvolvido por <a href="#">e-Web Agency + Empresarial Web</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/appear.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
