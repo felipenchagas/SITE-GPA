@@ -178,11 +178,11 @@ Last change:    00/00/00
 					});
 
 					$('.first.progress_area').circleProgress({
-						value: .65,
+						value: .99,
 						thickness: 6,
 						emptyFill: '#f0f0f0',
 					}).on('circle-animation-progress', function(event, progress) {
-						$(this).find('strong').html(Math.round(65 * progress) + '<span>%</span>');
+						$(this).find('strong').html(Math.round(100 * progress) + '<span>%</span>');
 					});
 					$('.secound.progress_area').circleProgress({
 						value: .5,

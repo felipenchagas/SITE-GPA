@@ -202,6 +202,7 @@ Color Code
 .slider_style_one .owl-nav .owl-next {
   width: 60px;
   color: #fff;
+  background-color:black;
   height: 60px;
   position: relative;
   text-align: center;
@@ -1038,6 +1039,69 @@ select:visited {
 .call_to_quote .icon_bg i {
   font-size: 95px;
   color: #bfa56e;
+}
+/* ================================
+   FIX DEFINITIVO: CALL TO QUOTE
+   ================================ */
+
+/* garante que o header seja a referência do absolute (se não for, vira bagunça) */
+.header_area,
+.header,
+.navbar,
+.main_header,
+.header_wrap {
+  position: relative;
+}
+
+/* Desktop: um pouco menor sem quebrar o shape */
+@media (min-width: 992px){
+  .call_to_quote{
+    width: 310px;                 /* era 370 */
+    padding: 18px 18px 18px 18px; /* era 30/35/31/30 */
+  }
+  .call_to_quote .call_icon i{ font-size: 42px; }   /* era 55 */
+  .call_to_quote .icon_bg i{ font-size: 75px; }     /* era 95 */
+  .call_to_quote span{ font-size: 12px; }           /* era 14 */
+  .call_to_quote .call_number{ font-size: 22px; }   /* era 30 */
+}
+
+/* Mobile/Tablet: NÃO pode ficar absolute nem com shape grande */
+@media (max-width: 991px){
+  .call_to_quote{
+    position: relative;     /* mata sobreposição */
+    top: auto;
+    right: auto;
+
+    width: 100%;
+    max-width: 100%;
+    padding: 10px 14px;
+    margin: 0;              /* evita empurrões estranhos */
+    border-radius: 0;
+    z-index: 2;
+  }
+
+  /* remove as “abas” (elas são as culpadas no mobile) */
+  .call_to_quote:before,
+  .call_to_quote:after{
+    display: none !important;
+    content: none !important;
+  }
+
+  .call_to_quote .call_icon{ margin-right: 10px; }
+  .call_to_quote .call_icon i{ font-size: 26px; }
+
+  .call_to_quote span{
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .4px;
+  }
+
+  .call_to_quote .call_number{
+    font-size: 16px;
+    line-height: 1.1;
+  }
+
+  .call_to_quote .icon_bg{ display: none; }
 }
 
 .wide_side_bar {
@@ -2891,7 +2955,7 @@ select:visited {
 .why_choose_section {
   overflow: visible;
   padding: 118px 0px 110px;
-  background-color: #343434;
+  background-color: #163945;
 }
 .why_choose_section .why_choose_left {
   padding-left: 40px;
@@ -6175,7 +6239,7 @@ select:visited {
 *	09 - media screen and (max-width: 380px)
 *	10 - media screen and (max-width: 320px)
 ================================================== */
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1700px) {
   .header_style_one,
 .header_style_one.menu-bg-overlay {
     padding: 0px 60px;
