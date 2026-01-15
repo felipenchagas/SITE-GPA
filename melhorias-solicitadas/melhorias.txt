@@ -1,0 +1,17 @@
+1. Links de Instagram e etc não estão executáveis
+2. ⁠Ainda ficou a “linha sobre linha” ali no cabeçalho
+3. ⁠Às citações do GPA precisam ser “O” e não “A”, porque se refere como “O escritório”
+4. ⁠Me parece que as fontes são diferentes ao longo do site, de tamanhos diferentes para mesmos campos. Seria bom revisar também
+5. ⁠Pode tirar essa parte de porcentagem de crescimento com segurança
+6. ⁠As cores ainda estão bem misturadas, não se comunicando entre si. Seria bom ter um padrão 
+7. ⁠Os quantitativos precisam ser aqueles do link que te mandei
+8. ⁠Nos serviços o Ambiental está duplicado
+9. ⁠Tem um “Advogados” meio perdido lá no “Por onde escolher a GPA”. E tambem precisaria ser “O”
+10. ⁠nos casos empresariais, como falei seria melhor manter o Blog com artigos
+11. ⁠”O que nossos clientes dizem” ainda com letras maiúsculas em toda palavra
+12. ⁠Cores marrons acho que podemos tirar. Deixar mais aquele verde petróleo mesmo
+13. ⁠No campo de Jurídico parceiro de negócios, a minha foro ficou sem a cor atrás, mesma dos outros dois. Amanda é Head Financeiro. Luiza Advogada Associada apenas
+
+titulo estilo tem q ser padronizado, fonte, cores - tamanho de letra, não sabe se marrom e azul são cores q se conversam, fazer so azul, tom sobre tom para padronizar
+
+metodoligia gpa não existe, remover ou alterar.. alterar partes q coisas q não existem e adequar.. o site é novo e muita coisa foi feit pra encher linguiça

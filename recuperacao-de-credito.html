@@ -1,802 +1,927 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Recuperação de Crédito | GPA Advocacia</title>
-	<link rel="shortcut icon" href="assets/img/logo/ficon.png" type="image/x-icon">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    
-	<link rel="stylesheet" href="assets/css/owl.carousel.css">
-	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<link rel="stylesheet" href="assets/css/flaticon.css">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <title>Recuperação de Crédito | GPA Advocacia</title>
+  <link rel="shortcut icon" href="assets/img/logo/ficon.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSS "Liquidity Expert Identity" -->
-    <style>
-        /* --- GERAL --- */
-        body { font-family: 'Poppins', sans-serif; color: #444; background-color: #fff; }
-        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; color: #1a202c; }
-        .text-success-gpa { color: #276749; } /* Verde Esmeralda Sóbrio */
-        .bg-ice { background-color: #f7fafc; }
-        
-        /* --- HEADER --- */
-        .main_navigation .dropdown-menu > li.dropdown{ position: relative; }
-        .main_navigation .dropdown-menu > li.dropdown > ul.dropdown-menu{ position: absolute; top: 0; left: 100%; display: none; z-index: 9999; }
-        .main_navigation a.has-submenu:after{ content: "›"; float: right; margin-left: 10px; opacity: .7; }
-        @media (min-width: 992px){ .main_navigation .dropdown-menu > li.dropdown:hover > ul.dropdown-menu{ display: block; } }
+  <link rel="stylesheet" href="assets/css/owl.carousel.css">
+  <link rel="stylesheet" href="assets/css/fontawesome-all.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-        /* --- HERO "CLEAN" --- */
-        .recovery-hero {
-            padding: 180px 0 120px;
-            background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.8)), url('assets/img/background/vdbg.jpg');
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-            border-bottom: 1px solid #edf2f7;
-        }
-        .hero-content h1 { font-size: 4rem; color: #1a202c; margin-bottom: 20px; letter-spacing: -2px; }
-        .hero-content p { font-size: 1.3rem; color: #4a5568; max-width: 700px; margin: 0 auto 40px; font-weight: 300; }
-        
-        .btn-success-gpa {
-            background: #276749;
-            color: #fff;
-            padding: 18px 45px;
-            font-weight: 700;
-            text-transform: uppercase;
-            border-radius: 0;
-            border: none;
-            transition: 0.3s;
-            letter-spacing: 1px;
-        }
-        .btn-success-gpa:hover { background: #1a202c; color: #fff; transform: translateY(-3px); }
+  <!-- CSS "Liquidity Expert Identity" -->
+  <!-- CSS MASTER TEMPLATE (SCOPED) -->
+  <style>
+    :root {
+      --primary-color: #163945;
+      /* Teal GPA */
+      --secondary-color: #bfa56e;
+      /* Gold GPA */
+      --text-color: #4a5568;
+      --bg-light: #f8fafc;
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Poppins', sans-serif;
+    }
 
-        /* --- SCORE BAR --- */
-        .score-bar {
-            background: #fff;
-            padding: 40px 0;
-            margin-top: -50px;
-            position: relative;
-            z-index: 10;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
-            border-radius: 5px;
-        }
-        .score-item { text-align: center; border-right: 1px solid #eee; }
-        .score-item:last-child { border: none; }
-        .score-value { font-size: 2rem; font-weight: 800; color: #276749; display: block; }
-        .score-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: #718096; margin-top: 5px; }
+    /* --- TYPOGRAPHY & UTILS --- */
+    body {
+      font-family: var(--font-body);
+      color: var(--text-color);
+      line-height: 1.7;
+      font-size: 16px;
+      overflow-x: hidden;
+      background-color: #fff;
+    }
 
-        /* --- DATA STRATEGY SECTION --- */
-        .strategy-sec { padding: 100px 0; }
-        .strategy-card {
-            background: #fff;
-            padding: 50px 40px;
-            border: 1px solid #edf2f7;
-            transition: 0.4s;
-            height: 100%;
-            position: relative;
-        }
-        .strategy-card:hover {
-            border-color: #276749;
-            box-shadow: 0 25px 50px rgba(0,0,0,0.04);
-        }
-        .sc-num {
-            font-size: 5rem;
-            font-weight: 900;
-            color: #f7fafc;
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            z-index: 0;
-        }
-        .sc-content { position: relative; z-index: 1; }
-        .sc-icon { font-size: 2.5rem; color: #276749; margin-bottom: 25px; }
-        .strategy-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
-        .strategy-card p { font-size: 0.95rem; line-height: 1.7; color: #718096; }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: var(--font-heading);
+      color: var(--primary-color);
+      font-weight: 700;
+    }
 
-        /* --- THE RECOVERY RULER (Visual) --- */
-        .ruler-section { padding: 100px 0; background: #1a202c; color: #fff; text-align: center; }
-        .ruler-container { display: flex; justify-content: space-between; margin-top: 60px; position: relative; }
-        .ruler-container::before {
-            content: ''; position: absolute; top: 25px; left: 0; width: 100%; height: 1px; background: rgba(255,255,255,0.1);
-        }
-        .ruler-step { width: 20%; position: relative; z-index: 1; }
-        .ruler-dot {
-            width: 50px; height: 50px; background: #276749; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 20px; font-weight: 700; border: 5px solid #1a202c;
-        }
-        .ruler-step h4 { color: #fff; font-size: 1rem; margin-bottom: 10px; }
-        .ruler-step p { font-size: 0.8rem; color: #718096; }
+    .text-gold {
+      color: var(--secondary-color) !important;
+    }
 
-        /* --- METHODOLOGY (Text + Side Image) --- */
-        .method-sec { padding: 100px 0; }
-        .method-list li {
-            margin-bottom: 25px;
-            display: flex;
-            align-items: flex-start;
-        }
-        .method-list i {
-            background: #f0fff4;
-            color: #276749;
-            width: 40px; height: 40px;
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            margin-right: 20px; margin-top: 5px;
-        }
-        
-        /* --- CTA --- */
-        .cta-clean {
-            padding: 100px 0;
-            background: #f7fafc;
-            text-align: center;
-        }
-        .cta-clean h2 { font-size: 3rem; margin-bottom: 20px; }
+    .bg-light-cream {
+      background-color: var(--bg-light);
+    }
 
-    </style>
+    .btn-sapphire {
+      background-color: var(--primary-color);
+      color: #fff !important;
+      padding: 14px 35px;
+      border-radius: 4px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn-sapphire:hover {
+      background-color: #112d36;
+      color: #bfa56e;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-badge {
+      background: rgba(191, 165, 110, 0.15);
+      color: var(--secondary-color);
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    /* --- HERO SPLIT --- */
+    .comp-hero {
+      padding: 160px 0 100px;
+      background: linear-gradient(135deg, #fdfbf7 0%, #fff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .comp-hero .hero-title {
+      font-size: 3.5rem;
+      line-height: 1.2;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .comp-hero .hero-subtitle {
+      font-family: var(--font-body);
+      font-size: 1.15rem;
+      color: #64748b;
+      margin-bottom: 40px;
+      max-width: 550px;
+      font-weight: 400;
+    }
+
+    .hero-img-wrap {
+      position: relative;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      transform: perspective(1000px) rotateY(-5deg);
+      transition: 0.5s;
+    }
+
+    .hero-img-wrap:hover {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+
+    .hero-img {
+      width: 100%;
+      display: block;
+      height: auto;
+      transition: 0.5s;
+    }
+
+    /* --- CULTURE SEC --- */
+    .culture-sec {
+      padding: 100px 0;
+      background: #fff;
+    }
+
+    .culture-img {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .culture-img img {
+      width: 100%;
+      transition: 0.5s;
+    }
+
+    .culture-img:hover img {
+      transform: scale(1.05);
+    }
+
+    .culture-stat {
+      position: absolute;
+      bottom: 30px;
+      left: -20px;
+      background: var(--primary-color);
+      color: #fff;
+      padding: 25px 40px;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .culture-stat h4 {
+      color: var(--secondary-color);
+      font-size: 2.5rem;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .integrity-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+    }
+
+    /* --- DEFENSE GRID (Services) --- */
+    .defense-sec {
+      padding: 100px 0;
+      background: #f8fafc;
+    }
+
+    .defense-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px;
+    }
+
+    .defense-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .defense-card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      position: relative;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .defense-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border-color: var(--secondary-color);
+    }
+
+    .defense-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--secondary-color);
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .defense-card:hover::before {
+      opacity: 1;
+    }
+
+    .def-num {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      line-height: 1;
+      transition: 0.3s;
+    }
+
+    .defense-card:hover .def-num {
+      color: rgba(191, 165, 110, 0.1);
+    }
+
+    .def-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .defense-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* --- RADAR GRID (Methodology) --- */
+    .radar-sec {
+      padding: 100px 0;
+      background: #163945;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .radar-sec h2 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .radar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .radar-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px 20px;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: 0.3s;
+    }
+
+    .radar-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-5px);
+      border-color: var(--secondary-color);
+    }
+
+    .radar-icon {
+      font-size: 2rem;
+      color: var(--secondary-color);
+      margin-bottom: 20px;
+      font-weight: 700;
+      display: block;
+    }
+
+    .radar-item h4 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .radar-item p {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* --- CTA CLEAN --- */
+    .cta-clean {
+      padding: 80px 0;
+      text-align: center;
+      background: #fff;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .btn-outline-theme {
+      border: 2px solid var(--primary-color);
+      color: var(--primary-color);
+      padding: 12px 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn-outline-theme:hover {
+      background: var(--primary-color);
+      color: #fff;
+    }
+
+    /* --- FOOTER CLEAN --- */
+    #footer_area {
+      padding: 80px 0 40px;
+      background: #0f242b;
+      color: #94a3b8;
+    }
+
+    .footer_widget h3 {
+      color: #fff;
+      margin-bottom: 25px;
+      font-size: 1.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    .footer_list {
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer_list li {
+      margin-bottom: 12px;
+    }
+
+    .footer_list a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 0.95rem;
+    }
+
+    .footer_list a:hover {
+      color: var(--secondary-color);
+      padding-left: 5px;
+    }
+
+    .footer-areas-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .footer_btn {
+      background: var(--secondary-color);
+      color: #163945;
+      padding: 12px 25px;
+      font-weight: 700;
+      display: inline-block;
+      border-radius: 4px;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    .footer_btn:hover {
+      background: #fff;
+      color: #163945;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 991px) {
+      .comp-hero .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .defense-grid,
+      .radar-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .culture-stat {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        border-radius: 10px;
+        margin-top: -30px;
+        margin-bottom: 30px;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<header id="header_id" class="main_header header_style_one">
-		<div class="header_top">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="header_contact_info float-left ul-li">
-						<ul>
-							<li><i class="far fa-envelope"></i> gpa.adv@outlook.com</li>
-							<li><i class="fas fa-phone"></i> (41) 99726-6499</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="header_follow_social float-right ul-li">
-						<ul>
-							<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
-							<li><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-							<li><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
-							
-							<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /header_top -->
-<div class="header_main_menu">
-<div class="site_logo">
-<a href="https://felipenchagas.github.io/SITE-GPA/" title="GPA Advocacia - Parceria jurídica no mundo dos negócios">
-<img src="assets/img/logo/logo-1.png" alt="Logo GPA Advocacia">
-</a>
-</div>
-<nav class="main_navigation ul-li">
-<ul>
-<li class="dropdown">
-<a href="https://felipenchagas.github.io/SITE-GPA/">Início</a>
-</li>
-<li class="dropdown">
-<a href="#service">Empresa</a>
-<ul class="dropdown-menu clearfix">
-
-<li><a href="fundado-em-curitiba.html">Fundado em Curitiba</a></li>
-<!-- NÍVEL 1 -->
-<li class="dropdown">
-<a href="#" class="has-submenu">Sócio Fundador</a>
-<ul class="dropdown-menu clearfix">
-<!-- NÍVEL 2 -->
-<li class="dropdown">
-<a href="gustavo-de-oliveira-pedroso.html" class="has-submenu">Gustavo de Oliveira Pedroso</a>
-<ul class="dropdown-menu clearfix">
-<!-- NÍVEL 3 -->
-<li class="dropdown">
-<a href="#" class="has-submenu">Qualificações</a>
-<ul class="dropdown-menu clearfix">
-<li><a href="especialista-em-direito-empresarial-e-inovacao-uel.html">Especialista em Direito Empresarial e Inovação (UEL)</a></li>
-<li><a href="mba-ibmec.html">MBA (IBMEC)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-
-<li><a href="estrategias-empresariais.html">Estratégias Empresariais</a></li>
-</ul>
-</li>
-
-<li class="dropdown">
-<a href="#service">Serviços</a>
-<ul class="dropdown-menu clearfix">
-<li class="dropdown">
-<a href="#" class="has-submenu">Área Consultiva</a>
-<ul class="dropdown-menu clearfix">
-<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação de Negócios</a></li>
-<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
-<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
-<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental, Florestal e Agronegócio</a></li>
-<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
-<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
-</ul>
-</li>
-
-<li class="dropdown">
-<a href="#" class="has-submenu">Área Contenciosa</a>
-<ul class="dropdown-menu clearfix">
-<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
-<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
-<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
-<li><a href="tributario.html">Tributário</a></li>
-<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
-<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
-</ul>
-</li>
-</ul>
-</li>
-
-<li class="dropdown">
-<a href="#portfolio">Rede social</a>
-<ul class="dropdown-menu">
-<li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-<li><a href="https://www.facebook.com/gpa.advocacia/" target="_blank">Facebook</a></li>
-<li><a href="https://www.linkedin.com/company/gpaadvocacia//" target="_blank">LinkedIn</a></li>
-</ul>
-</li>
-
-<li><a href="#">Blog</a></li>
-<li><a href="contato.html">Contato</a></li>
-</ul>
-</nav>
-
-
-			<!-- /nav Menu -->
-			<div class="wide_side_bar open_side_area clearfix">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-			<div class="wide_side_inner">
-				<div class="side_overlay open_side_area"></div>
-				<div class="side_inner_content text-center">
-					<div class="close_btn open_side_area">Voltar <i class="fas fa-arrow-right"></i></div>
-					<div class="side_inner_logo">
-						<a href="index" title="GPA Advocacia">
-							<img src="assets/img/logo/logo-1.png" alt="Logo lateral GPA Advocacia">
-						</a>
-					</div>
-					<p>
-						GPA Advocacia é um escritório fundado em Curitiba, especializado em empresas e empresários que buscam
-						<strong>segurança jurídica aliada às melhores estratégias empresariais</strong>. Atuamos como um verdadeiro
-						<strong>jurídico parceiro de negócios</strong>, apoiando a tomada de decisão e o crescimento sustentável das empresas.
-					</p>
-					<div class="side_contact">
-						<div class="social_widget ul-li headline relative-position">
-							<h3>Siga a GPA nas redes:</h3>
-							<ul>
-								<li class="h-fb"><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
-								<li class="h-tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
-								<li class="h-bh"><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-								<li class="h-yo"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="side_copywright">
-						© 2026 GPA Advocacia · Desenvolvido por e-Web Agency + Empresarial Web
-					</div>
-				</div>
-			</div>
-			
-			<!-- side bar Inner -->
-			<div class="call_to_quote float-right">
-				<div class="call_icon float-left">
-					<i class="flaticon-call"></i>
-				</div>
-				<span>Atendimento para empresas</span>
-				<span class="call_number">(41) 99726-6499</span>
-				
-			</div>
-			<!-- /call to action -->
-		</div>
-		<!-- /desktop version -->
-		<div class="mobile_menu">
-			<div class="mobile_menu_button open_mobile_menu">
-				<i class="fas fa-bars"></i>
-			</div>
-			<div class="mobile_menu_wrap">
-				<div class="mobile_menu_overlay open_mobile_menu"></div>
-				<div class="mobile_menu_content">
-					<div class="mobile_menu_close open_mobile_menu">
-						<i class="fas fa-window-close"></i>
-					</div>
-					<div class="m-brand-logo text-center">
-						<img src="assets/img/logo/logo-1.png" alt="Logo mobile GPA Advocacia">
-					</div>
-					<nav class="main-navigation  clearfix ul-li">
-						<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
-							<li class="dropdown">
-								<a href="index">
-									Início
-								</a>
-							</li>
-							<li><a href="about">Empresa</a></li>
-							<li class="dropdown">
-								<a href="#service">
-									Serviços
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="case">Área Consultiva</a></li>
-									<li><a href="case-2">Área Contenciosa</a></li>
-									<li><a href="case-single">Detalhes dos serviços</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#">
-									Rede social
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Instagram</a></li>
-									<li><a href="#">Facebook</a></li>
-									<li><a href="#">Linkedin</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#">
-									Time
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="team">Equipe</a></li>
-									<li><a href="team-single">Sócio fundador</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#">
-									Blog
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Artigos</a></li>
-									<li><a href="#">Post detalhado</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#">
-									Páginas
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="contato">Contato</a></li>
-									<li><a href="#">FAQ</a></li>
-									<li><a href="#">Proposta & Investimento</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-					<div class="free_call_nm">
-						<div class="m_call_icon text-center">
-							<i class="flaticon-call"></i>
-						</div>
-						<div class="m_call_text">
-							<span>ATENDIMENTO EMPRESARIAL</span>
-							<strong>(41) 99726-6499</strong>
-						</div>
-					</div>
-					<div class="m_social_area text-center ul-li">
-						<h3> Siga a GPA:</h3>
-						<ul>
-							<li class="m_fb"><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
-							<li class="m_tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
-							<li class="m_lk"><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-							<li class="m_yb"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
-						</ul>
-					</div>
-					<div class="m_get_quote">
-						<a href="contato">Falar com o jurídico parceiro</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /mobile menu -->
-	</header>
-
-    <!-- HERO -->
-    <section class="recovery-hero">
-        <div class="container">
-            <div class="hero-content wow fadeInUp">
-                <span class="text-success-gpa font-weight-bold" style="letter-spacing: 3px; text-transform: uppercase;">Capital & Liquidity</span>
-                <h1>Recuperação de Crédito</h1>
-                <p>Onde outros veem prejuízo, nós encontramos ativos. Inteligência investigativa e rigor jurídico para restabelecer o seu fluxo de caixa.</p>
-                <a href="contato.html" class="btn-success-gpa">Analisar Carteira de Inadimplência</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- SCORE BAR -->
-    <div class="container">
-        <div class="score-bar">
-            <div class="row">
-                <div class="col-md-3 score-item wow fadeIn">
-                    <span class="score-value">92%</span>
-                    <span class="score-label">Localização de Bens</span>
-                </div>
-                <div class="col-md-3 score-item wow fadeIn" data-wow-delay="0.2s">
-                    <span class="score-value">+R$ 50M</span>
-                    <span class="score-label">Recuperados/Ano</span>
-                </div>
-                <div class="col-md-3 score-item wow fadeIn" data-wow-delay="0.4s">
-                    <span class="score-value">High-Tech</span>
-                    <span class="score-label">Tracking de Ativos</span>
-                </div>
-                <div class="col-md-3 score-item wow fadeIn" data-wow-delay="0.6s">
-                    <span class="score-value">Zero</span>
-                    <span class="score-label">Custo de Análise</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- STRATEGY CARDS -->
-    <section class="strategy-sec">
-        <div class="container">
-            <div class="row mb-5 text-center justify-content-center">
-                <div class="col-lg-8">
-                    <h2>Estratégias de Alta Performance</h2>
-                    <p class="text-muted">Não fazemos apenas cobrança. Fazemos engenharia jurídica reversa para encontrar o patrimônio oculto do devedor.</p>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Card 1 -->
-                <div class="col-md-4 mb-4 wow fadeInUp">
-                    <div class="strategy-card">
-                        <span class="sc-num">01</span>
-                        <div class="sc-content">
-                            <div class="sc-icon"><i class="fas fa-balance-scale leaf-icon"></i>
-</div>
-                            <h3>Rastreamento de Ativos</h3>
-                            <p>Uso de softwares avançados para identificar bens em nome de laranjas, empresas do mesmo grupo econômico e blindagens patrimoniais.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 2 -->
-                <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="strategy-card">
-                        <span class="sc-num">02</span>
-                        <div class="sc-content">
-                            <div class="sc-icon"><i class="fas fa-gavel"></i></div>
-                            <h3>Medidas Coercitivas</h3>
-                            <p>Aplicação de medidas atípicas: bloqueio de cartões, apreensão de passaporte e CNH, forçando a negociação pelo devedor profissional.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Card 3 -->
-                <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="strategy-card" style="background: #276749;">
-                        <span class="sc-num" style="color: rgba(255,255,255,0.05);">03</span>
-                        <div class="sc-content">
-                            <div class="sc-icon" style="color: #fff;"><i class="fas fa-handshake"></i></div>
-                            <h3 style="color: #fff;">Acordos Estratégicos</h3>
-                            <p style="color: #aacdbb;">Negociação extrajudicial firme que prioriza a rapidez do recebimento e a minimização do custo processual.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- THE RECOVERY RULER -->
-    <section class="ruler-section">
-        <div class="container">
-            <h2 style="color: white;">A Régua da Recuperação</h2>
-            <p class="mb-5" style="color: #718096;">Um processo estruturado para maximizar sua liquidez</p>
-            
-            <div class="ruler-container">
-                <div class="ruler-step wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="ruler-dot">1</div>
-                    <h4>Triagem</h4>
-                    <p>Análise de solvência</p>
-                </div>
-                <div class="ruler-step wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="ruler-dot">2</div>
-                    <h4>Amigável</h4>
-                    <p>Notificação e Prazo</p>
-                </div>
-                <div class="ruler-step wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="ruler-dot">3</div>
-                    <h4>Invasão</h4>
-                    <p>Busca de Patrimônio</p>
-                </div>
-                <div class="ruler-step wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="ruler-dot">4</div>
-                    <h4>Execução</h4>
-                    <p>Bloqueio e Penhora</p>
-                </div>
-                <div class="ruler-step wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="ruler-dot">5</div>
-                    <h4>Liquidez</h4>
-                    <p>Dinheiro no Caixa</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- METHODOLOGY -->
-    <section class="method-sec">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 wow fadeInLeft">
-                    <img src="assets/img/service/credito.jpg" alt="Recuperação de Crédito" class="img-fluid rounded shadow-lg">
-                </div>
-                <div class="col-lg-6 pl-lg-5 mt-5 mt-lg-0 wow fadeInRight">
-                    <span class="text-success-gpa font-weight-bold">Diferencial GPA</span>
-                    <h2 class="mb-4">Tecnologia a serviço do seu recebimento.</h2>
-                    <ul class="list-unstyled method-list">
-                        <li>
-                            <i class="fas fa-check"></i>
-                            <div>
-                                <h4>Gestão de NPL (Créditos Podres)</h4>
-                                <p>Análise técnica para baixa contábil ou venda de carteiras de crédito de difícil recuperação.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            <div>
-                                <h4>Investigação Corporativa</h4>
-                                <p>Desconsideração da personalidade jurídica para atingir bens dos sócios em casos de fraude.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-check"></i>
-                            <div>
-                                <h4>Relatórios de Performance</h4>
-                                <p>Transparência total com dashboards mensais sobre o status de cada cobrança.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-clean">
-        <div class="container">
-            <h2 class="wow fadeInUp">Recupere sua margem de lucro.</h2>
-            <p class="text-muted mb-5 wow fadeInUp" data-wow-delay="0.2s">Pare de financiar o inadimplente. Vamos transformar sua dívida em caixa agora.</p>
-            <a href="contato.html" class="btn-success-gpa wow fadeInUp" data-wow-delay="0.4s">Falar com Equipe de Recuperação</a>
-        </div>
-    </section>
-
-<footer id="footer_area" class="footer_section footer-clean">
-  <div class="background_overlay"></div>
-
-  <div class="container">
-    <div class="footer_content">
-      <div class="row footer-row">
-
-        <!-- COL 1 -->
-        <div class="col-lg-4 col-md-12 footer-col">
-          <div class="footer_widget headline">
-            <h3 class="widget_title">
-              <span class="title_shape_left"></span>
-              GPA Advocacia
-            </h3>
-
-            <p class="footer_text">
-              Jurídico parceiro de negócios para empresas.<br>
-              Consultivo e contencioso com foco em segurança jurídica, estratégia e resultados.
-            </p>
-
-            <a class="footer_btn" href="contato.html">FALAR COM A GPA</a>
-
-            <div class="footer_contact">
-              <div>Curitiba • São Paulo • Chapecó</div>
-              <a href="mailto:gpa.adv@outlook.com">gpa.adv@outlook.com</a><br>
-              <a href="https://wa.me/5541997266499" target="_blank" rel="noopener">WhatsApp: (41) 99726-6499</a>
-            </div>
+  <header id="header_id" class="main_header header_style_one">
+    <div class="header_top">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="header_contact_info float-left ul-li">
+            <ul>
+              <li><i class="far fa-envelope"></i> gpa.adv@outlook.com</li>
+              <li><i class="fas fa-phone"></i> (41) 99726-6499</li>
+            </ul>
           </div>
         </div>
+        <div class="col-md-6">
+          <div class="header_follow_social float-right ul-li">
+            <ul>
+              <li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i
+                    class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i
+                    class="fab fa-linkedin"></i></a></li>
+              <li><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i
+                    class="fab fa-facebook-f"></i></a></li>
 
-        <!-- COL 2 -->
-        <div class="col-lg-4 col-md-12 footer-col">
-          <div class="footer_widget headline">
-            <h3 class="widget_title">
-              <span class="title_shape_left"></span>
-              Áreas principais
-            </h3>
-
-            <div class="footer-areas-grid">
-              <ul class="footer_list">
-                <li><a href="contratos-e-estruturacao-de-negocios.html">Contratos & Estruturação</a></li>
-                <li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
-                <li><a href="compliance-e-regulatorio.html">Compliance & Regulatório</a></li>
-                <li><a href="direito-digital-e-inovacao.html">Digital & Inovação</a></li>
-              </ul>
-
-              <ul class="footer_list">
-                <li><a href="marcas-e-patentes.html">Marcas & Patentes</a></li>
-                <li><a href="arbitragem-e-mediacao.html">Arbitragem & Mediação</a></li>
-                <li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
-                <li><a href="tributario.html">Tributário</a></li>
-              </ul>
-            </div>
-
-            <a class="footer_link_more" href="#service">Ver todas as áreas →</a>
+              <li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i
+                    class="fab fa-whatsapp"></i></a></li>
+            </ul>
           </div>
         </div>
-
-        <!-- COL 3 -->
-        <div class="col-lg-4 col-md-12 footer-col">
-          <div class="footer_widget headline">
-            <h3 class="widget_title">
-              <span class="title_shape_left"></span>
-              Conteúdos
-            </h3>
-
-            <div class="footer_posts">
-              <a class="footer_post" href="estrategias-empresariais.html">
-                <span class="tag">ESTRATÉGIA</span>
-                <span class="title">Segurança na abertura de filiais</span>
-              </a>
-
-              <a class="footer_post" href="compliance-e-regulatorio.html">
-                <span class="tag">GOVERNANÇA</span>
-                <span class="title">Compliance como valor competitivo</span>
-              </a>
-            </div>
-
-            <a class="footer_link_more" href="#blog_area">Ir para o blog →</a>
-          </div>
-        </div>
-
       </div>
     </div>
-  </div>
-</footer>
+    <!-- /header_top -->
+    <div class="header_main_menu">
+      <div class="site_logo">
+        <a href="https://felipenchagas.github.io/SITE-GPA/"
+          title="GPA Advocacia - Parceria jurídica no mundo dos negócios">
+          <img src="assets/img/logo/logo-1.png" alt="Logo GPA Advocacia">
+        </a>
+      </div>
+      <nav class="main_navigation ul-li">
+        <ul>
+          <li class="dropdown">
+            <a href="https://felipenchagas.github.io/SITE-GPA/">Início</a>
+          </li>
+          <li class="dropdown">
+            <a href="#service">Empresa</a>
+            <ul class="dropdown-menu clearfix">
 
-<style>
-/* ===== FOOTER CLEAN (anti-encavalamento) ===== */
-.footer-clean{ background:#000; padding:70px 0 60px; }
-.footer-clean .footer-row{ row-gap:34px; }
-.footer-clean .footer-col{ min-width:0; } /* IMPORTANTÍSSIMO: evita estouro/encavalamento */
+              <li><a href="fundado-em-curitiba.html">Fundado em Curitiba</a></li>
+              <!-- NÍVEL 1 -->
+              <li class="dropdown">
+                <a href="#" class="has-submenu">Sócio Fundador</a>
+                <ul class="dropdown-menu clearfix">
+                  <!-- NÍVEL 2 -->
+                  <li class="dropdown">
+                    <a href="gustavo-de-oliveira-pedroso.html" class="has-submenu">Gustavo de Oliveira Pedroso</a>
+                    <ul class="dropdown-menu clearfix">
+                      <!-- NÍVEL 3 -->
+                      <li class="dropdown">
+                        <a href="#" class="has-submenu">Qualificações</a>
+                        <ul class="dropdown-menu clearfix">
+                          <li><a href="especialista-em-direito-empresarial-e-inovacao-uel.html">Especialista em Direito
+                              Empresarial e Inovação (UEL)</a></li>
+                          <li><a href="mba-ibmec.html">MBA (IBMEC)</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
 
-.footer-clean .widget_title{
-  color:#fff;
-  margin:0 0 18px;
-  font:700 20px/1.2 Georgia,"Times New Roman",serif;
-}
-.footer-clean .widget_title .title_shape_left{ display:none; } /* opcional */
+              <li><a href="estrategias-empresariais.html">Estratégias Empresariais</a></li>
+            </ul>
+          </li>
 
-.footer-clean .footer_text{
-  color:rgba(255,255,255,.78);
-  font:500 14px/1.8 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  margin:0 0 18px;
-  max-width:360px;
-}
+          <li class="dropdown">
+            <a href="#service">Serviços</a>
+            <ul class="dropdown-menu clearfix">
+              <li class="dropdown">
+                <a href="#" class="has-submenu">Área Consultiva</a>
+                <ul class="dropdown-menu clearfix">
+                  <li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação de Negócios</a></li>
+                  <li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+                  <li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+                  <li><a href="ambiental-florestal-e-agronegocio.html">Ambiental, Florestal e Agronegócio</a></li>
+                  <li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+                  <li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+                </ul>
+              </li>
 
-.footer-clean .footer_btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  height:52px;
-  padding:0 22px;
-  border-radius:10px;
-  background:#2a2a2a;
-  color:#fff;
-  text-decoration:none;
-  font:800 12px/1 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  border:1px solid rgba(255,255,255,.12);
-  margin:8px 0 18px;
-  transition:transform .15s ease, filter .15s ease;
-}
-.footer-clean .footer_btn:hover{ filter:brightness(1.06); transform:translateY(-1px); }
+              <li class="dropdown">
+                <a href="#" class="has-submenu">Área Contenciosa</a>
+                <ul class="dropdown-menu clearfix">
+                  <li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+                  <li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+                  <li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+                  <li><a href="tributario.html">Tributário</a></li>
+                  <li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+                  <li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
 
-.footer-clean .footer_contact{
-  color:rgba(255,255,255,.72);
-  font:500 13px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-}
-.footer-clean .footer_contact a{
-  color:#c5a47e;
-  text-decoration:none;
-}
-.footer-clean .footer_contact a:hover{ text-decoration:underline; }
+          <li class="dropdown">
+            <a href="#portfolio">Rede social</a>
+            <ul class="dropdown-menu">
+              <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+              <li><a href="https://www.facebook.com/gpa.advocacia/" target="_blank">Facebook</a></li>
+              <li><a href="https://www.linkedin.com/company/gpaadvocacia//" target="_blank">LinkedIn</a></li>
+            </ul>
+          </li>
 
-/* LISTAS (evita “tudo em linha”) */
-.footer-clean .footer_list{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:grid;
-  gap:10px;
-}
-.footer-clean .footer_list a{
-  color:rgba(255,255,255,.78);
-  text-decoration:none;
-  font:600 13px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  display:inline-block;
-  max-width:100%;
-  overflow-wrap:anywhere;
-}
-.footer-clean .footer_list a:hover{ color:#fff; }
 
-/* Áreas em 2 colunas internas, com gap real */
-.footer-clean .footer-areas-grid{
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0,1fr));
-  gap:14px 24px;
-}
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
 
-/* Conteúdos (objetivo, sem “card com imagem”) */
-.footer-clean .footer_posts{
-  display:grid;
-  gap:16px;
-  margin-top:2px;
-}
-.footer-clean .footer_post{
-  text-decoration:none;
-  display:grid;
-  gap:6px;
-  padding-bottom:14px;
-  border-bottom:1px solid rgba(255,255,255,.10);
-}
-.footer-clean .footer_post:last-child{ border-bottom:none; padding-bottom:0; }
-.footer-clean .footer_post .tag{
-  color:#c5a47e;
-  font:800 11px/1 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  letter-spacing:.14em;
-}
-.footer-clean .footer_post .title{
-  color:#fff;
-  font:700 14px/1.35 Georgia,"Times New Roman",serif;
-}
 
-.footer-clean .footer_link_more{
-  display:inline-block;
-  margin-top:16px;
-  color:#c5a47e;
-  text-decoration:none;
-  font:700 13px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-}
-.footer-clean .footer_link_more:hover{ text-decoration:underline; }
+      <!-- /nav Menu -->
+      <div class="wide_side_bar open_side_area clearfix">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="wide_side_inner">
+        <div class="side_overlay open_side_area"></div>
+        <div class="side_inner_content text-center">
+          <div class="close_btn open_side_area">Voltar <i class="fas fa-arrow-right"></i></div>
+          <div class="side_inner_logo">
+            <a href="index" title="GPA Advocacia">
+              <img src="assets/img/logo/logo-1.png" alt="Logo lateral GPA Advocacia">
+            </a>
+          </div>
+          <p>
+            GPA Advocacia é um escritório fundado em Curitiba, especializado em empresas e empresários que buscam
+            <strong>segurança jurídica aliada às melhores estratégias empresariais</strong>. Atuamos como um verdadeiro
+            <strong>jurídico parceiro de negócios</strong>, apoiando a tomada de decisão e o crescimento sustentável das
+            empresas.
+          </p>
+          <div class="side_contact">
+            <div class="social_widget ul-li headline relative-position">
+              <h3>Siga a GPA nas redes:</h3>
+              <ul>
+                <li class="h-fb"><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i
+                      class="fab fa-facebook-f"></i></a></li>
+                <li class="h-tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i
+                      class="fab fa-instagram"></i></a></li>
+                <li class="h-bh"><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank"
+                    rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+                <li class="h-yo"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i
+                      class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="side_copywright">
+            © 2026 GPA Advocacia · Desenvolvido por e-Web Agency + Empresarial Web
+          </div>
+        </div>
+      </div>
 
-/* Responsivo: quebra a grid interna pra 1 coluna no mobile */
-@media (max-width: 520px){
-  .footer-clean .footer-areas-grid{ grid-template-columns:1fr; }
-  .footer-clean .footer_text{ max-width:100%; }
-}
-</style>
+      <!-- side bar Inner -->
+      <div class="call_to_quote float-right">
+        <div class="call_icon float-left">
+          <i class="flaticon-call"></i>
+        </div>
+        <span>Atendimento para empresas</span>
+        <span class="call_number">(41) 99726-6499</span>
 
-	<div class="footer_copyright">
-		<div class="container">
-			<div class="footer_copyright_content">
-				<div class="row">
-					<div class="col-lg-4 col-md-12">
-						<div class="footer_social ul-li clearfix">
-							<ul>
-								<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
-								<li><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-								<li><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
-								
-								<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12">
-						<div class="footer_logo text-center">
-							<a href="index"><img src="assets/img/logo/flogo-1.png" alt="Logo rodapé GPA Advocacia"></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12">
-						<div class="copyright_text text-right">
-							© 2026 GPA Advocacia. Desenvolvido por <a href="#">e-Web Agency + Empresarial Web</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+      </div>
+      <!-- /call to action -->
+    </div>
+    <!-- /desktop version -->
+    <div class="mobile_menu">
+      <div class="mobile_menu_button open_mobile_menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="mobile_menu_wrap">
+        <div class="mobile_menu_overlay open_mobile_menu"></div>
+        <div class="mobile_menu_content">
+          <div class="mobile_menu_close open_mobile_menu">
+            <i class="fas fa-window-close"></i>
+          </div>
+          <div class="m-brand-logo text-center">
+            <img src="assets/img/logo/logo-1.png" alt="Logo mobile GPA Advocacia">
+          </div>
+          <nav class="main-navigation  clearfix ul-li">
+            <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+              <li class="dropdown">
+                <a href="index">
+                  Início
+                </a>
+              </li>
+              <li><a href="about">Empresa</a></li>
+              <li class="dropdown">
+                <a href="#service">
+                  Serviços
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="case">Área Consultiva</a></li>
+                  <li><a href="case-2">Área Contenciosa</a></li>
+                  <li><a href="case-single">Detalhes dos serviços</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">
+                  Rede social
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Linkedin</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">
+                  Time
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="team">Equipe</a></li>
+                  <li><a href="team-single">Sócio fundador</a></li>
+                </ul>
+              </li>
 
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/appear.js"></script>
-	<script src="assets/js/wow.min.js"></script>
-	<script src="assets/js/script.js"></script>
+            </ul>
+          </nav>
+          <div class="free_call_nm">
+            <div class="m_call_icon text-center">
+              <i class="flaticon-call"></i>
+            </div>
+            <div class="m_call_text">
+              <span>ATENDIMENTO EMPRESARIAL</span>
+              <strong>(41) 99726-6499</strong>
+            </div>
+          </div>
+          <div class="m_social_area text-center ul-li">
+            <h3> Siga a GPA:</h3>
+            <ul>
+              <li class="m_fb"><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i
+                    class="fab fa-facebook-f"></i></a></li>
+              <li class="m_tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i
+                    class="fab fa-instagram"></i></a></li>
+              <li class="m_lk"><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank"
+                  rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+              <li class="m_yb"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i
+                    class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+          <div class="m_get_quote">
+            <a href="contato">Falar com o jurídico parceiro</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /mobile menu -->
+  </header>
+
+  <!-- 1. HERO SECTION (Standard Scoped) -->
+  <section class="comp-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 wow fadeInLeft">
+          <span class="hero-badge">Capital & Liquidity</span>
+          <h1 class="hero-title">Recuperação de Crédito</h1>
+          <h2 class="hero-subtitle">Onde outros veem prejuízo, nós encontramos ativos. Inteligência investigativa e
+            rigor jurídico para restabelecer o seu fluxo de caixa.</h2>
+          <a href="contato.html" class="btn-sapphire">Analisar Carteira</a>
+        </div>
+        <div class="col-lg-6 wow fadeInRight">
+          <div class="hero-img-wrap">
+            <img src="assets/img/service/credito.jpg" alt="Recuperação de Crédito" class="hero-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. INTRO (Culture Section) -->
+  <section class="culture-sec">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0 wow fadeInLeft">
+          <div class="culture-img">
+            <img src="assets/img/about/about-2.jpg" alt="Negociação e Estratégia" class="img-fluid rounded shadow">
+            <div class="culture-stat">
+              <h4>+R$ 50M</h4>
+              <p>Recuperados todo ano para empresas.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInRight">
+          <div class="custom-content pl-lg-5">
+            <div class="integrity-text">
+              <h2>Engenharia Jurídica Reversa</h2>
+            </div>
+            <p>A inadimplência não é apenas um problema financeiro, é um problema de gestão. Atuamos com uma abordagem
+              de "High-Tech Tracking", utilizando softwares avançados para identificar patrimônio oculto e garantir a
+              efetividade da cobrança.</p>
+            <p class="mt-3">Não fazemos apenas cobrança judicial. Investigamos bens em nome de laranjas, grupos
+              econômicos e holdings familiares para perfurar blindagens patrimoniais.</p>
+            <ul class="list-unstyled mt-4">
+              <li class="mb-3"><i class="fas fa-check text-gold mr-2"></i> <strong>Investigação:</strong> Rastreamento
+                de bens ocultos.</li>
+              <li class="mb-3"><i class="fas fa-check text-gold mr-2"></i> <strong>Coerção Legal:</strong> Bloqueio de
+                CNH, Passaporte e Cartões.</li>
+              <li class="mb-3"><i class="fas fa-check text-gold mr-2"></i> <strong>Negociação:</strong> Acordos com
+                cláusulas de garantia real.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. SERVICES (Defense Grid Style) -->
+  <section class="defense-sec">
+    <div class="container">
+      <div class="defense-header wow fadeInUp">
+        <span class="hero-badge" style="margin-bottom:15px;">Nossa Atuação</span>
+        <div class="custom-content">
+          <h2>Estratégias de Recuperação</h2>
+        </div>
+      </div>
+      <div class="defense-grid">
+        <!-- Card 1 -->
+        <div class="defense-card wow payUp">
+          <div class="def-num">01</div>
+          <div class="def-icon"><i class="flaticon-courthouse"></i></div>
+          <h3>Rastreamento de Ativos</h3>
+          <p class="custom-content">Uso de softwares avançados para identificar bens em nome de laranjas, empresas do
+            mesmo grupo econômico e blindagens.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="defense-card wow payUp" data-wow-delay="0.1s">
+          <div class="def-num">02</div>
+          <div class="def-icon"><i class="flaticon-courthouse"></i></div>
+          <h3>Medidas Coercitivas</h3>
+          <p class="custom-content">Aplicação de medidas atípicas (art. 139, IV, CPC): apreensão de passaporte e CNH,
+            forçando a negociação.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="defense-card wow payUp" data-wow-delay="0.2s">
+          <div class="def-num">03</div>
+          <div class="def-icon"><i class="flaticon-courthouse"></i></div>
+          <h3>Acordos Estratégicos</h3>
+          <p class="custom-content">Negociação extrajudicial firme que prioriza a rapidez do recebimento e a minimização
+            do custo processual.</p>
+        </div>
+        <!-- Card 4 -->
+        <div class="defense-card wow payUp" data-wow-delay="0.3s">
+          <div class="def-num">04</div>
+          <div class="def-icon"><i class="flaticon-courthouse"></i></div>
+          <h3>Gestão de NPL</h3>
+          <p class="custom-content">Análise técnica para baixa contábil e saneamento de carteiras de crédito podre
+            (Non-Performing Loans).</p>
+        </div>
+        <!-- Card 5 -->
+        <div class="defense-card wow payUp" data-wow-delay="0.4s">
+          <div class="def-num">05</div>
+          <div class="def-icon"><i class="flaticon-courthouse"></i></div>
+          <h3>Desconsideração da PJ</h3>
+          <p class="custom-content">Incidentes processuais para atingir o patrimônio pessoal dos sócios em casos de
+            fraude ou confusão patrimonial.</p>
+        </div>
+        <!-- Card 6 -->
+        <div class="defense-card wow payUp" data-wow-delay="0.5s">
+          <div class="def-num">06</div>
+          <div class="def-icon"><i class="flaticon-courthouse"></i></div>
+          <h3>Relatórios de Performance</h3>
+          <p class="custom-content">Transparência total com dashboards mensais sobre o status de cada cobrança e
+            probabilidades de êxito.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. METODOLOGIA (Radar Grid Style - The Recovery Ruler) -->
+  <section class="radar-sec">
+    <div class="container">
+      <div class="text-center custom-content">
+        <span class="hero-badge">A Régua da Recuperação</span>
+        <h2>Processo Estruturado</h2>
+        <p style="max-width: 700px; margin: 0 auto;">Maximizar a liquidez com inteligência processual.</p>
+      </div>
+      <div class="radar-grid">
+        <div class="radar-item">
+          <div class="radar-icon">01</div>
+          <div class="custom-content">
+            <h4>Triagem & Solvência</h4>
+            <p>Análise prévia da capacidade de pagamento do devedor antes de iniciar custos judiciais.</p>
+          </div>
+        </div>
+        <div class="radar-item">
+          <div class="radar-icon">02</div>
+          <div class="custom-content">
+            <h4>Fase Amigável</h4>
+            <p>Notificação extrajudicial e tentativa de acordo com descontos programados e prazos fatais.</p>
+          </div>
+        </div>
+        <div class="radar-item">
+          <div class="radar-icon">03</div>
+          <div class="custom-content">
+            <h4>Execução & Invasão</h4>
+            <p>Ingresso judicial, arresto de bens e busca patrimonial agressiva (SISBAJUD, RENAJUD e INFOJUD).</p>
+          </div>
+        </div>
+        <div class="radar-item">
+          <div class="radar-icon">04</div>
+          <div class="custom-content">
+            <h4>Liquidez</h4>
+            <p>Expropriação, leilão de ativos ou adjudicação para transformar a dívida em dinheiro ou patrimônio.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CTA FINAL (Clean Style) -->
+  <section class="cta-clean">
+    <div class="container">
+      <div class="custom-content">
+        <h2>Recupere sua margem de lucro.</h2>
+        <p class="mb-5">Pare de financiar o inadimplente. Vamos transformar sua dívida em caixa.</p>
+        <a href="contato.html" class="btn-outline-theme">Falar com Equipe de Recuperação</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WRAPPER PARA RODAPÉ (Isola os estilos) -->
+  <footer id="footer_area" class="footer_section footer-clean">
+    <div class="container">
+      <div class="footer_content">
+        <div class="row footer-row">
+          <!-- COL 1 -->
+          <div class="col-lg-4 col-md-12 footer-col">
+            <div class="footer_widget headline">
+              <h3 class="widget_title">GPA Advocacia</h3>
+              <p class="footer_text">
+                Jurídico parceiro de negócios para empresas.<br>
+                Consultivo e contencioso com foco em segurança jurídica, estratégia e resultados.
+              </p>
+              <a class="footer_btn" href="contato.html">FALAR COM A GPA</a>
+              <div class="footer_contact">
+                <div>Curitiba • São Paulo • Chapecó</div>
+                <a href="mailto:gpa.adv@outlook.com">gpa.adv@outlook.com</a><br>
+                <a href="https://wa.me/5541997266499" target="_blank" rel="noopener">WhatsApp: (41) 99726-6499</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- COL 2 -->
+          <div class="col-lg-4 col-md-12 footer-col">
+            <div class="footer_widget headline">
+              <h3 class="widget_title">Áreas principais</h3>
+              <div class="footer-areas-grid">
+                <ul class="footer_list">
+                  <li><a href="contratos-e-estruturacao-de-negocios.html">Contratos & Estruturação</a></li>
+                  <li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+                  <li><a href="compliance-e-regulatorio.html">Compliance & Regulatório</a></li>
+                  <li><a href="direito-digital-e-inovacao.html">Digital & Inovação</a></li>
+                </ul>
+                <ul class="footer_list">
+                  <li><a href="marcas-e-patentes.html">Marcas & Patentes</a></li>
+                  <li><a href="arbitragem-e-mediacao.html">Arbitragem & Mediação</a></li>
+                  <li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+                  <li><a href="tributario.html">Tributário</a></li>
+                </ul>
+              </div>
+              <a class="footer_link_more" href="#service">Ver todas as áreas →</a>
+            </div>
+          </div>
+
+          <!-- COL 3 -->
+          <div class="col-lg-4 col-md-12 footer-col">
+            <div class="footer_widget headline">
+              <h3 class="widget_title">Conteúdos</h3>
+              <div class="footer_posts">
+                <a class="footer_post" href="estrategias-empresariais.html">
+                  <span class="tag">ESTRATÉGIA</span>
+                  <span class="title">Segurança na abertura de filiais</span>
+                </a>
+                <a class="footer_post" href="compliance-e-regulatorio.html">
+                  <span class="tag">GOVERNANÇA</span>
+                  <span class="title">Compliance como valor competitivo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/appear.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>

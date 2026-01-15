@@ -1,871 +1,1085 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Segurança Jurídica | GPA Advocacia</title>
-	<link rel="shortcut icon" href="assets/img/logo/ficon.png" type="image/x-icon">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- Libraries -->
-	<link rel="stylesheet" href="assets/css/owl.carousel.css">
-	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<link rel="stylesheet" href="assets/css/flaticon.css">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <title>Segurança Jurídica | GPA Advocacia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="assets/img/logo/ficon.png" type="image/x-icon">
 
-    <!-- CSS "The Foundation Identity" (Restaurado) -->
-    <style>
-        /* --- GERAL --- */
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #444; background-color: #f4f6f8; }
-        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; font-weight: 700; color: #2c3e50; }
-        .text-steel { color: #34495e; }
-        .text-gold { color: #c0a16b; }
-        .bg-white { background-color: #fff; }
-        .font-sans { font-family: 'Poppins', sans-serif; }
-        
-        /* --- HEADER --- */
-        .main_navigation .dropdown-menu > li.dropdown{ position: relative; }
-        .main_navigation .dropdown-menu > li.dropdown > ul.dropdown-menu{ position: absolute; top: 0; left: 100%; display: none; z-index: 9999; }
-        .main_navigation a.has-submenu:after{ content: "›"; float: right; margin-left: 10px; opacity: .7; }
-        @media (min-width: 992px){ .main_navigation .dropdown-menu > li.dropdown:hover > ul.dropdown-menu{ display: block; } }
+  <!-- Libraries -->
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/fontawesome-all.css">
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Poppins:300,400,500,600,700"
+    rel="stylesheet">
 
-        /* --- HERO "FORTRESS" --- */
-        .security-hero {
-            padding: 180px 0 120px;
-            background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.7)), url('assets/img/slider/s2.jpg') center/cover;
-            color: #fff;
-            text-align: center;
-            border-bottom: 4px solid #c0a16b;
-        }
-        .security-hero h1 { font-size: 4rem; margin-bottom: 20px; color: #fff; letter-spacing: 1px; }
-        .security-hero p { font-size: 1.3rem; max-width: 700px; margin: 0 auto 40px; color: #bdc3c7; font-weight: 300; }
-        .btn-shield-gold {
-            background: transparent;
-            border: 2px solid #c0a16b;
-            color: #c0a16b;
-            padding: 15px 40px;
-            text-transform: uppercase;
-            font-weight: 700;
-            transition: 0.3s;
-        }
-        .btn-shield-gold:hover { background: #c0a16b; color: #2c3e50; }
+  <style>
+    :root {
+      --primary-color: #163945;
+      --secondary-color: #bfa56e;
+      --text-color: #4a5568;
+      --bg-light: #f8fafc;
+      --font-heading: 'Playfair Display', serif;
+      --font-body: 'Poppins', sans-serif;
+    }
 
-        /* --- INTRO "CHAOS VS ORDER" --- */
-        .chaos-sec { padding: 100px 0; }
-        .chaos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
-        .chaos-text h2 { font-size: 2.8rem; margin-bottom: 25px; }
-        .chaos-text p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 20px; color: #555; text-align: justify; }
-        .feature-list li { margin-bottom: 15px; display: flex; align-items: center; font-weight: 600; color: #34495e; }
-        .feature-list i { color: #c0a16b; margin-right: 15px; font-size: 1.2rem; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text-color);
+      line-height: 1.7;
+    }
 
-        /* --- 3 LAYERS OF PROTECTION (Cards) --- */
-        .layers-sec { background: #fff; padding: 100px 0; }
-        .layer-card {
-            background: #fdfdfd;
-            padding: 50px 30px;
-            border: 1px solid #eee;
-            text-align: center;
-            transition: 0.3s;
-            position: relative;
-            z-index: 1;
-            height: 100%;
-        }
-        .layer-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: #c0a16b; }
-        .layer-icon {
-            width: 80px; height: 80px; background: #2c3e50; color: #fff;
-            border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            margin: 0 auto 30px; font-size: 2rem;
-            box-shadow: 0 0 0 8px #f4f6f8;
-        }
-        .layer-card:hover .layer-icon { background: #c0a16b; }
-        .layer-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
-        .layer-card p { color: #666; font-size: 0.95rem; line-height: 1.6; }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-heading);
+      color: var(--primary-color);
+      font-weight: 700;
+    }
 
-        /* --- RISK RADAR (Visual) --- */
-        .radar-sec { padding: 100px 0; background: #2c3e50; color: #fff; text-align: center; }
-        .radar-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 60px; }
-        .radar-item {
-            background: rgba(255,255,255,0.05);
-            padding: 30px 20px;
-            border-radius: 8px;
-            transition: 0.3s;
-        }
-        .radar-item:hover { background: rgba(255,255,255,0.1); }
-        .radar-icon { font-size: 2.5rem; color: #e74c3c; margin-bottom: 15px; } /* Vermelho para risco */
-        .radar-check { font-size: 2.5rem; color: #2ecc71; margin-bottom: 15px; display: none; } /* Verde para solução */
-        .radar-item:hover .radar-icon { display: none; }
-        .radar-item:hover .radar-check { display: block; }
-        .radar-item h4 { color: #fff; font-size: 1.1rem; margin-bottom: 10px; }
-        .radar-item p { color: #95a5a6; font-size: 0.85rem; }
+    /* --- HERO SPLIT --- */
+    .comp-hero {
+      padding: 180px 0 120px;
+      /* Image blended */
+      background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.95)), url('assets/img/slider/s2.jpg') center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
 
-        /* --- NOVAS SEÇÕES DE CONTEÚDO INTEGRADO --- */
+    .hero-img-wrap {
+      position: relative;
+      z-index: 1;
+    }
 
-        /* Cost Table (Adaptada ao tema Foundation) */
-        .cost-sec { padding: 100px 0; background: #fff; }
-        .cost-table { width: 100%; border-collapse: separate; border-spacing: 0; border: 1px solid #eee; }
-        .cost-table th { background: #2c3e50; color: #fff; padding: 20px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
-        .cost-table td { padding: 20px; border-bottom: 1px solid #eee; color: #555; }
-        .cost-val { color: #e74c3c; font-weight: 700; }
-        .prevention-val { color: #27ae60; font-weight: 700; }
+    .hero-img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 20px 20px 0 #f0f2f5;
+      transform: rotate(-2deg);
+      transition: 0.5s;
+    }
 
-        /* Glossary Grid */
-        .glossary-sec { padding: 100px 0; background: #f4f6f8; }
-        .glossary-item { background: #fff; padding: 30px; border-left: 4px solid #2c3e50; margin-bottom: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
-        .glossary-item h4 { font-size: 1.2rem; margin-bottom: 10px; color: #2c3e50; }
-        .glossary-item p { font-size: 0.95rem; margin: 0; color: #666; }
+    .hero-img:hover {
+      transform: rotate(0deg);
+    }
 
-        /* Case Study (Adaptado ao tema Foundation) */
-        .case-sec { padding: 100px 0; background: #2c3e50; color: #fff; }
-        .case-stat { font-size: 3rem; font-weight: 700; color: #c0a16b; display: block; }
-        .case-desc { font-size: 1.1rem; color: #bdc3c7; }
+    .hero-badge {
+      background: #f0f2f5;
+      color: #163945;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-bottom: 25px;
+      border: 1px solid #e1e1e1;
+    }
 
-        /* --- QUOTE --- */
-        .shield-quote { padding: 100px 0; text-align: center; background: url('assets/img/background/map.png'); }
-        .shield-quote h3 { font-size: 2rem; font-style: italic; color: #34495e; max-width: 800px; margin: 0 auto; line-height: 1.5; }
-        .shield-quote span { display: block; margin-top: 20px; font-weight: 700; color: #c0a16b; text-transform: uppercase; letter-spacing: 2px; }
+    .hero-title {
+      font-size: 4rem;
+      line-height: 1.1;
+      margin-bottom: 25px;
+      color: #163945;
+      font-family: var(--font-heading);
+      font-weight: 700;
+    }
 
-        /* --- CTA --- */
-        .cta-foundation {
-            padding: 100px 0;
-            background: #fff;
-            text-align: center;
-            border-top: 1px solid #eee;
-        }
-        .cta-foundation h2 { font-size: 3rem; margin-bottom: 20px; }
-        .btn-solid-blue {
-            background: #2c3e50;
-            color: #fff;
-            padding: 15px 50px;
-            text-transform: uppercase;
-            font-weight: 700;
-            border: none;
-            transition: 0.3s;
-        }
-        .btn-solid-blue:hover { background: #34495e; transform: scale(1.05); }
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: #64748b;
+      margin-bottom: 40px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
 
-    </style>
+    .btn-sapphire {
+      background: #163945;
+      color: #fff;
+      padding: 18px 40px;
+      font-weight: 700;
+      border-radius: 8px;
+      border: none;
+      transition: 0.3s;
+      box-shadow: 0 10px 25px rgba(22, 57, 69, 0.2);
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-sapphire:hover {
+      background: #0f2932;
+      transform: translateY(-2px);
+      color: #fff;
+    }
+
+    /* --- CULTURE / INTRO --- */
+    .culture-sec {
+      padding: 120px 0;
+      background: #fff;
+    }
+
+    .culture-img {
+      position: relative;
+    }
+
+    .culture-img img {
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    }
+
+    .culture-stat {
+      position: absolute;
+      bottom: -30px;
+      right: -30px;
+      background: #163945;
+      color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 20px 40px rgba(22, 57, 69, 0.3);
+      max-width: 220px;
+    }
+
+    .culture-stat h4 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+      color: #bfa56e;
+    }
+
+    .culture-stat p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+
+    .integrity-text h2 {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      color: #163945;
+      margin-bottom: 30px;
+      font-weight: 700;
+    }
+
+    .custom-content {
+      color: #64748b;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 25px;
+    }
+
+    /* --- DEFENSE GRID (Layers) --- */
+    .defense-sec {
+      padding: 120px 0;
+      background: #f8fafc;
+    }
+
+    .defense-header {
+      text-align: center;
+      margin-bottom: 80px;
+    }
+
+    .defense-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .defense-card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      transition: 0.4s;
+      position: relative;
+      border: 1px solid #e2e8f0;
+      overflow: hidden;
+    }
+
+    .defense-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+      border-color: #bfa56e;
+    }
+
+    .def-num {
+      font-size: 4rem;
+      font-weight: 900;
+      color: #f1f5f9;
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      line-height: 1;
+    }
+
+    .def-icon {
+      width: 60px;
+      height: 60px;
+      background: #f0f9ff;
+      color: #163945;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 12px;
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+    }
+
+    .defense-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 15px;
+      font-family: var(--font-heading);
+    }
+
+    .defense-card p {
+      color: #64748b;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* --- RADAR SECTION (Risks) --- */
+    .radar-sec {
+      padding: 100px 0;
+      background: #163945;
+      color: #fff;
+    }
+
+    .radar-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .radar-item {
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .radar-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .radar-icon {
+      font-size: 3rem;
+      color: #bfa56e;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .radar-item h4 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .radar-item p {
+      color: #94a3b8;
+      font-size: 1rem;
+      margin: 0;
+    }
+
+    /* --- ROI TABLE (Custom preserved) --- */
+    .roi-sec {
+      padding: 100px 0;
+      background: #fff;
+    }
+
+    .cost-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .cost-table th {
+      background: #163945;
+      color: #fff;
+      padding: 20px;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+    }
+
+    .cost-table td {
+      padding: 20px;
+      border-bottom: 1px solid #e2e8f0;
+      color: #64748b;
+    }
+
+    .cost-val {
+      color: #dc2626;
+      font-weight: 700;
+    }
+
+    .prevention-val {
+      color: #16a34a;
+      font-weight: 700;
+    }
+
+    /* --- GLOSSARY (Custom preserved) --- */
+    .glossary-sec {
+      padding: 100px 0;
+      background: #f8fafc;
+    }
+
+    .glossary-item {
+      background: #fff;
+      padding: 30px;
+      border-left: 4px solid #163945;
+      margin-bottom: 20px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .glossary-item h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #163945;
+      font-weight: 700;
+    }
+
+    .glossary-item p {
+      font-size: 0.95rem;
+      margin: 0;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    /* --- CTA GOLD --- */
+    .cta-gold {
+      padding: 80px 0;
+      background-color: #0f262d;
+      text-align: center;
+      color: #fff;
+    }
+
+    .btn-gold-solid {
+      background: #bfa56e;
+      color: #0f262d;
+      padding: 16px 36px;
+      border-radius: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+      border: none;
+      box-shadow: 0 4px 15px rgba(191, 165, 110, 0.3);
+      display: inline-block;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+
+    .btn-gold-solid:hover {
+      background: #d4bd8a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(191, 165, 110, 0.4);
+      color: #0f262d;
+    }
+
+    /* --- FOOTER CLEAN --- */
+    .footer-clean {
+      background: #000;
+      padding: 70px 0 60px;
+    }
+
+    .footer-clean .footer-row {
+      row-gap: 34px;
+    }
+
+    .footer-clean .footer-col {
+      min-width: 0;
+    }
+
+    .footer-clean .widget_title {
+      color: #fff;
+      margin: 0 0 18px;
+      font: 700 20px/1.2 Georgia, "Times New Roman", serif;
+    }
+
+    .footer-clean .footer_text {
+      color: rgba(255, 255, 255, .78);
+      font: 500 14px/1.8 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      margin: 0 0 18px;
+      max-width: 360px;
+    }
+
+    .footer-clean .footer_btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: 52px;
+      padding: 0 22px;
+      border-radius: 10px;
+      background: #2a2a2a;
+      color: #fff;
+      text-decoration: none;
+      font: 800 12px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255, 255, 255, .12);
+      margin: 8px 0 18px;
+      transition: transform .15s ease, filter .15s ease;
+    }
+
+    .footer-clean .footer_btn:hover {
+      filter: brightness(1.06);
+      transform: translateY(-1px);
+    }
+
+    .footer-clean .footer_contact {
+      color: rgba(255, 255, 255, .72);
+      font: 500 13px/1.7 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+
+    .footer-clean .footer_contact a {
+      color: #2c586e;
+      text-decoration: none;
+    }
+
+    .footer-clean .footer_contact a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-clean .footer_list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-clean .footer_list a {
+      color: rgba(255, 255, 255, .78);
+      text-decoration: none;
+      font: 600 13px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      display: inline-block;
+      max-width: 100%;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-clean .footer_list a:hover {
+      color: #fff;
+    }
+
+    .footer-clean .footer-areas-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 24px;
+    }
+
+    .footer-clean .footer_posts {
+      display: grid;
+      gap: 16px;
+      margin-top: 2px;
+    }
+
+    .footer-clean .footer_post {
+      text-decoration: none;
+      display: grid;
+      gap: 6px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid rgba(255, 255, 255, .10);
+    }
+
+    .footer-clean .footer_post:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .footer-clean .footer_post .tag {
+      color: #2c586e;
+      font: 800 11px/1 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      letter-spacing: .14em;
+    }
+
+    .footer-clean .footer_post .title {
+      color: #fff;
+      font: 700 14px/1.35 Georgia, "Times New Roman", serif;
+    }
+
+    .footer-clean .footer_link_more {
+      display: inline-block;
+      margin-top: 16px;
+      color: #2c586e;
+      text-decoration: none;
+      font: 700 13px/1.2 system-ui, -apple-system, Segoe UI, Roboto, Arial;
+    }
+
+    .footer-clean .footer_link_more:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
+
 <body>
 
-<header id="header_id" class="main_header header_style_one">
-		<div class="header_top">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="header_contact_info float-left ul-li">
-						<ul>
-							<li><i class="far fa-envelope"></i> gpa.adv@outlook.com</li>
-							<li><i class="fas fa-phone"></i> (41) 99726-6499</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="header_follow_social float-right ul-li">
-						<ul>
-							<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
-							<li><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-							<li><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
-							
-							<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /header_top -->
-<div class="header_main_menu">
-<div class="site_logo">
-<a href="https://felipenchagas.github.io/SITE-GPA/" title="GPA Advocacia - Parceria jurídica no mundo dos negócios">
-<img src="assets/img/logo/logo-1.png" alt="Logo GPA Advocacia">
-</a>
-</div>
-<nav class="main_navigation ul-li">
-<ul>
-<li class="dropdown">
-<a href="https://felipenchagas.github.io/SITE-GPA/">Início</a>
-</li>
-<li class="dropdown">
-<a href="#service">Empresa</a>
-<ul class="dropdown-menu clearfix">
-
-<li><a href="fundado-em-curitiba.html">Fundado em Curitiba</a></li>
-<!-- NÍVEL 1 -->
-<li class="dropdown">
-<a href="#" class="has-submenu">Sócio Fundador</a>
-<ul class="dropdown-menu clearfix">
-<!-- NÍVEL 2 -->
-<li class="dropdown">
-<a href="gustavo-de-oliveira-pedroso.html" class="has-submenu">Gustavo de Oliveira Pedroso</a>
-<ul class="dropdown-menu clearfix">
-<!-- NÍVEL 3 -->
-<li class="dropdown">
-<a href="#" class="has-submenu">Qualificações</a>
-<ul class="dropdown-menu clearfix">
-<li><a href="especialista-em-direito-empresarial-e-inovacao-uel.html">Especialista em Direito Empresarial e Inovação (UEL)</a></li>
-<li><a href="mba-ibmec.html">MBA (IBMEC)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-
-<li><a href="estrategias-empresariais.html">Estratégias Empresariais</a></li>
-</ul>
-</li>
-
-<li class="dropdown">
-<a href="#service">Serviços</a>
-<ul class="dropdown-menu clearfix">
-<li class="dropdown">
-<a href="#" class="has-submenu">Área Consultiva</a>
-<ul class="dropdown-menu clearfix">
-<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação de Negócios</a></li>
-<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
-<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
-<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental, Florestal e Agronegócio</a></li>
-<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
-<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
-</ul>
-</li>
-
-<li class="dropdown">
-<a href="#" class="has-submenu">Área Contenciosa</a>
-<ul class="dropdown-menu clearfix">
-<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
-<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
-<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
-<li><a href="tributario.html">Tributário</a></li>
-<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
-<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
-</ul>
-</li>
-</ul>
-</li>
-
-<li class="dropdown">
-<a href="#portfolio">Rede social</a>
-<ul class="dropdown-menu">
-<li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-<li><a href="https://www.facebook.com/gpa.advocacia/" target="_blank">Facebook</a></li>
-<li><a href="https://www.linkedin.com/company/gpaadvocacia//" target="_blank">LinkedIn</a></li>
-</ul>
-</li>
-
-<li><a href="#">Blog</a></li>
-<li><a href="contato.html">Contato</a></li>
-</ul>
-</nav>
-
-
-			<!-- /nav Menu -->
-			<div class="wide_side_bar open_side_area clearfix">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-			<div class="wide_side_inner">
-				<div class="side_overlay open_side_area"></div>
-				<div class="side_inner_content text-center">
-					<div class="close_btn open_side_area">Voltar <i class="fas fa-arrow-right"></i></div>
-					<div class="side_inner_logo">
-						<a href="index" title="GPA Advocacia">
-							<img src="assets/img/logo/logo-1.png" alt="Logo lateral GPA Advocacia">
-						</a>
-					</div>
-					<p>
-						GPA Advocacia é um escritório fundado em Curitiba, especializado em empresas e empresários que buscam
-						<strong>segurança jurídica aliada às melhores estratégias empresariais</strong>. Atuamos como um verdadeiro
-						<strong>jurídico parceiro de negócios</strong>, apoiando a tomada de decisão e o crescimento sustentável das empresas.
-					</p>
-					<div class="side_contact">
-						<div class="social_widget ul-li headline relative-position">
-							<h3>Siga a GPA nas redes:</h3>
-							<ul>
-								<li class="h-fb"><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
-								<li class="h-tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
-								<li class="h-bh"><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-								<li class="h-yo"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="side_copywright">
-						© 2026 GPA Advocacia · Desenvolvido por e-Web Agency + Empresarial Web
-					</div>
-				</div>
-			</div>
-			
-			<!-- side bar Inner -->
-			<div class="call_to_quote float-right">
-				<div class="call_icon float-left">
-					<i class="flaticon-call"></i>
-				</div>
-				<span>Atendimento para empresas</span>
-				<span class="call_number">(41) 99726-6499</span>
-				
-			</div>
-			<!-- /call to action -->
-		</div>
-		<!-- /desktop version -->
-		<div class="mobile_menu">
-			<div class="mobile_menu_button open_mobile_menu">
-				<i class="fas fa-bars"></i>
-			</div>
-			<div class="mobile_menu_wrap">
-				<div class="mobile_menu_overlay open_mobile_menu"></div>
-				<div class="mobile_menu_content">
-					<div class="mobile_menu_close open_mobile_menu">
-						<i class="fas fa-window-close"></i>
-					</div>
-					<div class="m-brand-logo text-center">
-						<img src="assets/img/logo/logo-1.png" alt="Logo mobile GPA Advocacia">
-					</div>
-					<nav class="main-navigation  clearfix ul-li">
-						<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
-							<li class="dropdown">
-								<a href="index">
-									Início
-								</a>
-							</li>
-							<li><a href="about">Empresa</a></li>
-							<li class="dropdown">
-								<a href="#service">
-									Serviços
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="case">Área Consultiva</a></li>
-									<li><a href="case-2">Área Contenciosa</a></li>
-									<li><a href="case-single">Detalhes dos serviços</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#">
-									Rede social
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Instagram</a></li>
-									<li><a href="#">Facebook</a></li>
-									<li><a href="#">Linkedin</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#">
-									Time
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="team">Equipe</a></li>
-									<li><a href="team-single">Sócio fundador</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#">
-									Blog
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Artigos</a></li>
-									<li><a href="#">Post detalhado</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#">
-									Páginas
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="contato">Contato</a></li>
-									<li><a href="#">FAQ</a></li>
-									<li><a href="#">Proposta & Investimento</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-					<div class="free_call_nm">
-						<div class="m_call_icon text-center">
-							<i class="flaticon-call"></i>
-						</div>
-						<div class="m_call_text">
-							<span>ATENDIMENTO EMPRESARIAL</span>
-							<strong>(41) 99726-6499</strong>
-						</div>
-					</div>
-					<div class="m_social_area text-center ul-li">
-						<h3> Siga a GPA:</h3>
-						<ul>
-							<li class="m_fb"><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
-							<li class="m_tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
-							<li class="m_lk"><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-							<li class="m_yb"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
-						</ul>
-					</div>
-					<div class="m_get_quote">
-						<a href="contato">Falar com o jurídico parceiro</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /mobile menu -->
-	</header>
-
-    <!-- 1. HERO -->
-    <section class="security-hero">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 wow fadeInUp">
-                    <span style="color: #c0a16b; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;">Corporate Shield</span>
-                    <h1>Segurança Jurídica</h1>
-                    <p>Previsibilidade é o ativo mais valioso de uma empresa. Transforme riscos invisíveis em processos controlados.</p>
-                    <a href="contato.html" class="btn-shield-gold">Blindar Minha Empresa</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. CHAOS VS ORDER -->
-    <section class="chaos-sec">
-        <div class="container">
-            <div class="chaos-grid">
-                <div class="chaos-text wow fadeInLeft">
-                    <h2>O Custo da Insegurança</h2>
-                    <p>Empresas que operam sem segurança jurídica vivem em um estado de "apagar incêndios". Contratos frágeis, passivos trabalhistas ocultos e riscos regulatórios criam um ambiente de incerteza que afasta investidores e consome o lucro.</p>
-                    <p>A Segurança Jurídica não é sobre evitar 100% dos problemas (o que é impossível), mas sobre estar <strong>preparado, protegido e estruturado</strong> para enfrentá-los sem quebrar o caixa.</p>
-                    <ul class="list-unstyled feature-list">
-                        <li><i class="fas fa-check-circle"></i> Blindagem Contratual</li>
-                        <li><i class="fas fa-check-circle"></i> Compliance Regulatório</li>
-                        <li><i class="fas fa-check-circle"></i> Previsibilidade de Caixa</li>
-                    </ul>
-                </div>
-                <div class="wow fadeInRight">
-                    <img src="assets/img/service/sr2.jpg" alt="Estrutura Sólida" class="img-fluid rounded shadow-lg">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. THE 3 LAYERS OF PROTECTION -->
-    <section class="layers-sec">
-        <div class="container">
-            <div class="text-center mb-5">
-                <span class="text-gold text-uppercase font-weight-bold">Metodologia GPA</span>
-                <h2>As 3 Camadas de Blindagem</h2>
-            </div>
-            <div class="row">
-                <!-- Layer 1 -->
-                <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="layer-card">
-                        <div class="layer-icon"><i class="fas fa-balance-scale leaf-icon"></i>
-</div>
-                        <h3>1. Preventiva</h3>
-                        <p>A primeira linha de defesa. Contratos bem redigidos, acordos de sócios e políticas de compliance que evitam que o problema nasça. Inclui SLA e regras claras de rescisão.</p>
-                    </div>
-                </div>
-                <!-- Layer 2 -->
-                <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="layer-card">
-                        <div class="layer-icon"><i class="fas fa-chart-pie"></i></div>
-                        <h3>2. Gestão</h3>
-                        <p>Monitoramento ativo. Gestão de vigência de contratos, auditoria de processos e adequação constante às novas leis (LGPD, Tributária) para manter a conformidade.</p>
-                    </div>
-                </div>
-                <!-- Layer 3 -->
-                <div class="col-md-4 mb-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="layer-card">
-                        <div class="layer-icon"><i class="fas fa-shield-alt"></i></div>
-                        <h3>3. Defensiva</h3>
-                        <p>Quando o conflito é inevitável, atuamos com vigor técnico para minimizar danos, reduzir condenações e proteger o patrimônio da empresa e dos sócios.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. RISK RADAR -->
-    <section class="radar-sec">
-        <div class="container">
-            <h2 class="text-white mb-5">Radar de Riscos</h2>
-            <p class="text-muted mb-5">Passe o mouse para ver a solução</p>
-            <div class="radar-grid">
-                <!-- Item 1 -->
-                <div class="radar-item">
-                    <i class="fas fa-user-injured radar-icon"></i>
-                    <i class="fas fa-check-circle radar-check"></i>
-                    <h4>Passivo Trabalhista</h4>
-                    <p>Acúmulo de horas extras e processos.</p>
-                </div>
-                <!-- Item 2 -->
-                <div class="radar-item">
-                    <i class="fas fa-hand-holding-usd radar-icon"></i>
-                    <i class="fas fa-check-circle radar-check"></i>
-                    <h4>Inadimplência</h4>
-                    <p>Contratos fracos de cobrança.</p>
-                </div>
-                <!-- Item 3 -->
-                <div class="radar-item">
-                    <i class="fas fa-balance-scale-right radar-icon"></i>
-                    <i class="fas fa-check-circle radar-check"></i>
-                    <h4>Multas Fiscais</h4>
-                    <p>Erros de apuração tributária.</p>
-                </div>
-                <!-- Item 4 -->
-                <div class="radar-item">
-                    <i class="fas fa-users-slash radar-icon"></i>
-                    <i class="fas fa-check-circle radar-check"></i>
-                    <h4>Conflito Societário</h4>
-                    <p>Brigas entre sócios sem acordo.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. O CUSTO DA INAÇÃO (Nova Seção de Conteúdo) -->
-    <section class="cost-sec">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2>ROI da Advocacia Preventiva</h2>
-                <p class="text-muted">Por que sai mais barato contratar consultoria do que defesa.</p>
-            </div>
-            <div class="table-responsive wow fadeInUp">
-                <table class="cost-table">
-                    <thead>
-                        <tr>
-                            <th>Situação</th>
-                            <th>Custo da Prevenção</th>
-                            <th>Custo da Correção</th>
-                            <th>Impacto Oculto</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Demissão de Executivo</strong></td>
-                            <td class="prevention-val">1x Salário</td>
-                            <td class="cost-val">10x a 50x Salário</td>
-                            <td>Danos à reputação e clima organizacional.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Contrato com Fornecedor</strong></td>
-                            <td class="prevention-val">Horas de Consultoria</td>
-                            <td class="cost-val">Perda do contrato + Multa</td>
-                            <td>Parada de produção e perda de clientes.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Autuação Fiscal</strong></td>
-                            <td class="prevention-val">Auditoria Tributária</td>
-                            <td class="cost-val">Imposto + Multa (150%) + Juros</td>
-                            <td>Bloqueio de contas e crime fiscal.</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Uso Indevido de Marca</strong></td>
-                            <td class="prevention-val">Taxas INPI</td>
-                            <td class="cost-val">Indenização + Rebranding</td>
-                            <td>Perda de identidade de mercado.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. GLOSSÁRIO DE RISCOS (Nova Seção de Conteúdo) -->
-    <section class="glossary-sec">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h2 class="mb-4">Dicionário de Ameaças</h2>
-                    <p class="mb-5 text-muted">Termos que todo empresário deve conhecer para se proteger.</p>
-                    
-                    <div class="glossary-item wow fadeInLeft">
-                        <h4>Desconsideração da Personalidade Jurídica</h4>
-                        <p>É quando o juiz ignora a separação entre a empresa (CNPJ) e o sócio (CPF), permitindo a penhora de bens pessoais (casa, carro) para pagar dívidas da empresa. Ocorre em casos de confusão patrimonial ou fraude.</p>
-                    </div>
-                    <div class="glossary-item wow fadeInLeft" data-wow-delay="0.2s">
-                        <h4>Responsabilidade Solidária</h4>
-                        <p>Situação onde sua empresa responde por dívidas de terceiros. Muito comum em contratos de terceirização onde a empresa contratada não paga os funcionários, e a conta sobra para você.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="glossary-item wow fadeInRight">
-                        <h4>Sucessão Empresarial/Trabalhista</h4>
-                        <p>Ao comprar uma empresa ou fundo de comércio, você "herda" automaticamente todo o passivo trabalhista e fiscal anterior, mesmo que o contrato diga o contrário. A Due Diligence é essencial para evitar isso.</p>
-                    </div>
-                    <div class="glossary-item wow fadeInRight" data-wow-delay="0.2s">
-                        <h4>Passivo Oculto</h4>
-                        <p>Dívidas que não aparecem no balanço contábil, mas existem no mundo jurídico. Ex: contingências ambientais, processos judiciais não provisionados corretamente ou garantias dadas a terceiros.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. CASE STUDY (Nova Seção) -->
-    <section class="case-sec">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-7 wow fadeInUp">
-                    <span class="text-gold text-uppercase font-weight-bold">Estudo de Caso</span>
-                    <h2 class="text-white mt-3 mb-4">Reestruturação no Varejo</h2>
-                    <p class="text-white-50" style="font-size: 1.1rem; text-align: justify;">Uma rede varejista com 20 filiais enfrentava alto volume de processos trabalhistas e risco iminente de penhora de faturamento. Nossa equipe atuou na criação de uma Holding para proteger os imóveis da família e reestruturou toda a política de contratações e comissões.</p>
-                </div>
-                <div class="col-lg-5 text-center wow fadeInUp" data-wow-delay="0.2s">
-                    <span class="case-stat">-40%</span>
-                    <span class="case-desc">Redução no Passivo</span>
-                    <hr style="border-color: rgba(255,255,255,0.1); width: 50%; margin: 20px auto;">
-                    <span class="case-stat">100%</span>
-                    <span class="case-desc">Imóveis Blindados</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. QUOTE -->
-    <section class="shield-quote">
-        <div class="container wow zoomIn">
-            <h3>"Segurança jurídica é saber que, aconteça o que acontecer lá fora, a estrutura interna da sua empresa está sólida o suficiente para resistir."</h3>
-            <span>Filosofia GPA</span>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section class="cta-foundation">
-        <div class="container">
-            <h2 class="wow fadeInUp">Pare de construir na areia.</h2>
-            <p class="text-muted mb-5 wow fadeInUp" style="font-size: 1.2rem;">Construa sua empresa sobre a rocha da segurança jurídica.</p>
-            <a href="contato.html" class="btn-solid-blue wow fadeInUp" data-wow-delay="0.2s">Solicitar Auditoria de Riscos</a>
-        </div>
-    </section>
-
-<footer id="footer_area" class="footer_section footer-clean">
-  <div class="background_overlay"></div>
-
-  <div class="container">
-    <div class="footer_content">
-      <div class="row footer-row">
-
-        <!-- COL 1 -->
-        <div class="col-lg-4 col-md-12 footer-col">
-          <div class="footer_widget headline">
-            <h3 class="widget_title">
-              <span class="title_shape_left"></span>
-              GPA Advocacia
-            </h3>
-
-            <p class="footer_text">
-              Jurídico parceiro de negócios para empresas.<br>
-              Consultivo e contencioso com foco em segurança jurídica, estratégia e resultados.
-            </p>
-
-            <a class="footer_btn" href="contato.html">FALAR COM A GPA</a>
-
-            <div class="footer_contact">
-              <div>Curitiba • São Paulo • Chapecó</div>
-              <a href="mailto:gpa.adv@outlook.com">gpa.adv@outlook.com</a><br>
-              <a href="https://wa.me/5541997266499" target="_blank" rel="noopener">WhatsApp: (41) 99726-6499</a>
-            </div>
+  <!-- Header Standard -->
+  <header id="header_id" class="main_header header_style_one">
+    <div class="header_top">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="header_contact_info float-left ul-li">
+            <ul>
+              <li><i class="far fa-envelope"></i> gpa.adv@outlook.com</li>
+              <li><i class="fas fa-phone"></i> (41) 99726-6499</li>
+            </ul>
           </div>
         </div>
+        <div class="col-md-6">
+          <div class="header_follow_social float-right ul-li">
+            <ul>
+              <li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i
+                    class="fab fa-instagram"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i
+                    class="fab fa-linkedin"></i></a></li>
+              <li><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i
+                    class="fab fa-facebook-f"></i></a></li>
 
-        <!-- COL 2 -->
-        <div class="col-lg-4 col-md-12 footer-col">
-          <div class="footer_widget headline">
-            <h3 class="widget_title">
-              <span class="title_shape_left"></span>
-              Áreas principais
-            </h3>
-
-            <div class="footer-areas-grid">
-              <ul class="footer_list">
-                <li><a href="contratos-e-estruturacao-de-negocios.html">Contratos & Estruturação</a></li>
-                <li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
-                <li><a href="compliance-e-regulatorio.html">Compliance & Regulatório</a></li>
-                <li><a href="direito-digital-e-inovacao.html">Digital & Inovação</a></li>
-              </ul>
-
-              <ul class="footer_list">
-                <li><a href="marcas-e-patentes.html">Marcas & Patentes</a></li>
-                <li><a href="arbitragem-e-mediacao.html">Arbitragem & Mediação</a></li>
-                <li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
-                <li><a href="tributario.html">Tributário</a></li>
-              </ul>
-            </div>
-
-            <a class="footer_link_more" href="#service">Ver todas as áreas →</a>
+              <li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i
+                    class="fab fa-whatsapp"></i></a></li>
+            </ul>
           </div>
         </div>
-
-        <!-- COL 3 -->
-        <div class="col-lg-4 col-md-12 footer-col">
-          <div class="footer_widget headline">
-            <h3 class="widget_title">
-              <span class="title_shape_left"></span>
-              Conteúdos
-            </h3>
-
-            <div class="footer_posts">
-              <a class="footer_post" href="estrategias-empresariais.html">
-                <span class="tag">ESTRATÉGIA</span>
-                <span class="title">Segurança na abertura de filiais</span>
-              </a>
-
-              <a class="footer_post" href="compliance-e-regulatorio.html">
-                <span class="tag">GOVERNANÇA</span>
-                <span class="title">Compliance como valor competitivo</span>
-              </a>
-            </div>
-
-            <a class="footer_link_more" href="#blog_area">Ir para o blog →</a>
-          </div>
-        </div>
-
       </div>
     </div>
-  </div>
-</footer>
+    <!-- /header_top -->
+    <div class="header_main_menu">
+      <div class="site_logo">
+        <a href="https://felipenchagas.github.io/SITE-GPA/"
+          title="GPA Advocacia - Parceria jurídica no mundo dos negócios">
+          <img src="assets/img/logo/logo-1.png" alt="Logo GPA Advocacia">
+        </a>
+      </div>
+      <nav class="main_navigation ul-li">
+        <ul>
+          <li class="dropdown">
+            <a href="https://felipenchagas.github.io/SITE-GPA/">Início</a>
+          </li>
+          <li class="dropdown">
+            <a href="#service">Empresa</a>
+            <ul class="dropdown-menu clearfix">
 
-<style>
-/* ===== FOOTER CLEAN (anti-encavalamento) ===== */
-.footer-clean{ background:#000; padding:70px 0 60px; }
-.footer-clean .footer-row{ row-gap:34px; }
-.footer-clean .footer-col{ min-width:0; } /* IMPORTANTÍSSIMO: evita estouro/encavalamento */
+              <li><a href="fundado-em-curitiba.html">Fundado em Curitiba</a></li>
+              <!-- NÍVEL 1 -->
+              <li class="dropdown">
+                <a href="#" class="has-submenu">Sócio Fundador</a>
+                <ul class="dropdown-menu clearfix">
+                  <!-- NÍVEL 2 -->
+                  <li class="dropdown">
+                    <a href="gustavo-de-oliveira-pedroso.html" class="has-submenu">Gustavo de Oliveira Pedroso</a>
+                    <ul class="dropdown-menu clearfix">
+                      <!-- NÍVEL 3 -->
+                      <li class="dropdown">
+                        <a href="#" class="has-submenu">Qualificações</a>
+                        <ul class="dropdown-menu clearfix">
+                          <li><a href="especialista-em-direito-empresarial-e-inovacao-uel.html">Especialista em Direito
+                              Empresarial e Inovação (UEL)</a></li>
+                          <li><a href="mba-ibmec.html">MBA (IBMEC)</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
 
-.footer-clean .widget_title{
-  color:#fff;
-  margin:0 0 18px;
-  font:700 20px/1.2 Georgia,"Times New Roman",serif;
-}
-.footer-clean .widget_title .title_shape_left{ display:none; } /* opcional */
+              <li><a href="estrategias-empresariais.html">Estratégias Empresariais</a></li>
+            </ul>
+          </li>
 
-.footer-clean .footer_text{
-  color:rgba(255,255,255,.78);
-  font:500 14px/1.8 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  margin:0 0 18px;
-  max-width:360px;
-}
+          <li class="dropdown">
+            <a href="#service">Serviços</a>
+            <ul class="dropdown-menu clearfix">
+              <li class="dropdown">
+                <a href="#" class="has-submenu">Área Consultiva</a>
+                <ul class="dropdown-menu clearfix">
+                  <li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação de Negócios</a></li>
+                  <li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+                  <li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+                  <li><a href="ambiental-florestal-e-agronegocio.html">Ambiental, Florestal e Agronegócio</a></li>
+                  <li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+                  <li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+                </ul>
+              </li>
 
-.footer-clean .footer_btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  height:52px;
-  padding:0 22px;
-  border-radius:10px;
-  background:#2a2a2a;
-  color:#fff;
-  text-decoration:none;
-  font:800 12px/1 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  border:1px solid rgba(255,255,255,.12);
-  margin:8px 0 18px;
-  transition:transform .15s ease, filter .15s ease;
-}
-.footer-clean .footer_btn:hover{ filter:brightness(1.06); transform:translateY(-1px); }
+              <li class="dropdown">
+                <a href="#" class="has-submenu">Área Contenciosa</a>
+                <ul class="dropdown-menu clearfix">
+                  <li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+                  <li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+                  <li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+                  <li><a href="tributario.html">Tributário</a></li>
+                  <li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+                  <li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
 
-.footer-clean .footer_contact{
-  color:rgba(255,255,255,.72);
-  font:500 13px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-}
-.footer-clean .footer_contact a{
-  color:#c5a47e;
-  text-decoration:none;
-}
-.footer-clean .footer_contact a:hover{ text-decoration:underline; }
 
-/* LISTAS (evita “tudo em linha”) */
-.footer-clean .footer_list{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:grid;
-  gap:10px;
-}
-.footer-clean .footer_list a{
-  color:rgba(255,255,255,.78);
-  text-decoration:none;
-  font:600 13px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  display:inline-block;
-  max-width:100%;
-  overflow-wrap:anywhere;
-}
-.footer-clean .footer_list a:hover{ color:#fff; }
+          <li><a href="contato.html">Contato</a></li>
+        </ul>
+      </nav>
 
-/* Áreas em 2 colunas internas, com gap real */
-.footer-clean .footer-areas-grid{
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0,1fr));
-  gap:14px 24px;
-}
 
-/* Conteúdos (objetivo, sem “card com imagem”) */
-.footer-clean .footer_posts{
-  display:grid;
-  gap:16px;
-  margin-top:2px;
-}
-.footer-clean .footer_post{
-  text-decoration:none;
-  display:grid;
-  gap:6px;
-  padding-bottom:14px;
-  border-bottom:1px solid rgba(255,255,255,.10);
-}
-.footer-clean .footer_post:last-child{ border-bottom:none; padding-bottom:0; }
-.footer-clean .footer_post .tag{
-  color:#c5a47e;
-  font:800 11px/1 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  letter-spacing:.14em;
-}
-.footer-clean .footer_post .title{
-  color:#fff;
-  font:700 14px/1.35 Georgia,"Times New Roman",serif;
-}
+      <!-- /nav Menu -->
+      <div class="wide_side_bar open_side_area clearfix">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="wide_side_inner">
+        <div class="side_overlay open_side_area"></div>
+        <div class="side_inner_content text-center">
+          <div class="close_btn open_side_area">Voltar <i class="fas fa-arrow-right"></i></div>
+          <div class="side_inner_logo">
+            <a href="index" title="GPA Advocacia">
+              <img src="assets/img/logo/logo-1.png" alt="Logo lateral GPA Advocacia">
+            </a>
+          </div>
+          <p>
+            GPA Advocacia é um escritório fundado em Curitiba, especializado em empresas e empresários que buscam
+            <strong>segurança jurídica aliada às melhores estratégias empresariais</strong>. Atuamos como um verdadeiro
+            <strong>jurídico parceiro de negócios</strong>, apoiando a tomada de decisão e o crescimento sustentável das
+            empresas.
+          </p>
+          <div class="side_contact">
+            <div class="social_widget ul-li headline relative-position">
+              <h3>Siga a GPA nas redes:</h3>
+              <ul>
+                <li class="h-fb"><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i
+                      class="fab fa-facebook-f"></i></a></li>
+                <li class="h-tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i
+                      class="fab fa-instagram"></i></a></li>
+                <li class="h-bh"><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank"
+                    rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+                <li class="h-yo"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i
+                      class="fab fa-youtube"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="side_copywright">
+            © 2026 GPA Advocacia · Desenvolvido por e-Web Agency + Empresarial Web
+          </div>
+        </div>
+      </div>
 
-.footer-clean .footer_link_more{
-  display:inline-block;
-  margin-top:16px;
-  color:#c5a47e;
-  text-decoration:none;
-  font:700 13px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-}
-.footer-clean .footer_link_more:hover{ text-decoration:underline; }
+      <!-- side bar Inner -->
+      <div class="call_to_quote float-right">
+        <div class="call_icon float-left">
+          <i class="flaticon-call"></i>
+        </div>
+        <span>Atendimento para empresas</span>
+        <span class="call_number">(41) 99726-6499</span>
+        <div class="icon_bg">
+          <i class="flaticon-call"></i>
+        </div>
+      </div>
+      <!-- /call to action -->
+    </div>
+    <!-- /desktop version -->
+    <div class="mobile_menu">
+      <div class="mobile_menu_button open_mobile_menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="mobile_menu_wrap">
+        <div class="mobile_menu_overlay open_mobile_menu"></div>
+        <div class="mobile_menu_content">
+          <div class="mobile_menu_close open_mobile_menu">
+            <i class="fas fa-window-close"></i>
+          </div>
+          <div class="m-brand-logo text-center">
+            <img src="assets/img/logo/logo-1.png" alt="Logo mobile GPA Advocacia">
+          </div>
+          <nav class="main-navigation  clearfix ul-li">
+            <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+              <li class="dropdown">
+                <a href="index">
+                  Início
+                </a>
+              </li>
+              <li><a href="about">Empresa</a></li>
+              <li class="dropdown">
+                <a href="#service">
+                  Serviços
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="case">Área Consultiva</a></li>
+                  <li><a href="case-2">Área Contenciosa</a></li>
+                  <li><a href="case-single">Detalhes dos serviços</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">
+                  Rede social
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Instagram</a></li>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Linkedin</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">
+                  Time
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="team">Equipe</a></li>
+                  <li><a href="team-single">Sócio fundador</a></li>
+                </ul>
+              </li>
 
-/* Responsivo: quebra a grid interna pra 1 coluna no mobile */
-@media (max-width: 520px){
-  .footer-clean .footer-areas-grid{ grid-template-columns:1fr; }
-  .footer-clean .footer_text{ max-width:100%; }
-}
-</style>
+            </ul>
+          </nav>
+          <div class="free_call_nm">
+            <div class="m_call_icon text-center">
+              <i class="flaticon-call"></i>
+            </div>
+            <div class="m_call_text">
+              <span>ATENDIMENTO EMPRESARIAL</span>
+              <strong>(41) 99726-6499</strong>
+            </div>
+          </div>
+          <div class="m_social_area text-center ul-li">
+            <h3> Siga a GPA:</h3>
+            <ul>
+              <li class="m_fb"><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i
+                    class="fab fa-facebook-f"></i></a></li>
+              <li class="m_tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i
+                    class="fab fa-instagram"></i></a></li>
+              <li class="m_lk"><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank"
+                  rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+              <li class="m_yb"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i
+                    class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+          <div class="m_get_quote">
+            <a href="contato">Falar com o jurídico parceiro</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /mobile menu -->
+  </header>
 
-	<div class="footer_copyright">
-		<div class="container">
-			<div class="footer_copyright_content">
-				<div class="row">
-					<div class="col-lg-4 col-md-12">
-						<div class="footer_social ul-li clearfix">
-							<ul>
-								<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
-								<li><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-								<li><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
-								
-								<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12">
-						<div class="footer_logo text-center">
-							<a href="index"><img src="assets/img/logo/flogo-1.png" alt="Logo rodapé GPA Advocacia"></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12">
-						<div class="copyright_text text-right">
-							© 2026 GPA Advocacia. Desenvolvido por <a href="#">e-Web Agency + Empresarial Web</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  <!-- 1. HERO SECTION (Standard Scoped) -->
+  <section class="comp-hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 wow fadeInLeft">
+          <span class="hero-badge">Corporate Shield</span>
+          <h1 class="hero-title">Segurança Jurídica</h1>
+          <h2 class="hero-subtitle">Previsibilidade é o ativo mais valioso de uma empresa. Transforme riscos invisíveis
+            em processos controlados.</h2>
+          <a href="contato.html" class="btn-sapphire">Blindar Minha Empresa</a>
+        </div>
+        <div class="col-lg-6 wow fadeInRight">
+          <div class="hero-img-wrap">
+            <img src="assets/img/slider/s2.jpg" alt="Segurança Jurídica" class="hero-img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/appear.js"></script>
-	<script src="assets/js/wow.min.js"></script>
-	<script src="assets/js/script.js"></script>
+  <!-- 2. INTRO (Culture Section) -->
+  <section class="culture-sec">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0 wow fadeInLeft">
+          <div class="culture-img">
+            <img src="assets/img/service/sr2.jpg" alt="Estrutura Sólida" class="img-fluid rounded"
+              style="width:100%; object-fit: cover;">
+            <div class="culture-stat">
+              <h4>Riscos</h4>
+              <p>Controlados</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeInRight">
+          <div class="integrity-text ps-lg-4">
+            <h2>O Custo da Insegurança</h2>
+            <p class="custom-content mt-4">
+              Empresas que operam sem segurança jurídica vivem em um estado de "apagar incêndios". Contratos frágeis,
+              passivos trabalhistas ocultos e riscos regulatórios criam um ambiente de incerteza que afasta investidores
+              e consome o lucro.
+            </p>
+            <p class="custom-content">
+              A Segurança Jurídica não é sobre evitar 100% dos problemas (o que é impossível), mas sobre estar
+              <strong>preparado, protegido e estruturado</strong> para enfrentá-los sem quebrar o caixa.
+            </p>
+            <ul class="list-unstyled custom-content font-weight-bold" style="padding-left: 20px;">
+              <li><i class="fas fa-check-circle text-gold mr-2"></i> Blindagem Contratual</li>
+              <li><i class="fas fa-check-circle text-gold mr-2"></i> Compliance Regulatório</li>
+              <li><i class="fas fa-check-circle text-gold mr-2"></i> Previsibilidade de Caixa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. DEFENSE GRID (Layers) -->
+  <section class="defense-sec">
+    <div class="container">
+      <div class="defense-header wow fadeInUp">
+        <span class="text-sapphire text-uppercase fw-bold ls-2">Metodologia GPA</span>
+        <h2 class="display-4 fw-bold">As 3 Camadas de Blindagem</h2>
+      </div>
+      <div class="defense-grid">
+        <!-- Card 1 -->
+        <div class="defense-card wow fadeInUp" data-wow-delay="0.1s">
+          <div class="def-num">01</div>
+          <div class="def-icon"><i class="fas fa-balance-scale"></i></div>
+          <h3>Preventiva</h3>
+          <p>A primeira linha de defesa. Contratos bem redigidos, acordos de sócios e políticas de compliance que evitam
+            que o problema nasça.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="defense-card wow fadeInUp" data-wow-delay="0.2s">
+          <div class="def-num">02</div>
+          <div class="def-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3>Gestão</h3>
+          <p>Monitoramento ativo. Gestão de vigência de contratos, auditoria de processos e adequação constante às novas
+            leis (LGPD, Tributária).</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="defense-card wow fadeInUp" data-wow-delay="0.3s">
+          <div class="def-num">03</div>
+          <div class="def-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Defensiva</h3>
+          <p>Quando o conflito é inevitável, atuamos com vigor técnico para minimizar danos, reduzir condenações e
+            proteger o patrimônio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. RADAR SECTION (Risks) -->
+  <section class="radar-sec">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Radar de Riscos</h2>
+        <p class="text-muted">Áreas sensíveis que monitoramos.</p>
+      </div>
+      <div class="radar-grid">
+        <!-- Item 1 -->
+        <div class="radar-item wow fadeInUp">
+          <i class="fas fa-user-injured radar-icon"></i>
+          <h4>Passivo Trabalhista</h4>
+          <p>Horas extras e processos.</p>
+        </div>
+        <!-- Item 2 -->
+        <div class="radar-item wow fadeInUp" data-wow-delay="0.1s">
+          <i class="fas fa-hand-holding-usd radar-icon"></i>
+          <h4>Inadimplência</h4>
+          <p>Contratos fracos.</p>
+        </div>
+        <!-- Item 3 -->
+        <div class="radar-item wow fadeInUp" data-wow-delay="0.2s">
+          <i class="fas fa-balance-scale-right radar-icon"></i>
+          <h4>Multas Fiscais</h4>
+          <p>Erros de apuração.</p>
+        </div>
+        <!-- Item 4 -->
+        <div class="radar-item wow fadeInUp" data-wow-delay="0.3s">
+          <i class="fas fa-users-slash radar-icon"></i>
+          <h4>Conflito Societário</h4>
+          <p>Brigas entre sócios.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. ROI TABLE (Custom Preserved) -->
+  <section class="roi-sec">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="text-sapphire text-uppercase fw-bold ls-2">Investimento x Risco</span>
+        <h2 class="display-5 fw-bold mt-2">ROI da Advocacia Preventiva</h2>
+        <p class="text-muted">Por que sai mais barato contratar consultoria do que defesa.</p>
+      </div>
+      <div class="table-responsive wow fadeInUp">
+        <table class="cost-table">
+          <thead>
+            <tr>
+              <th>Situação</th>
+              <th>Custo da Prevenção</th>
+              <th>Custo da Correção</th>
+              <th>Impacto Oculto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Demissão de Executivo</strong></td>
+              <td class="prevention-val">1x Salário</td>
+              <td class="cost-val">10x a 50x Salário</td>
+              <td>Danos à reputação e clima.</td>
+            </tr>
+            <tr>
+              <td><strong>Contrato com Fornecedor</strong></td>
+              <td class="prevention-val">Horas de Consultoria</td>
+              <td class="cost-val">Perda do contrato + Multa</td>
+              <td>Parada de produção.</td>
+            </tr>
+            <tr>
+              <td><strong>Autuação Fiscal</strong></td>
+              <td class="prevention-val">Auditoria Tributária</td>
+              <td class="cost-val">Imposto + Multa (150%)</td>
+              <td>Crime fiscal.</td>
+            </tr>
+            <tr>
+              <td><strong>Uso Indevido de Marca</strong></td>
+              <td class="prevention-val">Taxas INPI</td>
+              <td class="cost-val">Indenização + Rebranding</td>
+              <td>Perda de identidade.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. GLOSSARY (Custom Preserved) -->
+  <section class="glossary-sec">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2 class="mb-4 text-sapphire fw-bold">Dicionário de Ameaças</h2>
+          <p class="mb-5 text-muted">Termos que todo empresário deve conhecer para se proteger.</p>
+
+          <div class="glossary-item wow fadeInLeft">
+            <h4>Desconsideração da PJ</h4>
+            <p>Quando a justiça ignora o CNPJ e penhora os bens pessoais (CPF) dos sócios para pagar dívidas da empresa.
+            </p>
+          </div>
+          <div class="glossary-item wow fadeInLeft" data-wow-delay="0.2s">
+            <h4>Responsabilidade Solidária</h4>
+            <p>Situação onde sua empresa responde por dívidas de terceiros (ex: subcontratados que não pagam seus
+              funcionários).</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="glossary-item wow fadeInRight">
+            <h4>Sucessão Trabalhista</h4>
+            <p>Ao comprar uma empresa, você "herda" automaticamente todo o passivo trabalhista anterior, mesmo que o
+              contrato diga o contrário.</p>
+          </div>
+          <div class="glossary-item wow fadeInRight" data-wow-delay="0.2s">
+            <h4>Passivo Oculto</h4>
+            <p>Dívidas que não aparecem no balanço contábil, mas existem no mundo jurídico (processos não provisionados,
+              garantias).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA GOLD -->
+  <section class="cta-gold">
+    <div class="container">
+      <h2 class="mb-4">Pare de construir na areia.</h2>
+      <p class="mb-5" style="opacity: 0.9;">Construa sua empresa sobre a rocha da segurança jurídica.</p>
+      <a href="contato.html" class="btn-gold-solid">Solicitar Auditoria</a>
+    </div>
+  </section>
+
+  <!-- FOOTER CLEAN -->
+  <footer id="footer_area" class="footer_section footer-clean">
+    <div class="background_overlay"></div>
+    <div class="container">
+      <div class="footer_content">
+        <div class="row footer-row">
+          <!-- COL 1 -->
+          <div class="col-lg-4 col-md-12 footer-col">
+            <div class="footer_widget headline">
+              <h3 class="widget_title">
+                <span class="title_shape_left"></span>
+                GPA Advocacia
+              </h3>
+              <p class="footer_text">
+                Jurídico parceiro de negócios para empresas.<br>
+                Consultivo e contencioso com foco em segurança jurídica, estratégia e resultados.
+              </p>
+              <a class="footer_btn" href="contato.html">FALAR COM A GPA</a>
+              <div class="footer_contact">
+                <div>Curitiba • São Paulo • Chapecó</div>
+                <a href="mailto:gpa.adv@outlook.com">gpa.adv@outlook.com</a><br>
+                <a href="https://wa.me/5541997266499" target="_blank" rel="noopener">WhatsApp: (41) 99726-6499</a>
+              </div>
+            </div>
+          </div>
+          <!-- COL 2 -->
+          <div class="col-lg-4 col-md-12 footer-col">
+            <div class="footer_widget headline">
+              <h3 class="widget_title">
+                <span class="title_shape_left"></span>
+                Áreas principais
+              </h3>
+              <div class="footer-areas-grid">
+                <ul class="footer_list">
+                  <li><a href="contratos-e-estruturacao-de-negocios.html">Contratos & Estruturação</a></li>
+                  <li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+                  <li><a href="compliance-e-regulatorio.html">Compliance & Regulatório</a></li>
+                  <li><a href="direito-digital-e-inovacao.html">Digital & Inovação</a></li>
+                </ul>
+                <ul class="footer_list">
+                  <li><a href="marcas-e-patentes.html">Marcas & Patentes</a></li>
+                  <li><a href="arbitragem-e-mediacao.html">Arbitragem & Mediação</a></li>
+                  <li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+                  <li><a href="tributario.html">Tributário</a></li>
+                </ul>
+              </div>
+              <a class="footer_link_more" href="#service">Ver todas as áreas →</a>
+            </div>
+          </div>
+          <!-- COL 3 -->
+          <div class="col-lg-4 col-md-12 footer-col">
+            <div class="footer_widget headline">
+              <h3 class="widget_title">
+                <span class="title_shape_left"></span>
+                Conteúdos
+              </h3>
+              <div class="footer_posts">
+                <a class="footer_post" href="estrategias-empresariais.html">
+                  <span class="tag">ESTRATÉGIA</span>
+                  <span class="title">Segurança na abertura de filiais</span>
+                </a>
+                <a class="footer_post" href="compliance-e-regulatorio.html">
+                  <span class="tag">GOVERNANÇA</span>
+                  <span class="title">Compliance como valor competitivo</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+  <script>
+    // Init WOW
+    new WOW().init();
+  </script>
+
 </body>
+
 </html>

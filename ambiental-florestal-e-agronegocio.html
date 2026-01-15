@@ -1,752 +1,847 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Ambiental e Agronegócio | GPA Advocacia</title>
-	<link rel="shortcut icon" href="assets/img/logo/ficon.png" type="image/x-icon">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    
-	<link rel="stylesheet" href="assets/css/owl.carousel.css">
-	<link rel="stylesheet" href="assets/css/fontawesome-all.css">
-	<link rel="stylesheet" href="assets/css/animate.css">
-	<link rel="stylesheet" href="assets/css/flaticon.css">
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <title>Ambiental e Agronegócio | GPA Advocacia</title>
+  <link rel="shortcut icon" href="assets/img/logo/ficon.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- CSS "Organic Identity" -->
-    <style>
-        /* --- GERAL --- */
-        body { font-family: 'Poppins', sans-serif; color: #5a5a5a; background-color: #fcfcfc; }
-        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: #2c3e2e; } /* Verde Escuro Profundo */
-        .text-green { color: #4a7c59; }
-        .text-earth { color: #8d6e63; }
-        
-        /* --- HEADER --- */
-        .main_navigation .dropdown-menu > li.dropdown{ position: relative; }
-        .main_navigation .dropdown-menu > li.dropdown > ul.dropdown-menu{ position: absolute; top: 0; left: 100%; display: none; z-index: 9999; }
-        .main_navigation a.has-submenu:after{ content: "›"; float: right; margin-left: 10px; opacity: .7; }
-        @media (min-width: 992px){ .main_navigation .dropdown-menu > li.dropdown:hover > ul.dropdown-menu{ display: block; } }
+  <link rel="stylesheet" href="assets/css/owl.carousel.css">
+  <link rel="stylesheet" href="assets/css/fontawesome-all.css">
+  <link rel="stylesheet" href="assets/css/animate.css">
+  <link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-        /* --- HERO "NATURE" --- */
-        .agro-hero {
-            padding: 180px 0 120px;
-            background: linear-gradient(to right, rgba(44, 62, 46, 0.9), rgba(44, 62, 46, 0.4)), url('assets/img/service/sr1.jpg');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Parallax suave */
-            color: #fff;
-            position: relative;
-        }
-        .agro-hero h1 { font-size: 4rem; font-weight: 700; color: #fff; margin-bottom: 20px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-        .agro-hero p { font-size: 1.2rem; max-width: 600px; color: #e8f5e9; font-weight: 300; }
-        .btn-leaf {
-            background: #4a7c59;
-            color: #fff;
-            padding: 15px 35px;
-            border-radius: 30px 0 30px 0; /* Formato de folha */
-            font-weight: 600;
-            border: none;
-            transition: 0.3s;
-            margin-top: 30px;
-        }
-        .btn-leaf:hover { background: #3a6346; transform: translateY(-3px); color: #fff; }
+  <style>
+    /* --- TYPOGRAPHY & UTILS --- */
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #334155;
+      line-height: 1.7;
+      font-size: 16px;
+      overflow-x: hidden;
+      background-color: #fff;
+    }
 
-        /* --- SEÇÃO "RAÍZES" (Intro) --- */
-        .roots-section { padding: 100px 0; background: #fff; position: relative; }
-        .roots-img { border-radius: 200px 200px 0 0; overflow: hidden; box-shadow: 0 20px 40px rgba(44, 62, 46, 0.15); }
-        .roots-content h2 { font-size: 2.8rem; margin-bottom: 25px; }
-        .roots-content p { line-height: 1.8; margin-bottom: 20px; text-align: justify; }
-        .highlight-box {
-            border-left: 4px solid #4a7c59;
-            padding: 20px;
-            background: #f1f8e9;
-            margin-top: 30px;
-            font-style: italic;
-            color: #2e4c35;
-        }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      font-family: 'Playfair Display', serif;
+      color: #163945;
+      font-weight: 700;
+    }
 
-        /* --- CARDS "ORGANIC" --- */
-        .agro-services { padding: 100px 0; background-color: #f4f1ea; } /* Bege suave */
-        .leaf-card {
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-            transition: 0.3s;
-            height: 100%;
-            border-bottom: 5px solid #4a7c59;
-            position: relative;
-            overflow: hidden;
-        }
-        .leaf-card:hover { transform: translateY(-10px); background: #2c3e2e; }
-        .leaf-card:hover h3, .leaf-card:hover p, .leaf-card:hover i { color: #fff; }
-        .leaf-icon { font-size: 3rem; color: #4a7c59; margin-bottom: 20px; transition: 0.3s; }
-        .leaf-card h3 { font-size: 1.5rem; margin-bottom: 15px; transition: 0.3s; }
-        .leaf-card p { color: #777; transition: 0.3s; }
+    .text-gold {
+      color: #bfa56e !important;
+    }
 
-        /* --- THE AGRO CYCLE (Visual) --- */
-        .cycle-section { padding: 100px 0; text-align: center; background: #fff; }
-        .cycle-container { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; margin-top: 50px; }
-        .cycle-item { width: 200px; padding: 20px; position: relative; }
-        .cycle-circle {
-            width: 120px;
-            height: 120px;
-            border: 2px dashed #4a7c59;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-size: 2.5rem;
-            color: #4a7c59;
-            transition: 0.3s;
-        }
-        .cycle-item:hover .cycle-circle { background: #4a7c59; color: #fff; border-style: solid; }
-        .cycle-arrow { font-size: 2rem; color: #ccc; margin-top: -60px; }
-        
-        /* --- CTA --- */
-        .cta-agro {
-            background: url('assets/img/background/prbg.jpg') center/cover fixed;
-            padding: 100px 0;
-            position: relative;
-            text-align: center;
-            color: #fff;
-        }
-        .cta-agro::before { content: ''; position: absolute; inset: 0; background: rgba(44, 62, 46, 0.85); }
-        .cta-content { position: relative; z-index: 2; }
-        .cta-agro h2 { color: #fff; font-size: 3rem; margin-bottom: 20px; }
+    .bg-light-cream {
+      background-color: #fdfbf7;
+    }
 
-    </style>
+    .btn-sapphire {
+      background-color: #163945;
+      color: #fff;
+      padding: 14px 35px;
+      border-radius: 4px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn-sapphire:hover {
+      background-color: #112d36;
+      color: #bfa56e;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero-badge {
+      background: rgba(191, 165, 110, 0.15);
+      color: #bfa56e;
+      padding: 5px 15px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+
+    /* --- HERO SPLIT --- */
+    .comp-hero {
+      padding: 160px 0 100px;
+      background: linear-gradient(135deg, #fdfbf7 0%, #fff 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .comp-hero .hero-title {
+      font-size: 3.5rem;
+      line-height: 1.2;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .comp-hero .hero-subtitle {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.15rem;
+      color: #64748b;
+      margin-bottom: 40px;
+      max-width: 550px;
+      font-weight: 400;
+    }
+
+    .hero-img-wrap {
+      position: relative;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      transform: perspective(1000px) rotateY(-5deg);
+      transition: 0.5s;
+    }
+
+    .hero-img-wrap:hover {
+      transform: perspective(1000px) rotateY(0deg);
+    }
+
+    .hero-img {
+      width: 100%;
+      display: block;
+      height: auto;
+      transition: 0.5s;
+    }
+
+    /* --- CULTURE SEC --- */
+    .culture-sec {
+      padding: 100px 0;
+      background: #fff;
+    }
+
+    .culture-img {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .culture-img img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .culture-img:hover img {
+      transform: scale(1.05);
+    }
+
+    .culture-stat {
+      position: absolute;
+      bottom: 30px;
+      left: -20px;
+      background: #163945;
+      color: #fff;
+      padding: 25px 40px;
+      border-radius: 0 10px 10px 0;
+      box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .culture-stat h4 {
+      color: #bfa56e;
+      font-size: 2.5rem;
+      margin: 0;
+      line-height: 1;
+    }
+
+    .integrity-text h2 {
+      font-size: 2.5rem;
+      margin-bottom: 25px;
+    }
+
+    /* --- DEFENSE GRID (Services) --- */
+    .defense-sec {
+      padding: 100px 0;
+      background: #f8fafc;
+    }
+
+    .defense-header {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 60px;
+    }
+
+    .defense-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .defense-card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      position: relative;
+      transition: 0.3s;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+
+    .defense-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      border-color: #bfa56e;
+    }
+
+    .defense-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: #bfa56e;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .defense-card:hover::before {
+      opacity: 1;
+    }
+
+    .def-num {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #f1f5f9;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      line-height: 1;
+      transition: 0.3s;
+    }
+
+    .defense-card:hover .def-num {
+      color: rgba(191, 165, 110, 0.1);
+    }
+
+    .def-icon {
+      font-size: 2.5rem;
+      color: #163945;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .defense-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* --- RADAR GRID (Methodology) --- */
+    .radar-sec {
+      padding: 100px 0;
+      background: #163945;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .radar-sec h2 {
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .radar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-top: 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .radar-item {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 30px 20px;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: 0.3s;
+    }
+
+    .radar-item:hover {
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-5px);
+      border-color: #bfa56e;
+    }
+
+    .radar-icon {
+      font-size: 2rem;
+      color: #bfa56e;
+      margin-bottom: 20px;
+      font-weight: 700;
+      display: block;
+    }
+
+    .radar-item h4 {
+      color: #fff;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+
+    .radar-item p {
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* --- CTA CLEAN --- */
+    .cta-clean {
+      padding: 80px 0;
+      text-align: center;
+      background: #fff;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    .btn-outline-theme {
+      border: 2px solid #163945;
+      color: #163945;
+      padding: 12px 30px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border-radius: 4px;
+      transition: 0.3s;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn-outline-theme:hover {
+      background: #163945;
+      color: #fff;
+    }
+
+    /* --- FOOTER CLEAN --- */
+    #footer_area {
+      padding: 80px 0 40px;
+      background: #0f242b;
+      color: #94a3b8;
+    }
+
+    .footer_widget h3 {
+      color: #fff;
+      margin-bottom: 25px;
+      font-size: 1.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    .footer_list {
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer_list li {
+      margin-bottom: 12px;
+    }
+
+    .footer_list a {
+      color: #94a3b8;
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 0.95rem;
+    }
+
+    .footer_list a:hover {
+      color: #bfa56e;
+      padding-left: 5px;
+    }
+
+    .footer-areas-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .footer_btn {
+      background: #bfa56e;
+      color: #163945;
+      padding: 12px 25px;
+      font-weight: 700;
+      display: inline-block;
+      border-radius: 4px;
+      margin-top: 20px;
+      text-decoration: none;
+    }
+
+    .footer_btn:hover {
+      background: #fff;
+      color: #163945;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 991px) {
+      .comp-hero .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .defense-grid,
+      .radar-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .culture-stat {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        text-align: center;
+        border-radius: 10px;
+        margin-top: -30px;
+        margin-bottom: 30px;
+        width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
-
-<header id="header_id" class="main_header header_style_one">
-		<div class="header_top">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="header_contact_info float-left ul-li">
-						<ul>
-							<li><i class="far fa-envelope"></i> gpa.adv@outlook.com</li>
-							<li><i class="fas fa-phone"></i> (41) 99726-6499</li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="header_follow_social float-right ul-li">
-						<ul>
-							<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
-							<li><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-							<li><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
-							
-							<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /header_top -->
-<div class="header_main_menu">
-<div class="site_logo">
-<a href="https://felipenchagas.github.io/SITE-GPA/" title="GPA Advocacia - Parceria jurídica no mundo dos negócios">
-<img src="assets/img/logo/logo-1.png" alt="Logo GPA Advocacia">
-</a>
-</div>
-<nav class="main_navigation ul-li">
-<ul>
-<li class="dropdown">
-<a href="https://felipenchagas.github.io/SITE-GPA/">Início</a>
-</li>
-<li class="dropdown">
-<a href="#service">Empresa</a>
-<ul class="dropdown-menu clearfix">
-
-<li><a href="fundado-em-curitiba.html">Fundado em Curitiba</a></li>
-<!-- NÍVEL 1 -->
-<li class="dropdown">
-<a href="#" class="has-submenu">Sócio Fundador</a>
-<ul class="dropdown-menu clearfix">
-<!-- NÍVEL 2 -->
-<li class="dropdown">
-<a href="gustavo-de-oliveira-pedroso.html" class="has-submenu">Gustavo de Oliveira Pedroso</a>
-<ul class="dropdown-menu clearfix">
-<!-- NÍVEL 3 -->
-<li class="dropdown">
-<a href="#" class="has-submenu">Qualificações</a>
-<ul class="dropdown-menu clearfix">
-<li><a href="especialista-em-direito-empresarial-e-inovacao-uel.html">Especialista em Direito Empresarial e Inovação (UEL)</a></li>
-<li><a href="mba-ibmec.html">MBA (IBMEC)</a></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-
-<li><a href="estrategias-empresariais.html">Estratégias Empresariais</a></li>
-</ul>
-</li>
-
-<li class="dropdown">
-<a href="#service">Serviços</a>
-<ul class="dropdown-menu clearfix">
-<li class="dropdown">
-<a href="#" class="has-submenu">Área Consultiva</a>
-<ul class="dropdown-menu clearfix">
-<li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação de Negócios</a></li>
-<li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
-<li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
-<li><a href="ambiental-florestal-e-agronegocio.html">Ambiental, Florestal e Agronegócio</a></li>
-<li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
-<li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
-</ul>
-</li>
-
-<li class="dropdown">
-<a href="#" class="has-submenu">Área Contenciosa</a>
-<ul class="dropdown-menu clearfix">
-<li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
-<li><a href="penal-empresarial.html">Penal Empresarial</a></li>
-<li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
-<li><a href="tributario.html">Tributário</a></li>
-<li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
-<li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
-</ul>
-</li>
-</ul>
-</li>
-
-<li class="dropdown">
-<a href="#portfolio">Rede social</a>
-<ul class="dropdown-menu">
-<li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
-<li><a href="https://www.facebook.com/gpa.advocacia/" target="_blank">Facebook</a></li>
-<li><a href="https://www.linkedin.com/company/gpaadvocacia//" target="_blank">LinkedIn</a></li>
-</ul>
-</li>
-
-<li><a href="#">Blog</a></li>
-<li><a href="contato.html">Contato</a></li>
-</ul>
-</nav>
-
-
-			<!-- /nav Menu -->
-			<div class="wide_side_bar open_side_area clearfix">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
-			<div class="wide_side_inner">
-				<div class="side_overlay open_side_area"></div>
-				<div class="side_inner_content text-center">
-					<div class="close_btn open_side_area">Voltar <i class="fas fa-arrow-right"></i></div>
-					<div class="side_inner_logo">
-						<a href="index" title="GPA Advocacia">
-							<img src="assets/img/logo/logo-1.png" alt="Logo lateral GPA Advocacia">
-						</a>
-					</div>
-					<p>
-						GPA Advocacia é um escritório fundado em Curitiba, especializado em empresas e empresários que buscam
-						<strong>segurança jurídica aliada às melhores estratégias empresariais</strong>. Atuamos como um verdadeiro
-						<strong>jurídico parceiro de negócios</strong>, apoiando a tomada de decisão e o crescimento sustentável das empresas.
-					</p>
-					<div class="side_contact">
-						<div class="social_widget ul-li headline relative-position">
-							<h3>Siga a GPA nas redes:</h3>
-							<ul>
-								<li class="h-fb"><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
-								<li class="h-tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
-								<li class="h-bh"><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-								<li class="h-yo"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="side_copywright">
-						© 2026 GPA Advocacia · Desenvolvido por e-Web Agency + Empresarial Web
-					</div>
-				</div>
-			</div>
-			
-			<!-- side bar Inner -->
-			<div class="call_to_quote float-right">
-				<div class="call_icon float-left">
-					<i class="flaticon-call"></i>
-				</div>
-				<span>Atendimento para empresas</span>
-				<span class="call_number">(41) 99726-6499</span>
-				
-			</div>
-			<!-- /call to action -->
-		</div>
-		<!-- /desktop version -->
-		<div class="mobile_menu">
-			<div class="mobile_menu_button open_mobile_menu">
-				<i class="fas fa-bars"></i>
-			</div>
-			<div class="mobile_menu_wrap">
-				<div class="mobile_menu_overlay open_mobile_menu"></div>
-				<div class="mobile_menu_content">
-					<div class="mobile_menu_close open_mobile_menu">
-						<i class="fas fa-window-close"></i>
-					</div>
-					<div class="m-brand-logo text-center">
-						<img src="assets/img/logo/logo-1.png" alt="Logo mobile GPA Advocacia">
-					</div>
-					<nav class="main-navigation  clearfix ul-li">
-						<ul id="main-nav" class="navbar-nav text-capitalize clearfix">
-							<li class="dropdown">
-								<a href="index">
-									Início
-								</a>
-							</li>
-							<li><a href="about">Empresa</a></li>
-							<li class="dropdown">
-								<a href="#service">
-									Serviços
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="case">Área Consultiva</a></li>
-									<li><a href="case-2">Área Contenciosa</a></li>
-									<li><a href="case-single">Detalhes dos serviços</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#">
-									Rede social
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Instagram</a></li>
-									<li><a href="#">Facebook</a></li>
-									<li><a href="#">Linkedin</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#">
-									Time
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="team">Equipe</a></li>
-									<li><a href="team-single">Sócio fundador</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#">
-									Blog
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Artigos</a></li>
-									<li><a href="#">Post detalhado</a></li>
-								</ul>
-							</li>
-							<li class="dropdown">
-								<a href="#">
-									Páginas
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="contato">Contato</a></li>
-									<li><a href="#">FAQ</a></li>
-									<li><a href="#">Proposta & Investimento</a></li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-					<div class="free_call_nm">
-						<div class="m_call_icon text-center">
-							<i class="flaticon-call"></i>
-						</div>
-						<div class="m_call_text">
-							<span>ATENDIMENTO EMPRESARIAL</span>
-							<strong>(41) 99726-6499</strong>
-						</div>
-					</div>
-					<div class="m_social_area text-center ul-li">
-						<h3> Siga a GPA:</h3>
-						<ul>
-							<li class="m_fb"><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
-							<li class="m_tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
-							<li class="m_lk"><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-							<li class="m_yb"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i class="fab fa-youtube"></i></a></li>
-						</ul>
-					</div>
-					<div class="m_get_quote">
-						<a href="contato">Falar com o jurídico parceiro</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /mobile menu -->
-	</header>
-
-    <!-- 1. HERO -->
-    <section class="agro-hero">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 wow fadeInUp">
-                    <span style="font-weight: 700; letter-spacing: 2px; color: #a5d6a7;">AGRIBUSINESS LAW</span>
-                    <h1>Segurança Jurídica<br>no Campo e na Indústria.</h1>
-                    <p>Do licenciamento ambiental à exportação da safra. Protegemos quem produz e sustenta o país.</p>
-                    <a href="contato.html" class="btn-leaf">Consultoria Especializada</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 2. ROOTS SECTION -->
-    <section class="roots-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 wow fadeInLeft">
-                    <div class="roots-img">
-                        <img src="assets/img/service/ambiental.jpg" alt="Campo e Produção" class="img-fluid">
-                    </div>
-                </div>
-                <div class="col-lg-7 roots-content wow fadeInRight">
-                    <h2>Produzir com Sustentabilidade e Segurança</h2>
-                    <p>O agronegócio opera sob um dos regimes regulatórios mais complexos do mundo. Questões ambientais, fundiárias e contratuais se entrelaçam, criando um cenário onde um erro técnico pode custar a safra inteira ou gerar embargos milionários.</p>
-                    <p>A GPA Advocacia atua como um parceiro estratégico do produtor rural e da indústria florestal. Nossa missão é destravar burocracias e garantir que a atividade produtiva continue, respeitando o meio ambiente e blindando o patrimônio familiar.</p>
-                    <div class="highlight-box">
-                        <i class="fas fa-seedling mr-2"></i> "Atuamos da regularização da terra até a venda da commodity, integrando jurídico e visão de mercado."
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 3. SERVICES CARDS -->
-    <section class="agro-services">
-        <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center">
-                    <span class="text-green font-weight-bold text-uppercase">Nossa Expertise</span>
-                    <h2>Soluções para o Setor</h2>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="leaf-card">
-                        <i class="flaticon-lotus leaf-icon"></i>
-                        <h3>Direito Ambiental</h3>
-                        <p>Defesa em autos de infração (IBAMA/Estaduais), acompanhamento de TACs, inquéritos civis e licenciamento de grandes obras.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="leaf-card">
-                        <i class="fas fa-leaf leaf-icon"></i>
-                        <h3>Contratos Agrários</h3>
-                        <p>Arrendamento, parceria rural, comodato e contratos de integração. Segurança na relação entre proprietário e produtor.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="leaf-card">
-                        <i class="fas fa-balance-scale leaf-icon"></i>
-                        <h3>Regularização Fundiária</h3>
-                        <p>Georreferenciamento, retificação de área, CAR (Cadastro Ambiental Rural) e regularização de posse e propriedade.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="leaf-card">
-                        <i class="fas fa-tree leaf-icon"></i>
-                        <h3>Florestal & Madeira</h3>
-                        <p>Assessoria para indústrias madeireiras, planos de manejo sustentável e contratos de fomento florestal.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="leaf-card">
-                        <i class="fas fa-hand-holding-usd leaf-icon"></i>
-                        <h3>Crédito Rural</h3>
-                        <p>Revisão de contratos bancários, alongamento de dívidas e defesa em execuções para proteção da propriedade produtiva.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="leaf-card">
-                        <i class="fas fa-users leaf-icon"></i>
-                        <h3>Holding Rural</h3>
-                        <p>Planejamento sucessório específico para famílias do agro, garantindo que a terra e a gestão passem para a próxima geração sem conflitos.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. AGRO CYCLE -->
-    <section class="cycle-section">
-        <div class="container">
-            <h2 class="mb-5">O Ciclo Jurídico do Agro</h2>
-            <div class="cycle-container">
-                <div class="cycle-item wow zoomIn" data-wow-delay="0.1s">
-                    <div class="cycle-circle"><i class="fas fa-hand-holding-usd leaf-icon"></i></div>
-                    <h4>Aquisição/Posse</h4>
-                    <p>Due Diligence da terra</p>
-                </div>
-                <div class="cycle-arrow d-none d-md-block"><i class="fas fa-chevron-right"></i></div>
-                
-                <div class="cycle-item wow zoomIn" data-wow-delay="0.3s">
-                    <div class="cycle-circle"><i class="fas fa-seedling"></i></div>
-                    <h4>Produção</h4>
-                    <p>Licenças e Ambiental</p>
-                </div>
-                <div class="cycle-arrow d-none d-md-block"><i class="fas fa-chevron-right"></i></div>
-
-                <div class="cycle-item wow zoomIn" data-wow-delay="0.5s">
-                    <div class="cycle-circle"><i class="fas fa-truck-loading"></i></div>
-                    <h4>Venda/Logística</h4>
-                    <p>Contratos de Safra</p>
-                </div>
-                <div class="cycle-arrow d-none d-md-block"><i class="fas fa-chevron-right"></i></div>
-
-                <div class="cycle-item wow zoomIn" data-wow-delay="0.7s">
-                    <div class="cycle-circle"><i class="fas fa-home"></i></div>
-                    <h4>Sucessão</h4>
-                    <p>Proteção do Legado</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. CTA -->
-    <section class="cta-agro">
-        <div class="container cta-content">
-            <h2 class="wow fadeInUp">Não deixe sua produção parar.</h2>
-            <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s">A prevenção jurídica é o melhor adubo para o crescimento sustentável.</p>
-            <a href="contato.html" class="btn-leaf wow fadeInUp" data-wow-delay="0.4s" style="background: #fff; color: #2c3e2e;">Falar com Especialista Agro</a>
-        </div>
-    </section>
-
-<footer id="footer_area" class="footer_section footer-clean">
-  <div class="background_overlay"></div>
-
-  <div class="container">
-    <div class="footer_content">
-      <div class="row footer-row">
-
-        <!-- COL 1 -->
-        <div class="col-lg-4 col-md-12 footer-col">
-          <div class="footer_widget headline">
-            <h3 class="widget_title">
-              <span class="title_shape_left"></span>
-              GPA Advocacia
-            </h3>
-
-            <p class="footer_text">
-              Jurídico parceiro de negócios para empresas.<br>
-              Consultivo e contencioso com foco em segurança jurídica, estratégia e resultados.
-            </p>
-
-            <a class="footer_btn" href="contato.html">FALAR COM A GPA</a>
-
-            <div class="footer_contact">
-              <div>Curitiba • São Paulo • Chapecó</div>
-              <a href="mailto:gpa.adv@outlook.com">gpa.adv@outlook.com</a><br>
-              <a href="https://wa.me/5541997266499" target="_blank" rel="noopener">WhatsApp: (41) 99726-6499</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- COL 2 -->
-        <div class="col-lg-4 col-md-12 footer-col">
-          <div class="footer_widget headline">
-            <h3 class="widget_title">
-              <span class="title_shape_left"></span>
-              Áreas principais
-            </h3>
-
-            <div class="footer-areas-grid">
-              <ul class="footer_list">
-                <li><a href="contratos-e-estruturacao-de-negocios.html">Contratos & Estruturação</a></li>
-                <li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
-                <li><a href="compliance-e-regulatorio.html">Compliance & Regulatório</a></li>
-                <li><a href="direito-digital-e-inovacao.html">Digital & Inovação</a></li>
-              </ul>
-
-              <ul class="footer_list">
-                <li><a href="marcas-e-patentes.html">Marcas & Patentes</a></li>
-                <li><a href="arbitragem-e-mediacao.html">Arbitragem & Mediação</a></li>
-                <li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
-                <li><a href="tributario.html">Tributário</a></li>
+  <!-- Header -->
+    <header id="header_id" class="main_header header_style_one">
+      <div class="header_top">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="header_contact_info float-left ul-li">
+              <ul>
+                <li><i class="far fa-envelope"></i>gpa.adv@outlook.com</li>
+                <li><i class="fas fa-phone"></i>(41) 99726-6499</li>
               </ul>
             </div>
-
-            <a class="footer_link_more" href="#service">Ver todas as áreas →</a>
           </div>
-        </div>
-
-        <!-- COL 3 -->
-        <div class="col-lg-4 col-md-12 footer-col">
-          <div class="footer_widget headline">
-            <h3 class="widget_title">
-              <span class="title_shape_left"></span>
-              Conteúdos
-            </h3>
-
-            <div class="footer_posts">
-              <a class="footer_post" href="estrategias-empresariais.html">
-                <span class="tag">ESTRATÉGIA</span>
-                <span class="title">Segurança na abertura de filiais</span>
-              </a>
-
-              <a class="footer_post" href="compliance-e-regulatorio.html">
-                <span class="tag">GOVERNANÇA</span>
-                <span class="title">Compliance como valor competitivo</span>
-              </a>
+          <div class="col-md-6">
+            <div class="header_follow_social float-right ul-li">
+              <ul>
+                <li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i
+                      class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i
+                      class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i
+                      class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i
+                      class="fab fa-whatsapp"></i></a></li>
+              </ul>
             </div>
-
-            <a class="footer_link_more" href="#blog_area">Ir para o blog →</a>
           </div>
         </div>
-
       </div>
-    </div>
-  </div>
-</footer>
-
-<style>
-/* ===== FOOTER CLEAN (anti-encavalamento) ===== */
-.footer-clean{ background:#000; padding:70px 0 60px; }
-.footer-clean .footer-row{ row-gap:34px; }
-.footer-clean .footer-col{ min-width:0; } /* IMPORTANTÍSSIMO: evita estouro/encavalamento */
-
-.footer-clean .widget_title{
-  color:#fff;
-  margin:0 0 18px;
-  font:700 20px/1.2 Georgia,"Times New Roman",serif;
-}
-.footer-clean .widget_title .title_shape_left{ display:none; } /* opcional */
-
-.footer-clean .footer_text{
-  color:rgba(255,255,255,.78);
-  font:500 14px/1.8 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  margin:0 0 18px;
-  max-width:360px;
-}
-
-.footer-clean .footer_btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  height:52px;
-  padding:0 22px;
-  border-radius:10px;
-  background:#2a2a2a;
-  color:#fff;
-  text-decoration:none;
-  font:800 12px/1 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-  border:1px solid rgba(255,255,255,.12);
-  margin:8px 0 18px;
-  transition:transform .15s ease, filter .15s ease;
-}
-.footer-clean .footer_btn:hover{ filter:brightness(1.06); transform:translateY(-1px); }
-
-.footer-clean .footer_contact{
-  color:rgba(255,255,255,.72);
-  font:500 13px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-}
-.footer-clean .footer_contact a{
-  color:#c5a47e;
-  text-decoration:none;
-}
-.footer-clean .footer_contact a:hover{ text-decoration:underline; }
-
-/* LISTAS (evita “tudo em linha”) */
-.footer-clean .footer_list{
-  list-style:none;
-  padding:0;
-  margin:0;
-  display:grid;
-  gap:10px;
-}
-.footer-clean .footer_list a{
-  color:rgba(255,255,255,.78);
-  text-decoration:none;
-  font:600 13px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  display:inline-block;
-  max-width:100%;
-  overflow-wrap:anywhere;
-}
-.footer-clean .footer_list a:hover{ color:#fff; }
-
-/* Áreas em 2 colunas internas, com gap real */
-.footer-clean .footer-areas-grid{
-  display:grid;
-  grid-template-columns:repeat(2, minmax(0,1fr));
-  gap:14px 24px;
-}
-
-/* Conteúdos (objetivo, sem “card com imagem”) */
-.footer-clean .footer_posts{
-  display:grid;
-  gap:16px;
-  margin-top:2px;
-}
-.footer-clean .footer_post{
-  text-decoration:none;
-  display:grid;
-  gap:6px;
-  padding-bottom:14px;
-  border-bottom:1px solid rgba(255,255,255,.10);
-}
-.footer-clean .footer_post:last-child{ border-bottom:none; padding-bottom:0; }
-.footer-clean .footer_post .tag{
-  color:#c5a47e;
-  font:800 11px/1 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-  letter-spacing:.14em;
-}
-.footer-clean .footer_post .title{
-  color:#fff;
-  font:700 14px/1.35 Georgia,"Times New Roman",serif;
-}
-
-.footer-clean .footer_link_more{
-  display:inline-block;
-  margin-top:16px;
-  color:#c5a47e;
-  text-decoration:none;
-  font:700 13px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial;
-}
-.footer-clean .footer_link_more:hover{ text-decoration:underline; }
-
-/* Responsivo: quebra a grid interna pra 1 coluna no mobile */
-@media (max-width: 520px){
-  .footer-clean .footer-areas-grid{ grid-template-columns:1fr; }
-  .footer-clean .footer_text{ max-width:100%; }
-}
-</style>
-
-	<div class="footer_copyright">
-		<div class="container">
-			<div class="footer_copyright_content">
-				<div class="row">
-					<div class="col-lg-4 col-md-12">
-						<div class="footer_social ul-li clearfix">
-							<ul>
-								<li><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a></li>
-								<li><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i></a></li>
-								<li><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
-								
-								<li><a href="https://wa.me/5541997266499" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12">
-						<div class="footer_logo text-center">
-							<a href="index"><img src="assets/img/logo/flogo-1.png" alt="Logo rodapé GPA Advocacia"></a>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-12">
-						<div class="copyright_text text-right">
-							© 2026 GPA Advocacia. Desenvolvido por <a href="#">e-Web Agency + Empresarial Web</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/appear.js"></script>
-	<script src="assets/js/wow.min.js"></script>
-	<script src="assets/js/script.js"></script>
+      <!-- /header_top -->
+        <div class="header_main_menu">
+          <div class="site_logo"><a href="https://felipenchagas.github.io/SITE-GPA/"
+              title="GPA Advocacia - Parceria jurídica no mundo dos negócios"><img src="assets/img/logo/logo-1.png"
+                alt="Logo GPA Advocacia"></a></div>
+          <nav class="main_navigation ul-li">
+            <ul>
+              <li class="dropdown"><a href="https://felipenchagas.github.io/SITE-GPA/">Início</a></li>
+              <li class="dropdown"><a href="#service">Empresa</a>
+                <ul class="dropdown-menu clearfix">
+                  <li><a href="fundado-em-curitiba.html">Fundado em Curitiba</a></li>
+                  <!-- NÍVEL 1 -->
+                    <li class="dropdown"><a href="#" class="has-submenu">Sócio Fundador</a>
+                      <ul class="dropdown-menu clearfix">
+                        <!-- NÍVEL 2 -->
+                          <li class="dropdown"><a href="gustavo-de-oliveira-pedroso.html" class="has-submenu">Gustavo de
+                              Oliveira Pedroso</a>
+                            <ul class="dropdown-menu clearfix">
+                              <!-- NÍVEL 3 -->
+                                <li class="dropdown"><a href="#" class="has-submenu">Qualificações</a>
+                                  <ul class="dropdown-menu clearfix">
+                                    <li><a href="especialista-em-direito-empresarial-e-inovacao-uel.html">Especialista
+                                        em Direito Empresarial e Inovação (UEL)</a></li>
+                                    <li><a href="mba-ibmec.html">MBA (IBMEC)</a></li>
+                                  </ul>
+                                </li>
+                            </ul>
+                          </li>
+                      </ul>
+                    </li>
+                    <li><a href="estrategias-empresariais.html">Estratégias Empresariais</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#service">Serviços</a>
+                <ul class="dropdown-menu clearfix">
+                  <li class="dropdown"><a href="#" class="has-submenu">Área Consultiva</a>
+                    <ul class="dropdown-menu clearfix">
+                      <li><a href="contratos-e-estruturacao-de-negocios.html">Contratos e Estruturação de Negócios</a>
+                      </li>
+                      <li><a href="marcas-e-patentes.html">Marcas e Patentes</a></li>
+                      <li><a href="direito-digital-e-inovacao.html">Direito Digital e Inovação</a></li>
+                      <li><a href="ambiental-florestal-e-agronegocio.html">Ambiental, Florestal e Agronegócio</a></li>
+                      <li><a href="compliance-e-regulatorio.html">Compliance e Regulatório</a></li>
+                      <li><a href="advocacy-e-public-affairs.html">Advocacy / Public Affairs</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="#" class="has-submenu">Área Contenciosa</a>
+                    <ul class="dropdown-menu clearfix">
+                      <li><a href="familia-e-sucessoes.html">Família e Sucessões</a></li>
+                      <li><a href="penal-empresarial.html">Penal Empresarial</a></li>
+                      <li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+                      <li><a href="tributario.html">Tributário</a></li>
+                      <li><a href="arbitragem-e-mediacao.html">Arbitragem e Mediação</a></li>
+                      <li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#portfolio">Rede social</a>
+                <ul class="dropdown-menu">
+                  <li><a href="https://www.instagram.com/" target="_blank">Instagram</a></li>
+                  <li><a href="https://www.facebook.com/gpa.advocacia/" target="_blank">Facebook</a></li>
+                  <li><a href="https://www.linkedin.com/company/gpaadvocacia//" target="_blank">LinkedIn</a></li>
+                </ul>
+              </li>
+              <li><a href="contato.html">Contato</a></li>
+            </ul>
+          </nav>
+          <!-- /nav Menu -->
+            <div class="wide_side_bar open_side_area clearfix"><span></span><span></span><span></span></div>
+            <div class="wide_side_inner">
+              <div class="side_overlay open_side_area"></div>
+              <div class="side_inner_content text-center">
+                <div class="close_btn open_side_area">Voltar <i class="fas fa-arrow-right"></i></div>
+                <div class="side_inner_logo"><a href="index" title="GPA Advocacia"><img src="assets/img/logo/logo-1.png"
+                      alt="Logo lateral GPA Advocacia"></a></div>
+                <p>GPA Advocacia é um escritório fundado em Curitiba, especializado em empresas e empresários que buscam
+                  <strong>segurança jurídica aliada às melhores estratégias empresariais</strong>. Atuamos como um
+                  verdadeiro <strong>jurídico parceiro de negócios</strong>, apoiando a tomada de decisão e o
+                  crescimento sustentável das empresas. </p>
+                <div class="side_contact">
+                  <div class="social_widget ul-li headline relative-position">
+                    <h3>Siga a GPA nas redes:</h3>
+                    <ul>
+                      <li class="h-fb"><a href="https://www.facebook.com/gpa.advocacia" target="_blank"
+                          rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+                      <li class="h-tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i
+                            class="fab fa-instagram"></i></a></li>
+                      <li class="h-bh"><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank"
+                          rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+                      <li class="h-yo"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i
+                            class="fab fa-youtube"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="side_copywright">© 2026 GPA Advocacia · Desenvolvido por e-Web Agency+Empresarial Web </div>
+              </div>
+            </div>
+            <!-- side bar Inner -->
+              <div class="call_to_quote float-right">
+                <div class="call_icon float-left"><i class="flaticon-call"></i></div><span>Atendimento para
+                  empresas</span><span class="call_number">(41) 99726-6499</span>
+              </div>
+              <!-- /call to action -->
+        </div>
+        <!-- /desktop version -->
+          <div class="mobile_menu">
+            <div class="mobile_menu_button open_mobile_menu"><i class="fas fa-bars"></i></div>
+            <div class="mobile_menu_wrap">
+              <div class="mobile_menu_overlay open_mobile_menu"></div>
+              <div class="mobile_menu_content">
+                <div class="mobile_menu_close open_mobile_menu"><i class="fas fa-window-close"></i></div>
+                <div class="m-brand-logo text-center"><img src="assets/img/logo/logo-1.png"
+                    alt="Logo mobile GPA Advocacia"></div>
+                <nav class="main-navigation  clearfix ul-li">
+                  <ul id="main-nav" class="navbar-nav text-capitalize clearfix">
+                    <li class="dropdown"><a href="index">Início </a></li>
+                    <li><a href="about">Empresa</a></li>
+                    <li class="dropdown"><a href="#service">Serviços </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="case">Área Consultiva</a></li>
+                        <li><a href="case-2">Área Contenciosa</a></li>
+                        <li><a href="case-single">Detalhes dos serviços</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Rede social </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Linkedin</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a href="#">Time </a>
+                      <ul class="dropdown-menu">
+                        <li><a href="team">Equipe</a></li>
+                        <li><a href="team-single">Sócio fundador</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="free_call_nm">
+                  <div class="m_call_icon text-center"><i class="flaticon-call"></i></div>
+                  <div class="m_call_text"><span>ATENDIMENTO EMPRESARIAL</span><strong>(41) 99726-6499</strong></div>
+                </div>
+                <div class="m_social_area text-center ul-li">
+                  <h3>Siga a GPA:</h3>
+                  <ul>
+                    <li class="m_fb"><a href="https://www.facebook.com/gpa.advocacia" target="_blank" rel="noopener"><i
+                          class="fab fa-facebook-f"></i></a></li>
+                    <li class="m_tw"><a href="https://www.instagram.com/gpa.adv" target="_blank" rel="noopener"><i
+                          class="fab fa-instagram"></i></a></li>
+                    <li class="m_lk"><a href="https://www.linkedin.com/company/gpaadvocacia/" target="_blank"
+                        rel="noopener"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="m_yb"><a href="https://www.youtube.com" target="_blank" rel="noopener"><i
+                          class="fab fa-youtube"></i></a></li>
+                  </ul>
+                </div>
+                <div class="m_get_quote"><a href="contato">Falar com o jurídico parceiro</a></div>
+              </div>
+            </div>
+          </div>
+          <!-- /mobile menu -->
+    </header>
+    <!-- START of Standardized Content -->
+      <!-- 1. HERO SPLIT -->
+        <section class="comp-hero">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-6 wow fadeInLeft"><span class="hero-badge">Ambiental & Agronegócio</span>
+                <h1 class="hero-title">Segurança Jurídica no Campo e na Indústria</h1>
+                <p class="hero-subtitle">Do licenciamento ambiental à exportação da safra. Protegemos quem produz e
+                  sustenta o país.</p><a href="contato.html" class="btn-sapphire">Agendar Diagnóstico</a>
+              </div>
+              <div class="col-lg-6 wow fadeInRight">
+                <div class="hero-img-wrap"><img src="assets/img/service/ambiental.jpg" class="hero-img"
+                    alt="Direito Ambiental e Agronegócio"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- 2. CULTURE SEC -->
+          <section class="culture-sec">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0 wow fadeInUp">
+                  <div class="culture-img"><img src="assets/img/service/at1.jpg" alt="Sustentabilidade e Segurança">
+                    <div class="culture-stat">
+                      <h4>+20</h4><span>Anos de Agro</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 pl-lg-5 wow fadeInUp" data-wow-delay="0.2s">
+                  <div class="integrity-text">
+                    <h2>Produzir com Sustentabilidade e Segurança</h2>
+                    <p class="mb-4">O agronegócio opera sob um dos regimes regulatórios mais complexos do mundo.
+                      Questões ambientais, fundiárias e contratuais se entrelaçam.</p>
+                    <p class="mb-4">Nossa missão é destravar burocracias e garantir que a atividade produtiva continue,
+                      respeitando o meio ambiente e blindando o patrimônio familiar.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 3. DEFENSE GRID (Services) -->
+            <section class="defense-sec">
+              <div class="container">
+                <div class="defense-header wow fadeInUp">
+                  <h2>Áreas de Atuação</h2>
+                  <p>Soluções jurídicas integradas para o sucesso do agronegócio.</p>
+                </div>
+                <div class="defense-grid">
+                  <!-- Item 1 -->
+                    <div class="defense-card wow fadeInUp" data-wow-delay="0.1s"><span class="def-num">01</span>
+                      <div class="def-icon"><i class="flaticon-courthouse"></i></div>
+                      <h3>Direito Ambiental</h3>
+                      <p>Defesa em autos de infração (IBAMA/Estaduais), TACs, inquéritos civis e licenciamento de obras.
+                      </p>
+                    </div>
+                    <!-- Item 2 -->
+                      <div class="defense-card wow fadeInUp" data-wow-delay="0.2s"><span class="def-num">02</span>
+                        <div class="def-icon"><i class="flaticon-courthouse"></i></div>
+                        <h3>Florestal & Madeira</h3>
+                        <p>Assessoria para indústrias madeireiras, planos de manejo sustentável e contratos de fomento
+                          florestal.</p>
+                      </div>
+                      <!-- Item 3 -->
+                        <div class="defense-card wow fadeInUp" data-wow-delay="0.3s"><span class="def-num">03</span>
+                          <div class="def-icon"><i class="flaticon-courthouse"></i></div>
+                          <h3>Contratos Agrários</h3>
+                          <p>Arrendamento, parceria rural, comodato e contratos de integração. Segurança proprietário e
+                            produtor.</p>
+                        </div>
+                        <!-- Item 4 -->
+                          <div class="defense-card wow fadeInUp" data-wow-delay="0.4s"><span class="def-num">04</span>
+                            <div class="def-icon"><i class="flaticon-courthouse"></i></div>
+                            <h3>Regularização Fundiária</h3>
+                            <p>Georreferenciamento, retificação de área, CAR e regularização de posse e propriedade.</p>
+                          </div>
+                          <!-- Item 5 -->
+                            <div class="defense-card wow fadeInUp" data-wow-delay="0.5s"><span class="def-num">05</span>
+                              <div class="def-icon"><i class="flaticon-courthouse"></i></div>
+                              <h3>Crédito Rural</h3>
+                              <p>Revisão de contratos bancários, alongamento de dívidas e defesa em execuções.</p>
+                            </div>
+                            <!-- Item 6 -->
+                              <div class="defense-card wow fadeInUp" data-wow-delay="0.6s"><span
+                                  class="def-num">06</span>
+                                <div class="def-icon"><i class="flaticon-courthouse"></i></div>
+                                <h3>Holding Rural</h3>
+                                <p>Planejamento sucessório específico para famílias do agro, protegendo a terra e a
+                                  gestão.</p>
+                              </div>
+                </div>
+              </div>
+            </section>
+            <!-- 4. RADAR GRID (Methodology/Cycle) -->
+              <section class="radar-sec">
+                <div class="container">
+                  <div class="row align-items-center">
+                    <div class="col-lg-4 wow fadeInLeft">
+                      <h2>O Ciclo Jurídico do Agro</h2>
+                      <p>Da aquisição da terra à sucessão familiar. Segurança jurídica em todas as etapas da cadeia
+                        produtiva.</p><a href="contato.html" class="btn-sapphire mt-4">Blindar Patrimônio</a>
+                    </div>
+                    <div class="col-lg-8">
+                      <div class="radar-grid">
+                        <div class="radar-item wow fadeInUp" data-wow-delay="0.1s"><i
+                            class="flaticon-courthouse radar-icon"></i>
+                          <h4>Aquisição</h4>
+                          <p>Due Diligence da terra e da posse.</p>
+                        </div>
+                        <div class="radar-item wow fadeInUp" data-wow-delay="0.2s"><i
+                            class="flaticon-courthouse radar-icon"></i>
+                          <h4>Produção</h4>
+                          <p>Licenciamento e regularidade ambiental.</p>
+                        </div>
+                        <div class="radar-item wow fadeInUp" data-wow-delay="0.3s"><i
+                            class="flaticon-courthouse radar-icon"></i>
+                          <h4>Venda</h4>
+                          <p>Contratos de safra e logística.</p>
+                        </div>
+                        <div class="radar-item wow fadeInUp" data-wow-delay="0.4s"><i
+                            class="flaticon-courthouse radar-icon"></i>
+                          <h4>Sucessão</h4>
+                          <p>Proteção do legado familiar.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- 5. FAQ (Standardized) -->
+                <section class="faq-sec"
+                  style="padding: 100px 0; background: linear-gradient(rgba(26, 32, 44, 0.9), rgba(26, 32, 44, 0.9)), url('assets/img/background/vdbg.jpg') center/cover fixed; color: #fff;">
+                  <div class="container">
+                    <div class="text-center mb-5">
+                      <h2 style="color: #fff;">Perguntas Frequentes</h2>
+                      <p style="color: #cbd5e0;">Segurança Jurídica no Agronegócio</p>
+                    </div>
+                    <div class="row justify-content-center">
+                      <div class="col-lg-8">
+                        <div class="mb-4">
+                          <h5 style="color: #bfa56e; font-weight: 700;">Como lidar com multas ambientais e embargos?
+                          </h5>
+                          <p style="color: #e2e8f0;">Atuamos na defesa administrativa e judicial contra autuações do
+                            IBAMA e órgãos estaduais, visando o desbloqueio de áreas, a anulação de multas indevidas e a
+                            continuidade da produção. </p>
+                        </div>
+                        <div class="mb-4">
+                          <h5 style="color: #bfa56e; font-weight: 700;">O que envolve a Regularização Fundiária?</h5>
+                          <p style="color: #e2e8f0;">Realizamos todo o processo de regularização de posse e propriedade,
+                            incluindo CAR (Cadastro Ambiental Rural), Georreferenciamento e retificação de registros
+                            imobiliários.</p>
+                        </div>
+                        <div class="mb-4">
+                          <h5 style="color: #bfa56e; font-weight: 700;">Como funcionam os Contratos Agrários?</h5>
+                          <p style="color: #e2e8f0;">Elaboramos e revisamos contratos de arrendamento, parceria rural e
+                            integração,
+                            focando na segurança jurídica do produtor e na proteção contra riscos contratuais e
+                            climáticos.</p>
+                        </div>
+                        <div class="mb-4">
+                          <h5 style="color: #bfa56e; font-weight: 700;">Atuam com Licenciamento Ambiental?</h5>
+                          <p style="color: #e2e8f0;">Sim. Prestamos assessoria completa para a obtenção e renovação de
+                            licenças ambientais (LP, LI, LO) para atividades agrossilvipastoris e industriais.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!-- 6. CTA CLEAN -->
+                  <section class="cta-clean">
+                    <div class="container">
+                      <h2 class="mb-4 wow fadeInUp">Não deixe sua produção parar.</h2><a href="contato.html"
+                        class="btn-outline-theme wow fadeInUp" data-wow-delay="0.2s">Agendar Diagnóstico</a>
+                    </div>
+                  </section>
+                  <!-- WRAPPER PARA RODAPÉ (Isola os estilos) -->
+                    <footer id="footer_area" class="footer_section footer-clean">
+                      <div class="container">
+                        <div class="footer_content">
+                          <div class="row footer-row">
+                            <!-- COL 1 -->
+                              <div class="col-lg-4 col-md-12 footer-col">
+                                <div class="footer_widget headline">
+                                  <h3 class="widget_title">GPA Advocacia</h3>
+                                  <p class="footer_text">Jurídico parceiro de negócios para empresas.<br>Consultivo e
+                                    contencioso com foco em segurança jurídica, estratégia e resultados. </p><a
+                                    class="footer_btn" href="contato.html">FALAR COM A GPA</a>
+                                  <div class="footer_contact">
+                                    <div>Curitiba • São Paulo • Chapecó</div><a
+                                      href="mailto:gpa.adv@outlook.com">gpa.adv@outlook.com</a><br><a
+                                      href="https://wa.me/5541997266499" target="_blank" rel="noopener">WhatsApp: (41)
+                                      99726-6499</a>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- COL 2 -->
+                                <div class="col-lg-4 col-md-12 footer-col">
+                                  <div class="footer_widget headline">
+                                    <h3 class="widget_title">Áreas principais</h3>
+                                    <div class="footer-areas-grid">
+                                      <ul class="footer_list">
+                                        <li><a href="contratos-e-estruturacao-de-negocios.html">Contratos &
+                                            Estruturação</a></li>
+                                        <li><a href="recuperacao-de-credito.html">Recuperação de Crédito</a></li>
+                                        <li><a href="compliance-e-regulatorio.html">Compliance & Regulatório</a></li>
+                                        <li><a href="direito-digital-e-inovacao.html">Digital & Inovação</a></li>
+                                      </ul>
+                                      <ul class="footer_list">
+                                        <li><a href="marcas-e-patentes.html">Marcas & Patentes</a></li>
+                                        <li><a href="arbitragem-e-mediacao.html">Arbitragem & Mediação</a></li>
+                                        <li><a href="relacoes-trabalhistas.html">Relações Trabalhistas</a></li>
+                                        <li><a href="tributario.html">Tributário</a></li>
+                                      </ul>
+                                    </div><a class="footer_link_more" href="#service">Ver todas as áreas →</a>
+                                  </div>
+                                </div>
+                                <!-- COL 3 -->
+                                  <div class="col-lg-4 col-md-12 footer-col">
+                                    <div class="footer_widget headline">
+                                      <h3 class="widget_title">Conteúdos</h3>
+                                      <div class="footer_posts"><a class="footer_post"
+                                          href="estrategias-empresariais.html"><span class="tag">ESTRATÉGIA</span><span
+                                            class="title">Segurança na abertura de filiais</span></a><a
+                                          class="footer_post" href="compliance-e-regulatorio.html"><span
+                                            class="tag">GOVERNANÇA</span><span class="title">Compliance como valor
+                                            competitivo</span></a></div>
+                                    </div>
+                                  </div>
+                          </div>
+                        </div>
+                      </div>
+                    </footer>
+                    <script src="assets/js/jquery.min.js"></script>
+                    <script src="assets/js/bootstrap.min.js"></script>
+                    <script src="assets/js/appear.js"></script>
+                    <script src="assets/js/wow.min.js"></script>
+                    <script src="assets/js/script.js"></script>
 </body>
+
 </html>

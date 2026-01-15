@@ -317,7 +317,7 @@ Color Code
 }
 .testimonial_style_three .testimonial_slide_item_three .t-icon-bg i, .testimonial_content .testimonial_text .t-icon-bg i,
 .subscribe_content .testimonial_text .t-icon-bg i {
-  color: #a58b54;
+  color: #163945;
   font-size: 180px;
 }
 
@@ -332,7 +332,7 @@ Color Code
   margin: 0 5px;
   border-radius: 100%;
   display: inline-block;
-  background-color: #c6af7e;
+  background-color: #4a7c91;
 }
 .testimonial_style_three .owl-dots .owl-dot.active, .testimonial_slide_area .owl-dots .owl-dot.active {
   background-color: #fff;
@@ -1038,7 +1038,7 @@ select:visited {
 }
 .call_to_quote .icon_bg i {
   font-size: 95px;
-  color: #bfa56e;
+  color: #2c586e;
 }
 /* ================================
    FIX DEFINITIVO: CALL TO QUOTE
