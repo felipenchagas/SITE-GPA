@@ -916,7 +916,119 @@
         </div>
       </div>
     </div>
-  </footer>
+<style>
+/* ===== FOOTER CLEAN (anti-encavalamento) ===== */
+.footer-clean{ background:#000; padding:70px 0 60px; }
+.footer-clean .footer-row{ row-gap:34px; }
+.footer-clean .footer-col{ min-width:0; } /* IMPORTANTÍSSIMO: evita estouro/encavalamento */
+
+.footer-clean .widget_title{
+  color:#fff;
+  margin:0 0 18px;
+  font:700 20px/1.2 Georgia,"Times New Roman",serif;
+}
+.footer-clean .widget_title .title_shape_left{ display:none; } /* opcional */
+
+.footer-clean .footer_text{
+  color:rgba(255,255,255,.78);
+  font:500 14px/1.8 system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  margin:0 0 18px;
+  max-width:360px;
+}
+
+.footer-clean .footer_btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  height:52px;
+  padding:0 22px;
+  border-radius:10px;
+  background:#2a2a2a;
+  color:#fff;
+  text-decoration:none;
+  font:800 12px/1 system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+  border:1px solid rgba(255,255,255,.12);
+  margin:8px 0 18px;
+  transition:transform .15s ease, filter .15s ease;
+}
+.footer-clean .footer_btn:hover{ filter:brightness(1.06); transform:translateY(-1px); }
+
+.footer-clean .footer_contact{
+  color:rgba(255,255,255,.72);
+  font:500 13px/1.7 system-ui,-apple-system,Segoe UI,Roboto,Arial;
+}
+.footer-clean .footer_contact a{
+  color:#c5a47e;
+  text-decoration:none;
+}
+.footer-clean .footer_contact a:hover{ text-decoration:underline; }
+
+/* LISTAS (evita “tudo em linha”) */
+.footer-clean .footer_list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:grid;
+  gap:10px;
+}
+.footer-clean .footer_list a{
+  color:rgba(255,255,255,.78);
+  text-decoration:none;
+  font:600 13px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  display:inline-block;
+  max-width:100%;
+  overflow-wrap:anywhere;
+}
+.footer-clean .footer_list a:hover{ color:#fff; }
+
+/* Áreas em 2 colunas internas, com gap real */
+.footer-clean .footer-areas-grid{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0,1fr));
+  gap:14px 24px;
+}
+
+/* Conteúdos (objetivo, sem “card com imagem”) */
+.footer-clean .footer_posts{
+  display:grid;
+  gap:16px;
+  margin-top:2px;
+}
+.footer-clean .footer_post{
+  text-decoration:none;
+  display:grid;
+  gap:6px;
+  padding-bottom:14px;
+  border-bottom:1px solid rgba(255,255,255,.10);
+}
+.footer-clean .footer_post:last-child{ border-bottom:none; padding-bottom:0; }
+.footer-clean .footer_post .tag{
+  color:#c5a47e;
+  font:800 11px/1 system-ui,-apple-system,Segoe UI,Roboto,Arial;
+  letter-spacing:.14em;
+}
+.footer-clean .footer_post .title{
+  color:#fff;
+  font:700 14px/1.35 Georgia,"Times New Roman",serif;
+}
+
+.footer-clean .footer_link_more{
+  display:inline-block;
+  margin-top:16px;
+  color:#c5a47e;
+  text-decoration:none;
+  font:700 13px/1.2 system-ui,-apple-system,Segoe UI,Roboto,Arial;
+}
+.footer-clean .footer_link_more:hover{ text-decoration:underline; }
+
+/* Responsivo: quebra a grid interna pra 1 coluna no mobile */
+@media (max-width: 520px){
+  .footer-clean .footer-areas-grid{ grid-template-columns:1fr; }
+  .footer-clean .footer_text{ max-width:100%; }
+}
+</style>
 
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>
